@@ -1,0 +1,624 @@
+@import "../variables/var";
+
+.header {
+  &_top {
+    margin: 0 0 10px 0;
+  }
+
+  &_bottom {
+
+  }
+}
+
+
+.top-header {
+  &_content {
+    display: flex;
+  }
+
+  &_label {
+    flex: 0 0 auto;
+    width: 329px;
+    height: 138px;
+    max-width: 100%;
+    background: url("../images_adaptive_layout/hat/image_label.png") center no-repeat;
+
+    @media (max-width: 1340px) {
+      display: none;
+    }
+  }
+}
+
+.services-header {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 0 30px;
+
+  &_services {
+    cursor: pointer;
+
+    span {
+      position: relative;
+      letter-spacing: 0;
+      white-space: nowrap;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24px;
+      transition: all 0.3s ease 0s;
+
+      @media (min-width: $md2+px) {
+        &:hover {
+          color: $colorOrange;
+        }
+      }
+
+      &::after {
+        @include backgroundImage($colorGray, 60%);
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: -5px;
+        left: 0;
+        background-position: bottom;
+        background-size: 5px 1px;
+        background-repeat: repeat-x;
+        transition: linear-gradient 0.5s;
+      }
+
+      @media (min-width: $md2+px) {
+        &:hover::after {
+          @include backgroundImage($colorOrange, 100%);
+        }
+      }
+    }
+  }
+
+  &_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+  }
+
+  &_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.bottom-services {
+  display: flex;
+
+  &_column {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 40%;
+
+    &:last-child {
+      flex: 0 1 60%;
+    }
+  }
+
+  &_map {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #001569;
+  }
+
+  &_description {
+    display: flex;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: left;
+
+    span {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21px;
+    }
+  }
+
+  &_phoneNumber {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+
+  &_number {
+    display: inline-block;
+    padding: 0 25px 0 0;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 30px;
+      background: url("../images_adaptive_layout/hat/phone.png") 0 0 no-repeat;
+      transform: translate(-40px, 3px)
+    }
+
+    span {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 37px;
+    }
+  }
+
+  &_requestCall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 35px;
+  }
+}
+
+.bottom-header {
+  display: flex;
+  justify-content: space-between;
+
+  &_column {
+    display: flex;
+    flex: 0 1 50%;
+  }
+
+  &_input {
+    position: relative;
+    height: 40px;
+    width: 100%;
+  }
+
+  &_searchField {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #000;
+  }
+
+  &_searchButton {
+    position: absolute;
+
+    &::after {
+      content: "";
+      cursor: pointer;
+      top: 8px;
+      right: 20px;
+      display: inline-block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url("../images_adaptive_layout/hat/magnifierInput.png") 0 0 no-repeat;
+    }
+  }
+}
+
+.contactWithMe-header {
+  display: flex;
+  width: 100%;
+
+  &_column {
+    flex: 0 1 33.3333%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    img {
+      padding: 0 10px 0 0;
+    }
+  }
+
+  &_contact {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  &_contact-city {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: Montserrat, sans-serif;
+
+    span {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+//@include heightAndWidth(163px, 1395px);
+//position: relative;
+//display: grid;
+//grid-template-rows: 48px 63px 54px;
+//grid-template-columns: 767px 641px;
+//margin: auto;
+
+//.labelImg {
+//  grid-area: 1/1/2/1;
+//  @include heightAndWidth(138px, 329px);
+//  margin: -12px 0 0 -7px;
+//}
+
+//.navBar {
+//  @include heightAndWidth(24px, 1046px);
+//  grid-area: 1/1/1/2;
+//  display: flex;
+//  position: relative;
+//  gap: 44px;
+//  margin: 0 0 0 360px;
+//
+//  .relativeDivNavBar {
+//    position: relative;
+//  }
+//
+//  .commonSizesNumber {
+//    cursor: pointer;
+//    margin: 0;
+//    font-weight: 500;
+//    text-align: center;
+//    line-height: 24px;
+//    font-size: 20px;
+//    letter-spacing: 0;
+//    transition: color 0.5s;
+//
+//    &::after {
+//      @include backgroundImage($colorGray, 60%);
+//      content: '';
+//      display: inline-block;
+//      position: relative;
+//      height: 2px;
+//      top: -11px;
+//      left: 0;
+//      background-position: bottom;
+//      background-size: 5px 1px;
+//      background-repeat: repeat-x;
+//      transition: linear-gradient 0.5s;
+//    }
+//  }
+//
+//  .sizesOne {
+//    @include heightAndWidth(24px, 178px);
+//
+//    &:after {
+//      width: 178px;
+//    }
+//  }
+//
+//  .sizesOne:hover, .sizesTwo:hover, .sizesThree:hover,
+//  .sizesFour:hover, .sizesFive:hover, .sizesSix:hover {
+//    color: $colorOrange;
+//  }
+//
+//  .sizesOne:hover:after, .sizesTwo:hover:after,
+//  .sizesThree:hover:after, .sizesFour:hover:after,
+//  .sizesFive:hover:after, .sizesSix:hover:after {
+//    @include backgroundImage($colorOrange, 100%);
+//  }
+//
+//  .sizesTwo {
+//    @include heightAndWidth(24px, 187px);
+//
+//    &:after {
+//      width: 186px;
+//    }
+//  }
+//
+//  .sizesThree {
+//    @include heightAndWidth(24px, 78px);
+//
+//    &:after {
+//      width: 78px;
+//    }
+//  }
+//
+//  .sizesFour {
+//    @include heightAndWidth(24px, 167px);
+//
+//    &:after {
+//      width: 166px;
+//    }
+//  }
+//
+//  .sizesFive {
+//    @include heightAndWidth(24px, 117px);
+//
+//    &:after {
+//      width: 116px;
+//    }
+//  }
+//
+//  .sizesSix {
+//    @include heightAndWidth(24px, 99px);
+//
+//    &:after {
+//      width: 96px;
+//    }
+//  }
+//}
+
+//.description {
+//  @include heightAndWidth(45px, 403px);
+//  display: flex;
+//  grid-area: 2/1/2/1;
+//  margin: 5px auto auto 360px;
+//  line-height: 21px;
+//  letter-spacing: 0;
+//  text-align: left;
+//}
+//
+//.phoneNumber {
+//  @include heightAndWidth(37px, 569px);
+//  display: flex;
+//  position: relative;
+//  grid-area: 2/2/2/2;
+//  justify-content: space-between;
+//  margin: 5px 0 auto auto;
+//  padding-right: 4px;
+//
+//  .phoneImage {
+//    @include heightAndWidth(30px, 30px);
+//  }
+//
+//  .number {
+//    font-family: $fontFamilyMontserrat;
+//    font-size: 30px;
+//    font-weight: 700;
+//    letter-spacing: 0;
+//    line-height: 36px;
+//  }
+//
+//  #requestCall {
+//    @include heightAndWidth(37px, 240px);
+//  }
+//
+//#modalGetCall {
+//  @include heightAndWidth(500px, 764px);
+//  @include topAndLeft(68px, -500px);
+//  display: none;
+//  position: absolute;
+//  box-shadow: $boxShadow;
+//  border-radius: 10px;
+//  z-index: 200;
+//  flex-direction: column;
+//  border: 2px solid $colorGray;
+//  background-color: $colorWhite;
+//
+//  .modalContentSpanAndClose {
+//    display: flex;
+//    flex-direction: row;
+//
+//    .modalContentHeader {
+//      @include heightAndWidth(48px, 382px);
+//      text-align: center;
+//      margin: 30px auto 20px 200px;
+//      color: $colorGray;
+//      font-size: 20px;
+//    }
+//  }
+//
+//  .modalContentBlock {
+//    @include heightAndWidth(346px, 331px);
+//    @extend %tplFlexAndColumn;
+//    align-items: flex-start;
+//    justify-content: center;
+//    margin-left: 80px;
+//    z-index: 100;
+//
+//    .modalContentBlockOneInput, #sendRequest {
+//      @include heightAndWidth(60px, 330px);
+//      margin-bottom: 20px;
+//    }
+//  }
+//
+//  .oneModalImage {
+//    @include heightAndWidth(254px, 397px);
+//    @include topAndLeft(230px, 360px);
+//    position: absolute;
+//  }
+//}
+//
+////}
+//
+//#overModal {
+//  @include heightAndWidth(500px, 500px);
+//  @include topAndLeft(70px, -367px);
+//  display: none;
+//  position: absolute;
+//  flex-direction: column;
+//  box-shadow: $boxShadow;
+//  border: 2px solid $colorGray;
+//  border-radius: 10px;
+//  background-color: $colorWhite;
+//  z-index: 200;
+//  justify-content: space-between;
+//
+//  .oneRowOverModal {
+//    display: flex;
+//    flex-direction: row;
+//    justify-content: space-between;
+//    width: 100%;
+//    height: auto;
+//
+//    .overModalLabel {
+//      @include heightAndWidth(99px, 146px);
+//      margin: 15px auto auto 38px;
+//    }
+//  }
+//
+//  .twoRowOverModal {
+//    margin-top: 33px;
+//    font-size: 20px;
+//    line-height: 30px;
+//    text-align: center;
+//  }
+//
+//  .threeRowOverModal {
+//    @include heightAndWidth(295px, 100%);
+//    @include flexAndAlign(flex-end, flex-end);
+//
+//    .overModalBigImage {
+//      @include heightAndWidth(185px, 190px);
+//      @include topAndLeft(259px, 38px);
+//      position: absolute;
+//    }
+//
+//    .overModalSmallImage {
+//      @include heightAndWidth(146px, 146px);
+//      @include topAndLeft(298px, 184px);
+//      position: absolute;
+//    }
+//
+//    #threeRowOverModalSpan {
+//      cursor: pointer;
+//      font-size: 14px;
+//      color: #001569;
+//      transition: color 0.5s;
+//      margin: auto 25px 40px auto;
+//
+//      &:hover {
+//        color: $colorBlue;
+//        text-decoration: underline;
+//      }
+//    }
+//  }
+//}
+
+//.inputAndButton {
+//  display: flex;
+//  grid-area: 3/1/3/1;
+//  margin: 15px 0 0 -7px;
+//
+//  .searchField {
+//    @include heightAndWidth(40px, 690px);
+//
+//    &[type="search"]::-webkit-search-cancel-button {
+//      //display: inline-block;
+//      //-webkit-appearance: none;
+//      margin-right: 70px;
+//      font-size: 20px;
+//      //background: url('path/to/your/cross-icon.png') no-repeat center;
+//      cursor: pointer;
+//    }
+//  }
+//
+//  #searchButton {
+//    position: absolute;
+//    font-size: 20px;
+//    background-color: white;
+//    border: none;
+//    margin: 8px 0 0 639px;
+//  }
+//}
+//
+//#oneDropDawn {
+//  @include topAndLeft(165px, -7px);
+//  display: none;
+//  position: absolute;
+//  max-height: 690px;
+//  max-width: 690px;
+//  overflow-x: hidden;
+//  background-color: $colorWhite;
+//  box-shadow: $boxShadow;
+//  z-index: 400;
+//  cursor: pointer;
+//  border-bottom-left-radius: 2px;
+//  border-bottom-right-radius: 2px;
+//  border: 1px solid $colorBlue;
+//
+//  &::-webkit-scrollbar {
+//    background-color: #FFFF;
+//    width: 7px;
+//  }
+//
+//  &::-webkit-scrollbar-thumb {
+//    background-color: rgba(0, 21, 105, 0.7);
+//    border-radius: 10px;
+//  }
+//
+//  .noResultsMessage {
+//    @include heightAndWidth(69px, 688px);
+//    display: none;
+//    padding-left: 20px;
+//    align-items: center;
+//  }
+//
+//  .optionDropDawn {
+//    @include heightAndWidth(69px, 688px);
+//    display: flex;
+//    align-items: center;
+//    color: $colorGray;
+//    transition: color 0.5s, background-color 0.5s;
+//    padding-left: 20px;
+//    border-bottom: 1px solid rgba(74, 77, 74, 0.5);
+//
+//    &:hover {
+//      background-color: $colorBlue;
+//      color: $colorOrange;
+//    }
+//  }
+//}
+//
+//.contactWithMe {
+//  display: flex;
+//  grid-area: 3/2/3/2;
+//  flex-direction: row;
+//  justify-content: space-between;
+//  align-items: center;
+//  height: 50px;
+//  width: 624px;
+//  margin-left: 14px;
+//
+//  .contactWithMeBlock {
+//    display: flex;
+//  }
+//
+//  .whatsApp {
+//    @include heightAndWidth(24px, 24px);
+//    margin-left: 20px;
+//  }
+//
+//  .contactsOne {
+//    margin-left: 10px;
+//    height: 34px;
+//    width: 130px;
+//    font-size: 14px;
+//    line-height: 17px;
+//  }
+//
+//  .sms {
+//    @include heightAndWidth(18px, 24px);
+//    margin: 9px 0 0 55px;
+//  }
+//
+//  .contactsTwo {
+//    @include heightAndWidth(21px, 164px);
+//    margin: 4px 0 0 12px;
+//  }
+//
+//  .geo {
+//    @include heightAndWidth(27px, 20px);
+//    margin: 14px 0 0 14px;
+//  }
+//
+//  .contactsThree {
+//    @include heightAndWidth(50px, 176px);
+//    font-size: 16px;
+//    text-align: center;
+//    margin: 4px 0 0 -8px;
+//  }
+//
+//  .city {
+//    font-size: 20px;
+//    font-weight: 600;
+//  }
+//}
+
+

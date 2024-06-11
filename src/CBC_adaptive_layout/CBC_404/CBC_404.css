@@ -40,7 +40,7 @@ input:focus, select:focus {
   flex-direction: column;
 }
 
-button {
+.btn {
   background-color: #FFAF37;
   color: white;
   cursor: pointer;
@@ -52,7 +52,7 @@ button {
   text-transform: uppercase;
   transition: background-color 0.5s;
 }
-button:hover {
+.btn:hover {
   background-color: #001569;
 }
 
