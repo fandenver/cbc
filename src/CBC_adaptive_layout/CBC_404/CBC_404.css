@@ -26,9 +26,14 @@ input:focus, select:focus {
 }
 
 ._limit_container {
-  max-width: 1410px;
+  max-width: 1450px;
   margin: 0 auto;
   padding: 0 20px;
+}
+@media (max-width: 479.98px) {
+  ._limit_container {
+    padding: 0 10px;
+  }
 }
 
 .page {

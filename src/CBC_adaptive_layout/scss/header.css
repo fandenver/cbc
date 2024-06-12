@@ -26,9 +26,14 @@ input:focus, select:focus {
 }
 
 ._limit_container {
-  max-width: 1410px;
+  max-width: 1450px;
   margin: 0 auto;
   padding: 0 20px;
+}
+@media (max-width: 479.98px) {
+  ._limit_container {
+    padding: 0 10px;
+  }
 }
 
 .page {
@@ -206,9 +211,15 @@ input:focus {
 .header_top {
   margin: 0 0 10px 0;
 }
+@media (max-width: 991.98px) {
+  .header_top {
+    margin: 20px 0 10px 0;
+  }
+}
 .top-header_content {
   display: flex;
   position: relative;
+  width: 100%;
 }
 .top-header_label {
   flex: 0 0 auto;
@@ -239,6 +250,11 @@ input:focus {
   justify-content: space-between;
   margin: 0 0 40px 0;
 }
+@media (max-width: 1340px) {
+  .services-header_top {
+    margin: 0 0 10px 0;
+  }
+}
 @media (max-width: 991.98px) {
   .services-header_top {
     margin: 0 0 10px 0;
@@ -246,7 +262,7 @@ input:focus {
 }
 @media (max-width: 479.98px) {
   .services-header_top {
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
   }
 }
 .services-header_services {
@@ -296,25 +312,24 @@ input:focus {
 }
 .services-header_number {
   display: inline-block;
-  position: relative;
   white-space: nowrap;
+  background: url("../images_adaptive_layout/hat/phone.png") left no-repeat;
+  padding: 0 0 0 35px;
 }
 @media (min-width: 991.98px) {
   .services-header_number {
     display: none;
   }
 }
-.services-header_number::before {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 30px;
-  background: url("../images_adaptive_layout/hat/phone.png") 0 0 no-repeat;
-  transform: translate(-40px, 3px);
+@media (max-width: 991.98px) {
+  .services-header_number {
+    padding: 0 0 0 30px;
+    background: url("../images_adaptive_layout/hat/phone.png") left/24px no-repeat;
+  }
 }
 @media (max-width: 360px) {
-  .services-header_number::before {
-    background: none;
+  .services-header_number {
+    padding: 0 0 0 25px;
   }
 }
 .services-header_number span {
@@ -444,7 +459,7 @@ input:focus {
   width: 100%;
   margin: 0 0 15px 0;
 }
-@media (max-width: 1422px) {
+@media (max-width: 1462px) {
   .bottom-services_phone-number {
     flex-direction: column;
     align-items: flex-end;
@@ -452,27 +467,19 @@ input:focus {
 }
 .bottom-services_number {
   display: inline-block;
-  padding: 0 25px 0 0;
-  position: relative;
+  padding: 0 25px 0 35px;
   white-space: nowrap;
+  background: url("../images_adaptive_layout/hat/phone.png") 0 0 no-repeat;
 }
-@media (max-width: 1422px) {
+@media (max-width: 1462px) {
   .bottom-services_number {
-    padding: 0 0 0 0;
+    padding: 0 0 0 35px;
   }
 }
 @media (max-width: 991.98px) {
   .bottom-services_number {
     display: none;
   }
-}
-.bottom-services_number::before {
-  position: absolute;
-  content: "";
-  width: 30px;
-  height: 30px;
-  background: url("../images_adaptive_layout/hat/phone.png") 0 0 no-repeat;
-  transform: translate(-40px, 3px);
 }
 .bottom-services_number span {
   font-size: 30px;
@@ -491,7 +498,7 @@ input:focus {
   align-items: center;
   padding: 8px 35px;
 }
-@media (max-width: 1422px) {
+@media (max-width: 1462px) {
   .bottom-services_request-call {
     width: 80%;
   }
@@ -569,7 +576,7 @@ input:focus {
 }
 @media (max-width: 991.98px) {
   .contacts-header li {
-    margin: 0 14.1843971631vw 0 0;
+    margin: 0 13.7931034483vw 0 0;
   }
   .contacts-header li:first-child {
     margin: 0 0 0 0;
@@ -605,7 +612,7 @@ input:focus {
   font-size: 18px;
   line-height: 21px;
 }
-@media (max-width: 1422px) and (min-width: 991.98px) {
+@media (max-width: 1462px) and (min-width: 991.98px) {
   .contacts-header_mail {
     display: none;
   }

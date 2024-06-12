@@ -19,7 +19,7 @@ $maxWidth: 1400px;
 
 $minWidth: 320px;
 $maxWidth: 1400;
-$maxWidthContainer: 1410;
+$maxWidthContainer: 1450;
 $md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
@@ -69,6 +69,10 @@ input:focus, select:focus {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
   padding: 0 20px;
+
+  @media (max-width: $md4+px) {
+    padding: 0 10px;
+  }
 }
 
 .page {

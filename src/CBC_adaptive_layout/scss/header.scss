@@ -3,6 +3,10 @@
 .header {
   &_top {
     margin: 0 0 10px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 20px 0 10px 0;
+    }
   }
 
   &_bottom {
@@ -16,6 +20,7 @@
   &_content {
     display: flex;
     position: relative;
+    width: 100%;
   }
 
   &_label {
@@ -46,12 +51,16 @@
     justify-content: space-between;
     margin: 0 0 40px 0;
 
+    @media (max-width: 1340px) {
+      margin: 0 0 10px 0;
+    }
+
     @media (max-width: $md2+px) {
       margin: 0 0 10px 0;
     }
 
     @media (max-width: $md4+px) {
-      margin: 0 0 20px 0;
+      margin: 0 0 15px 0;
     }
   }
 
@@ -105,26 +114,21 @@
 
   &_number {
     display: inline-block;
-    position: relative;
     white-space: nowrap;
+    background: url("../images_adaptive_layout/hat/phone.png") left no-repeat;
+    padding: 0 0 0 35px;
 
     @media (min-width: $md2+px) {
       display: none;
     }
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 30px;
-      height: 30px;
-      background: url("../images_adaptive_layout/hat/phone.png") 0 0 no-repeat;
-      transform: translate(-40px, 3px)
+    @media (max-width: $md2+px) {
+      padding: 0 0 0 30px;
+      background: url("../images_adaptive_layout/hat/phone.png") left /24px no-repeat;
     }
 
     @media (max-width: 360px) {
-      &::before {
-        background: none;
-      }
+      padding: 0 0 0 25px;
     }
 
     span {
@@ -271,24 +275,16 @@
 
   &_number {
     display: inline-block;
-    padding: 0 25px 0 0;
-    position: relative;
+    padding: 0 25px 0 35px;
     white-space: nowrap;
+    background: url("../images_adaptive_layout/hat/phone.png") 0 0 no-repeat;
 
     @media (max-width: $md1+px) {
-      padding: 0 0 0 0;
-    }
-    @media (max-width: $md2+px) {
-      display: none;
+      padding: 0 0 0 35px;
     }
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 30px;
-      height: 30px;
-      background: url("../images_adaptive_layout/hat/phone.png") 0 0 no-repeat;
-      transform: translate(-40px, 3px)
+    @media (max-width: $md2+px) {
+      display: none;
     }
 
     span {
