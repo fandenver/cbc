@@ -218,20 +218,6 @@ html, body {
   overflow: visible;
   height: 100%;
 }
-@media (min-width: 1920px) {
-  html, body {
-    margin: 15px 0 0 0;
-    line-height: 24px;
-    font-size: 18px;
-  }
-}
-@media (max-width: 1280px) {
-  html, body {
-    margin: 12.09px 0 0 0;
-    line-height: 19.3px;
-    font-size: 14.51px;
-  }
-}
 
 .circle, .circleTwoBanners, .circleAfterManyPicturesBanner,
 .circleAfterTwoFooter, .circleBannerBeforeLastFooter {
@@ -1965,4 +1951,4 @@ html, body {
   margin-left: 1226px;
 }
 
-/*# sourceMappingURL=styleCBS.css.map */
+/*# sourceMappingURL=style.css.map */

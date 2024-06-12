@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const openModalBtn = document.getElementById('requestCall');
-    const modal = document.getElementById('modalGetCall');
-    const overModalBtn = document.getElementById('sendRequest');
-    const openOverModal = document.getElementById('overModal');
+    const openModalRequestCallBtn = document.querySelector('.bottom-services_request-call');
+    const modalRequestCall = document.querySelector('.modal_request-call');
+    const successModalBtn = document.querySelector('.request-call-modal_send-request');
+    const openSuccessModal = document.querySelector('.modal_success');
     const closeBtn = document.getElementsByClassName('close');
     const showProductMenu = document.getElementsByClassName('productMenu')[0];
     const hideSpan = document.getElementsByClassName('mainBanner')[0];
@@ -43,23 +43,23 @@ document.addEventListener('DOMContentLoaded', function () {
         const threeCloseBtn = closeBtn[2];
 
         firstCloseBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
+            modalRequestCall.style.display = 'none';
             enableScroll();
         });
 
         secondCloseBtn.addEventListener('click', () => {
-            openOverModal.style.display = 'none';
+            openSuccessModal.style.display = 'none';
             enableScroll();
         });
 
         threeCloseBtn.addEventListener('click', () => {
-            openOverModal.style.display = 'none';
+            openSuccessModal.style.display = 'none';
             enableScroll();
         });
     }
 
     function disableBlock() {
-        modal.style.display = 'none';
+        modalRequestCall.style.display = 'none';
     }
 
     function oneEvent(background, backgroundSize) {
@@ -158,13 +158,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    openModalBtn.addEventListener('click', () => {
-        modal.style.display = 'flex';
+    openModalRequestCallBtn.addEventListener('click', () => {
+        modalRequestCall.style.display = 'flex';
         disableScroll();
     });
 
-    overModalBtn.addEventListener('click', () => {
-        openOverModal.style.display = 'flex';
+    successModalBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        openSuccessModal.style.display = 'flex';
         disableBlock();
     });
 })

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const redirectErrorPage = document.querySelectorAll('div > button');
 
     redirectErrorPage.forEach(button => {
-        if (button.id !== 'requestCall' && button.id !== 'sendRequest') {
+        if (!button.classList.contains('bottom-services_request-call') && !button.classList.contains('request-call-modal_send-request')) {
             button.addEventListener('click', () => {
                 window.location.href = '../CBC_404/CBC_404.html';
             })
