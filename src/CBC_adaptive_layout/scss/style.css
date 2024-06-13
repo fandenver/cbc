@@ -40,17 +40,9 @@ input:focus, select:focus {
   flex: 1 1 auto;
 }
 
-.afterNavBar, .bottom_navBar .alignSpan {
+.afterNavBar {
   display: flex;
   justify-content: space-between;
-}
-
-.lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan, .lastFooter .lastFooterMainBlock .lastFooterOneBlock, .lastFooter .lastFooterMainBlock .lastFooterTwoBlock,
-.lastFooter .lastFooterMainBlock .lastFooterThreeBlock, .lastFooter .lastFooterMainBlock .lastFooterFourBlock,
-.lastFooter .lastFooterMainBlock .lastFooterFiveBlock, .lastFooter .lastFooterMainBlock .lastFooterSixBlock, .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock, .bannerBeforeLastFooter .beforeLastFooterSpanAndImage, .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage, .twoBannerAfterTwoFooter, .bannerAfterTwoFooter .bannerAfterTwoFooterBlock, .twoFooter .twoFooterBlockAndImage .twoFooterBlock, .twoBannersNextDiv .oneBannerSpanAndButton, .twoBannersNextDiv .twoBannerSpanAndButton, .manyBanners .cooperation, .manyBanners .qualityService, .manyBanners .spanAndImageReliable, .manyBanners .spanAndImageFullComplex,
-.manyBanners .spanAndImageOrderKey, .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock, .afterNavBar .afterNavBarBannerAndSpan, .afterNavBar .choiceChapter, .afterNavBar .mainMenu {
-  display: flex;
-  flex-direction: column;
 }
 
 .btn {
@@ -67,6 +59,13 @@ input:focus, select:focus {
 }
 .btn:hover {
   background-color: #001569;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
 }
 
 input {
@@ -87,7 +86,7 @@ input:focus {
 }
 
 .close {
-  margin: 10px 10px auto auto;
+  position: absolute;
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -317,81 +316,57 @@ html, body {
   text-decoration: underline;
 }
 
-.bottom_navBar {
-  height: 60px;
-  width: 100%;
+.navigate {
   width: 100%;
   height: 60px;
   background-color: #F0F0FF;
   margin-top: 28px;
-  padding: 15px;
 }
-.bottom_navBar .alignSpan {
-  width: 1394px;
-  margin: auto;
+@media (max-width: 1340px) {
+  .navigate {
+    display: none;
+  }
 }
-.bottom_navBar .alignSpan .bottom_navBar_one, .bottom_navBar .alignSpan .bottom_navBar_two,
-.bottom_navBar .alignSpan .bottom_navBar_three, .bottom_navBar .alignSpan .bottom_navBar_four {
+
+.navigate-content_list {
+  width: 100%;
+  min-height: 60px;
   display: flex;
-  position: relative;
-  cursor: pointer;
-  transition: color 0.5s;
+  justify-content: space-between;
+  align-items: center;
 }
-.bottom_navBar .alignSpan .bottom_navBar_one:hover, .bottom_navBar .alignSpan .bottom_navBar_two:hover,
-.bottom_navBar .alignSpan .bottom_navBar_three:hover, .bottom_navBar .alignSpan .bottom_navBar_four:hover {
+.navigate-content_option {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.navigate-content_option:hover {
   color: #FFAF37;
 }
-.bottom_navBar .alignSpan .bottom_navBar_one::after, .bottom_navBar .alignSpan .bottom_navBar_two::after,
-.bottom_navBar .alignSpan .bottom_navBar_three::after, .bottom_navBar .alignSpan .bottom_navBar_four::after {
+.navigate-content_option a {
+  font-size: 18px;
+  position: relative;
+}
+@media (max-width: 1340px) {
+  .navigate-content_option a {
+    font-size: 14px;
+  }
+}
+.navigate-content_option a::after {
   background-image: linear-gradient(to right, black 60%, transparent 0);
-  content: "";
   position: absolute;
-  margin-top: 30px;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  content: "";
   height: 2px;
   background-position: bottom;
   background-size: 5px 1px;
   background-repeat: repeat-x;
   cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
-.bottom_navBar .alignSpan .bottom_navBar_one:hover:after, .bottom_navBar .alignSpan .bottom_navBar_two:hover:after,
-.bottom_navBar .alignSpan .bottom_navBar_three:hover:after, .bottom_navBar .alignSpan .bottom_navBar_four:hover:after {
+.navigate-content_option a:hover:after {
   background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
-}
-.bottom_navBar .alignSpan .bottom_navBar_one {
-  height: 29px;
-  width: 245px;
-  position: relative;
-  left: -7px;
-}
-.bottom_navBar .alignSpan .bottom_navBar_one::after {
-  left: 0;
-  width: 240px;
-}
-.bottom_navBar .alignSpan .bottom_navBar_two {
-  height: 25px;
-  width: 350px;
-  line-height: 21px;
-}
-.bottom_navBar .alignSpan .bottom_navBar_two::after {
-  width: 346px;
-}
-.bottom_navBar .alignSpan .bottom_navBar_three {
-  height: 21px;
-  width: 385px;
-  padding-left: 12px;
-}
-.bottom_navBar .alignSpan .bottom_navBar_three::after {
-  width: 368px;
-}
-.bottom_navBar .alignSpan .bottom_navBar_four {
-  height: 21px;
-  width: 99px;
-  padding-left: 21px;
-}
-.bottom_navBar .alignSpan .bottom_navBar_four::after {
-  left: 0;
-  margin-left: 23px;
-  width: 85px;
 }
 
 .afterNavBar {

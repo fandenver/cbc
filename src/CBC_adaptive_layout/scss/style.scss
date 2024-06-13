@@ -95,87 +95,60 @@ html, body {
   }
 }
 
-.bottom_navBar {
-  @include heightAndWidth(60px, 100%);
+.navigate {
   width: 100%;
   height: 60px;
   background-color: #F0F0FF;
   margin-top: 28px;
-  padding: 15px;
 
-  .alignSpan {
-    @extend %tplFlexAndSpace;
-    width: 1394px;
-    margin: auto;
+  @media (max-width: 1340px) {
+    display: none;
+  }
+}
 
-    .bottom_navBar_one, .bottom_navBar_two,
-    .bottom_navBar_three, .bottom_navBar_four {
-      display: flex;
-      position: relative;
-      cursor: pointer;
-      transition: color 0.5s;
-    }
+.navigate-content {
 
-    .bottom_navBar_one:hover, .bottom_navBar_two:hover,
-    .bottom_navBar_three:hover, .bottom_navBar_four:hover {
+  &_list {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_option {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
       color: $colorOrange;
     }
 
-    .bottom_navBar_one::after, .bottom_navBar_two::after,
-    .bottom_navBar_three::after, .bottom_navBar_four::after {
-      @include backgroundImage(black, 60%);
-      content: '';
-      position: absolute;
-      margin-top: 30px;
-      height: 2px;
-      background-position: bottom;
-      background-size: 5px 1px;
-      background-repeat: repeat-x;
-      cursor: pointer;
-    }
-
-    .bottom_navBar_one:hover:after, .bottom_navBar_two:hover:after,
-    .bottom_navBar_three:hover:after, .bottom_navBar_four:hover:after {
-      @include backgroundImage($colorOrange, 100%);
-    }
-
-    .bottom_navBar_one {
-      @include heightAndWidth(29px, 245px);
+    a {
+      font-size: 18px;
       position: relative;
-      left: -7px;
+
+      @media (max-width: 1340px) {
+        font-size: 14px;
+      }
 
       &::after {
+        @include backgroundImage(black, 60%);
+        position: absolute;
         left: 0;
-        width: 240px;
+        bottom: -5px;
+        width: 100%;
+        content: '';
+        height: 2px;
+        background-position: bottom;
+        background-size: 5px 1px;
+        background-repeat: repeat-x;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
       }
-    }
 
-    .bottom_navBar_two {
-      @include heightAndWidth(25px, 350px);
-      line-height: 21px;
-
-      &::after {
-        width: 346px;
-      }
-    }
-
-    .bottom_navBar_three {
-      @include heightAndWidth(21px, 385px);
-      padding-left: 12px;
-
-      &::after {
-        width: 368px;
-      }
-    }
-
-    .bottom_navBar_four {
-      @include heightAndWidth(21px, 99px);
-      padding-left: 21px;
-
-      &::after {
-        left: 0;
-        margin-left: 23px;
-        width: 85px;
+      &:hover:after {
+        @include backgroundImage($colorOrange, 100%);
       }
     }
   }

@@ -87,8 +87,7 @@ input:focus, select:focus {
 }
 
 %tplFlexAndColumn {
-  display: flex;
-  flex-direction: column;
+
 }
 
 //-----------------------------------------------
@@ -146,6 +145,13 @@ input:focus, select:focus {
   }
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
 input {
   cursor: text;
   font-size: 18px;
@@ -166,7 +172,7 @@ input {
 }
 
 .close {
-  margin: 10px 10px auto auto;
+  position: absolute;
   color: #aaa;
   float: right;
   font-size: 28px;
