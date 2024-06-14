@@ -95,18 +95,44 @@ html, body {
   }
 }
 
-.navigate {
-  width: 100%;
-  height: 60px;
-  background-color: #F0F0FF;
-  margin-top: 28px;
+.page {
+  flex: 1 1 auto;
 
-  @media (max-width: 1340px) {
-    display: none;
+  &_bar-navigate {
+    margin: 0 0 50px 0;
+  }
+
+  &_container {
+    @media (min-width: $md2+px) {
+      display: flex;
+    }
+  }
+
+  &_side {
+    z-index: 10;
+    margin: 0 0 50px 0;
+    flex: 0 0 448px;
+  }
+
+  &_menu {
+
+  }
+
+  &_content {
+    @media (min-width: $md2+px) {
+      margin: 0 0 0 40px;
+    }
+  }
+
+  &_header {
+    margin: 0 0 20px 0;
   }
 }
 
-.navigate-content {
+.navigate-bar {
+  width: 100%;
+  min-height: 60px;
+  background-color: #F0F0FF;
 
   &_list {
     width: 100%;
@@ -114,14 +140,47 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 430px) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &_option {
+    white-space: nowrap;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    padding: 20px 20px 20px 20px;
+
+    &:first-child {
+      padding: 20px 20px 20px 0;
+    }
+
+    &:last-child {
+      padding: 20px 0 20px 20px;
+    }
 
     &:hover {
       color: $colorOrange;
+    }
+
+    @media (max-width: $md2+px) {
+      &:first-child {
+        display: none;
+      }
+    }
+
+    @media (max-width: $md3+px) {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 430px) {
+      &:first-child, &:nth-child(2) {
+        display: block;
+      }
     }
 
     a {
@@ -150,459 +209,189 @@ html, body {
       &:hover:after {
         @include backgroundImage($colorOrange, 100%);
       }
+
+      @media (max-width: 430px) {
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 }
 
-.afterNavBar {
-  //@include heightAndWidth(736px, 1410px);
-  @extend %tplFlexAndSpace;
-  max-width: 1470px;
-  width: 100%;
-  margin: 50px auto auto auto;
-  padding: 0 30px;
+.menu-page {
+  display: flex;
+  flex-direction: column;
 
-  .mainMenu {
-    //@include heightAndWidth(736px, 448px);
-    @extend %tplFlexAndColumn;
-    max-width: 448px;
-    width: 100%;
-    min-width: 316px;
-  }
-
-  .headerMainMenu {
-    //@include heightAndWidth(60px, 447px);
-    width: 100%;
-    max-height: 60px;
-    height: 100%;
-    display: inline-block;
+  &_header {
+    height: 60px;
+    display: flex;
+    align-items: center;
     border-radius: 10px 10px 0 0;
     background: #F0F0FF;
+    padding: 0 0 0 25px;
+
+    span {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 29px;
+    }
   }
 
-  .headerSpan {
-    //@include heightAndWidth(26px, 106px);
+  &_body {
     display: flex;
-    //margin: 17px auto auto 21px;
-    padding-top: 17px;
-    padding-left: 21px;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 29px;
-    letter-spacing: 0;
-    text-align: left;
-  }
-
-  .choiceChapter {
-    //@include heightAndWidth(676px, 447px);
-    @extend %tplFlexAndColumn;
-    max-width: 447px;
-    width: 100%;
-    max-height: 676px;
-    height: 100%;
+    flex-direction: column;
     box-shadow: $boxShadow;
   }
 
-  .left {
-    @include heightAndWidth(9px, 9px);
-    margin-right: 15px;
-    cursor: pointer;
-    border-top: 3px solid #00156999;
-    border-left: 3px solid #00156999;
-    transform: rotate(-225deg);
-    transition: border-top-color 0.5s, border-left-color 0.5s, transform 0.3s;
-  }
-
-  .commonSpanMainMenu:hover .left {
-    border-top-color: #FFFFFF;
-    border-left-color: #FFFFFF;
-  }
-
-  .choiceChapter > div > :nth-child(1) {
-    @include heightAndWidth(16px, 20px);
-    margin-left: 20px;
-  }
-
-  .choiceChapter > div > :nth-child(2) {
-    margin-left: 12px;
-  }
-
-  #smallImageSize, #smallTwoImageSize,
-  #smallFourImageSize, #smallFiveImageSize,
-  #smallSixImageSize {
-    height: 20px;
-  }
-
-  #newSticker {
-    height: 10px;
-    margin-top: 6px;
-  }
-
-  #smallOneImageSize {
-    @include heightAndWidth(24px, 15px);
-    margin-top: -1px;
-    margin-left: 24px;
-  }
-
-  .commonSpanMainMenu {
-    //@include flexAndAlign(space-between, center);
+  &_item {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    flex-grow: 1;
+    padding: 10px 0 10px 0;
+    position: relative;
+    transition: all 0.3s ease 0s;
     cursor: pointer;
-    transition: $backgroundTransition, color 0.3s;
 
-    &:hover {
-      background-color: $colorOrange;
-      color: #FFFFFF;
-    }
-  }
-
-  .choiceChapterOneBlockBack {
-    background-color: $colorBlue;
-    flex-grow: 1;
-  }
-
-  //.html {
-  //  //margin-right: 85px;
-  //  margin-left: 0;
-  //}
-  //
-  //.two {
-  //  margin-right: 138px;
-  //}
-  //
-  //.three {
-  //  margin-right: 152px;
-  //}
-  //
-  //.four {
-  //  margin-right: 159px;
-  //}
-  //
-  //.five {
-  //  margin-right: 162px;
-  //}
-  //
-  //.six {
-  //  margin-right: 36px;
-  //}
-  //
-  //.seven {
-  //  margin-right: 53px;
-  //}
-  //
-  //.eight {
-  //  margin-right: 146px;
-  //}
-  //
-  //.nine {
-  //  margin-right: 106px;
-  //}
-  //
-  //.ten {
-  //  margin-right: 93px;
-  //}
-  //
-  //.eleven {
-  //  margin-right: 210px;
-  //}
-  //
-  //.twelve {
-  //  margin-right: 173px;
-  //}
-  //
-  //.thirteen {
-  //  margin-right: 310px;
-  //}
-
-  //.fourteen {
-  //  margin-right: 289px;
-  //}
-
-  .twoChoice {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 386px;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .rightSmall {
-    margin-right: 12px;
-  }
-
-  .afterNavBarBannerAndSpan {
-    @extend %tplFlexAndColumn;
-    margin-left: 42px;
-
-    .productMenu {
-      //@include heightAndWidth(736px, 922px);
-      max-width: 922px;
-      width: 100%;
-      max-height: 736px;
-      height: 100%;
-      display: none;
-      position: relative;
-      justify-content: space-between;
-      align-content: space-between;
-      flex-direction: row;
-      flex-wrap: wrap;
-      animation: fadeIn 0.9s ease-in-out;
-
-      @media (max-width: 1426px) {
-        max-height: 1567px;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      .productMenuBlock {
-        @include heightAndWidth(320px, 210px);
-        @extend %tplFlexAndColumn;
-        align-items: center;
-        background-color: $colorWhite;
-        box-shadow: $boxShadow;
-        border: 0.4px solid #4A4D4A;
-        border-radius: 4px;
-        transition: $backgroundTransition;
-        font-size: 14px;
-        text-align: center;
-        margin-bottom: 96px;
-      }
-
-      .oneProduct:hover, .twoProduct:hover,
-      .threeProduct:hover, .fourProduct:hover {
-        background-color: #cec9c9;
-      }
-
-      .oneProduct {
-        background-color: #F0F0FF;
-        cursor: pointer;
-
-        .pmPhoneMain {
-          @include heightAndWidth(116px, 45px);
-          margin-top: 45px;
-        }
-
-        .oneProductSpan {
-          margin-top: 22px;
-        }
-      }
-
-      .twoProduct {
-        background-color: #F0F0FF;
-        cursor: pointer;
-
-        .pmTabletMain {
-          @include heightAndWidth(118px, 81px);
-          margin-top: 45px;
-        }
-
-        .twoProductSpan {
-          margin-top: 20px;
-        }
-      }
-
-      .threeProduct {
-        background-color: #F0F0FF;
-        cursor: pointer;
-
-        .pmPodsMain {
-          @include heightAndWidth(117px, 93px);
-          margin-top: 48px;
-        }
-
-        .threeProductSpan {
-          margin-top: 18px;
-        }
-      }
-
-      .fourProduct {
-        background-color: #F0F0FF;
-        cursor: pointer;
-
-        .pmCaseMain {
-          @include heightAndWidth(117px, 93px);
-          margin-top: 48px;
-        }
-
-        .fourProductSpan {
-          margin-top: 18px;
-        }
-      }
-
-      .fiveProduct, .sixProduct, .sevenProduct, .eightProduct {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .pmPhone {
-        @include heightAndWidth(94px, 59px);
-        margin-top: 8px;
-      }
-
-      .pmPods {
-        margin-top: 16px;
-      }
-
-      .pmClock {
-        margin-top: 9px;
-      }
-
-      .pmTablet {
-        margin-top: 9px;
-      }
-
-      .productBlockSpanOne {
-        margin-top: 12px;
-        font-weight: 600;
-        color: black;
-        line-height: 17px;
-      }
-
-      .fiveProductSpanOneTwo {
-        margin-top: 4px;
-      }
-
-      .productBlockSpanTwo {
-        font-weight: 300;
-        line-height: 21px;
-      }
-
-      .sevenProductSpanOneTwo {
-        margin-top: 11px;
-      }
-
-      .productBlockSpanThree {
-        font-weight: 400;
-        line-height: 21px;
-        color: black;
-      }
-
-      .productBlockSpanFour {
-        color: $colorBlue;
-        font-size: 24px;
-        line-height: 29px;
-      }
-
-      .inBasket {
-        @include heightAndWidth(50px, 190px);
-        @include flexAndAlign(center, center);
-        gap: 11px;
-        margin-bottom: 14px;
-      }
-
-      .blockBetweenTwoRowProduct {
-        @include heightAndWidth(20px, 350px);
-        @include flexAndAlign(space-between, center);
-        top: 350px;
-        display: flex;
-        position: absolute;
-        flex-direction: row;
-        justify-content: space-between;
-        color: #4A4D4A;
-        font-size: 14px;
-
-        .blockBetweenTwoRowProductOneSpan {
-          cursor: pointer;
-          transition: color 0.5s;
-        }
-
-        .blockBetweenTwoRowProductSpan {
-          font-weight: 400;
-          line-height: 21px;
-          cursor: pointer;
-          transition: color 0.5s;
-        }
-
-        .blockBetweenTwoRowProductSpan:hover, .blockBetweenTwoRowProductOneSpan:hover {
-          color: $colorOrange;
-        }
-
-        .leftBlockBetweenOne, .leftBlockBetweenTwo, .leftBlockBetweenThree {
-          @include heightAndWidth(8px, 8px);
-          position: absolute;
-          margin-right: 15px;
-          cursor: pointer;
-          border-top: 1px solid #4A4D4A;
-          border-left: 1px solid #4A4D4A;
-          transform: rotate(-135deg);
-        }
-
-        .leftBlockBetweenOne {
-          @include topAndLeft(3px, 127px);
-        }
-
-        .leftBlockBetweenTwo {
-          @include topAndLeft(3px, 258px);
-        }
-
-        .leftBlockBetweenThree {
-          @include topAndLeft(3px, 357px);
-        }
+    @media (min-width: $md2+px) {
+      &:hover {
+        background-color: $colorOrange;
+        color: #FFFFFF;
       }
     }
 
-    .mainBanner {
-      //@include heightAndWidth(132px, 922px);
-      width: 100%;
-      max-width: 922px;
-      max-height: 132px;
-      display: flex;
-      font-size: 36px;
-      //line-height: 44px;
-      line-height: 122%;
-      letter-spacing: 0;
-      text-align: left;
-      color: $colorGray;
-      font-family: $fontFamilyMontserrat;
-      animation: fadeIn 0.5s ease-in-out;
+    img {
+      padding: 0 0 0 20px;
 
-      @media (max-width: 1473px) {
-        font-size: 30px;
+      @media (max-width: $md4+px) {
+        padding: 0 0 0 10px;
       }
+    }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+    span {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21px;
+      margin: 0 0 0 15px;
+
+      @media (max-width: $md4+px) {
+        font-size: 13px;
+        margin: 0 0 0 10px;
       }
+    }
+  }
 
-      .bigText {
-        font-weight: 700;
-        line-height: 44px;
-      }
+  &_arrow {
+  }
+}
 
-      .orangeText {
-        font-family: $fontFamilyRubik;
+.header-page {
+
+  &_content {
+    padding: 0 10px;
+    @media (max-width: $md2+px) {
+      text-align: center;
+    }
+  }
+
+  span {
+    font-family: $fontFamilyMontserrat;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 42px;
+
+    @media (max-width: 1340px) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    @media (max-width: $md2+px) {
+      font-size: 24px;
+      line-height: 29px;
+      font-family: Rubik, sans-serif;
+    }
+
+    span {
+      font-family: Rubik, sans-serif;
+
+      span {
         color: $colorOrange;
       }
     }
+  }
+}
 
-    .mainBannerImage {
-      //@include heightAndWidth(590px, 922px);
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      border-radius: 10px;
-      background-image: url("../images_adaptive_layout/hat/mainBannerImage.png");
-      background-size: cover;
-      margin-top: 14px;
+.mainBannerImage {
+  //@include heightAndWidth(590px, 922px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 10px;
+  background-image: url("../images_adaptive_layout/hat/mainBannerImage.png");
+  background-size: cover;
+  margin-top: 14px;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: background-image 0.5s;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .leftMain {
+    @include heightAndWidth(175px, 240px);
+    position: absolute;
+    left: 715px;
+    top: 447px;
+    border-top: 8px solid #1F347B;
+    border-left: 8px solid #1F347B;
+    transform: rotate(-180deg);
+  }
+
+  .bannerTextOnImage {
+    @include heightAndWidth(116px, 422px);
+    margin-left: 400px;
+    margin-top: 150px;
+    text-align: center;
+    font-size: 30px;
+    color: $colorWhite;
+    font-weight: 550;
+    line-height: 37px;
+    transition: color 0.5s;
+  }
+
+  #showOffer {
+    @include heightAndWidth(69px, 330px);
+    @include flexAndAlign(center, center);
+    margin-left: 440px;
+  }
+
+  .bannerButtonCommon {
+    @include heightAndWidth(50px, 100%);
+    display: flex;
+    flex-direction: row;
+
+    .buttonBanner {
+      @include heightAndWidth(50px, 50px);
+      cursor: pointer;
+      background-color: $colorWhite;
+      border-radius: 50%;
+      transition: $backgroundTransition;
+      padding: 20px;
+
+      &:hover {
+        background-color: $colorOrange;
+      }
+    }
+
+    .buttonBannerLeft {
+      display: none;
+      margin-left: 5px;
       animation: fadeIn 0.5s ease-in-out;
-      transition: background-image 0.5s;
 
       @keyframes fadeIn {
         from {
@@ -612,141 +401,79 @@ html, body {
           opacity: 1;
         }
       }
+    }
 
-      .leftMain {
-        @include heightAndWidth(175px, 240px);
-        position: absolute;
-        left: 715px;
-        top: 447px;
-        border-top: 8px solid #1F347B;
-        border-left: 8px solid #1F347B;
-        transform: rotate(-180deg);
-      }
+    .buttonBannerRight {
+      display: none;
+      margin-left: 812px;
+      animation: fadeIn 0.5s ease-in-out;
 
-      .bannerTextOnImage {
-        @include heightAndWidth(116px, 422px);
-        margin-left: 400px;
-        margin-top: 150px;
-        text-align: center;
-        font-size: 30px;
-        color: $colorWhite;
-        font-weight: 550;
-        line-height: 37px;
-        transition: color 0.5s;
-      }
-
-      #showOffer {
-        @include heightAndWidth(69px, 330px);
-        @include flexAndAlign(center, center);
-        margin-left: 440px;
-      }
-
-      .bannerButtonCommon {
-        @include heightAndWidth(50px, 100%);
-        display: flex;
-        flex-direction: row;
-
-        .buttonBanner {
-          @include heightAndWidth(50px, 50px);
-          cursor: pointer;
-          background-color: $colorWhite;
-          border-radius: 50%;
-          transition: $backgroundTransition;
-          padding: 20px;
-
-          &:hover {
-            background-color: $colorOrange;
-          }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
-
-        .buttonBannerLeft {
-          display: none;
-          margin-left: 5px;
-          animation: fadeIn 0.5s ease-in-out;
-
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-            }
-            to {
-              opacity: 1;
-            }
-          }
-        }
-
-        .buttonBannerRight {
-          display: none;
-          margin-left: 812px;
-          animation: fadeIn 0.5s ease-in-out;
-
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-            }
-            to {
-              opacity: 1;
-            }
-          }
-        }
-
-        .leftBannerButton, .rightBannerButton {
-          @include heightAndWidth(16px, 16px);
-        }
-
-        .leftBannerButton {
-          border-top: 5px solid #001569;
-          border-left: 5px solid #001569;
-        }
-
-        .leftButtonBannerOne {
-          position: relative;
-          bottom: 2px;
-          right: 2px;
-        }
-
-        .rightButtonBannerOne {
-          left: 2px;
-          top: 16px;
-        }
-
-        .leftButtonBannerOne {
-          transform: rotate(-45deg);
-        }
-
-        .leftButtonBannerTwo, .rightButtonBannerTwo {
-          position: relative;
-          right: 3px;
-          bottom: 2px;
+        to {
+          opacity: 1;
         }
       }
+    }
 
-      .leftButtonBannerTwo {
-        transform: rotate(-225deg);
+    .leftBannerButton, .rightBannerButton {
+      @include heightAndWidth(16px, 16px);
+    }
+
+    .leftBannerButton {
+      border-top: 5px solid #001569;
+      border-left: 5px solid #001569;
+    }
+
+    .leftButtonBannerOne {
+      position: relative;
+      bottom: 2px;
+      right: 2px;
+    }
+
+    .rightButtonBannerOne {
+      left: 2px;
+      top: 16px;
+    }
+
+    .leftButtonBannerOne {
+      transform: rotate(-45deg);
+    }
+
+    .leftButtonBannerTwo, .rightButtonBannerTwo {
+      position: relative;
+      right: 3px;
+      bottom: 2px;
+    }
+  }
+
+  .leftButtonBannerTwo {
+    transform: rotate(-225deg);
+  }
+
+  .paginationBanner {
+    @include heightAndWidth(20px, 152px);
+    display: flex;
+    margin: 170px auto auto 370px;
+    padding-bottom: 35px;
+
+    .circlePagination {
+      @include heightAndWidth(20px, 20px);
+      cursor: pointer;
+      border-radius: 100%;
+      margin-left: 4px;
+      border: 1px solid $colorWhite;
+      transition: $backgroundTransition;
+
+      &:hover {
+        background-color: $colorOrange;
       }
+    }
 
-      .paginationBanner {
-        @include heightAndWidth(20px, 152px);
-        display: flex;
-        margin: 170px auto auto 370px;
-        padding-bottom: 35px;
-
-        .circlePagination {
-          @include heightAndWidth(20px, 20px);
-          cursor: pointer;
-          border-radius: 100%;
-          margin-left: 4px;
-          border: 1px solid $colorWhite;
-          transition: $backgroundTransition;
-
-          &:hover {
-            background-color: $colorOrange;
-          }
-        }
-
-        .circlePaginationOne {
-          background-color: $colorOrange;
-        }
-      }
+    .circlePaginationOne {
+      background-color: $colorOrange;
     }
   }
 }
@@ -798,6 +525,226 @@ html, body {
   .oneSideButtonImage {
     @include heightAndWidth(30px, 30px);
     @include topAndLeft(7px, 15px);
+  }
+}
+
+.afterNavBarBannerAndSpan {
+  @extend %tplFlexAndColumn;
+  margin-left: 42px;
+
+  .productMenu {
+    //@include heightAndWidth(736px, 922px);
+    max-width: 922px;
+    width: 100%;
+    max-height: 736px;
+    height: 100%;
+    display: none;
+    position: relative;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    animation: fadeIn 0.9s ease-in-out;
+
+    @media (max-width: 1426px) {
+      max-height: 1567px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  .productMenuBlock {
+    display: none;
+    @include heightAndWidth(320px, 210px);
+    @extend %tplFlexAndColumn;
+    align-items: center;
+    background-color: $colorWhite;
+    box-shadow: $boxShadow;
+    border: 0.4px solid #4A4D4A;
+    border-radius: 4px;
+    transition: $backgroundTransition;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 96px;
+  }
+
+  .oneProduct:hover, .twoProduct:hover,
+  .threeProduct:hover, .fourProduct:hover {
+    background-color: #cec9c9;
+  }
+
+  .oneProduct {
+    background-color: #F0F0FF;
+    cursor: pointer;
+
+    .pmPhoneMain {
+      @include heightAndWidth(116px, 45px);
+      margin-top: 45px;
+    }
+
+    .oneProductSpan {
+      margin-top: 22px;
+    }
+  }
+
+  .twoProduct {
+    background-color: #F0F0FF;
+    cursor: pointer;
+
+    .pmTabletMain {
+      @include heightAndWidth(118px, 81px);
+      margin-top: 45px;
+    }
+
+    .twoProductSpan {
+      margin-top: 20px;
+    }
+  }
+
+  .threeProduct {
+    background-color: #F0F0FF;
+    cursor: pointer;
+
+    .pmPodsMain {
+      @include heightAndWidth(117px, 93px);
+      margin-top: 48px;
+    }
+
+    .threeProductSpan {
+      margin-top: 18px;
+    }
+  }
+
+  .fourProduct {
+    background-color: #F0F0FF;
+    cursor: pointer;
+
+    .pmCaseMain {
+      @include heightAndWidth(117px, 93px);
+      margin-top: 48px;
+    }
+
+    .fourProductSpan {
+      margin-top: 18px;
+    }
+  }
+
+  .fiveProduct, .sixProduct, .sevenProduct, .eightProduct {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pmPhone {
+    @include heightAndWidth(94px, 59px);
+    margin-top: 8px;
+  }
+
+  .pmPods {
+    margin-top: 16px;
+  }
+
+  .pmClock {
+    margin-top: 9px;
+  }
+
+  .pmTablet {
+    margin-top: 9px;
+  }
+
+  .productBlockSpanOne {
+    margin-top: 12px;
+    font-weight: 600;
+    color: black;
+    line-height: 17px;
+  }
+
+  .fiveProductSpanOneTwo {
+    margin-top: 4px;
+  }
+
+  .productBlockSpanTwo {
+    font-weight: 300;
+    line-height: 21px;
+  }
+
+  .sevenProductSpanOneTwo {
+    margin-top: 11px;
+  }
+
+  .productBlockSpanThree {
+    font-weight: 400;
+    line-height: 21px;
+    color: black;
+  }
+
+  .productBlockSpanFour {
+    color: $colorBlue;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .inBasket {
+    @include heightAndWidth(50px, 190px);
+    @include flexAndAlign(center, center);
+    gap: 11px;
+    margin-bottom: 14px;
+  }
+
+  .blockBetweenTwoRowProduct {
+    @include heightAndWidth(20px, 350px);
+    @include flexAndAlign(space-between, center);
+    top: 350px;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #4A4D4A;
+    font-size: 14px;
+
+    .blockBetweenTwoRowProductOneSpan {
+      cursor: pointer;
+      transition: color 0.5s;
+    }
+
+    .blockBetweenTwoRowProductSpan {
+      font-weight: 400;
+      line-height: 21px;
+      cursor: pointer;
+      transition: color 0.5s;
+    }
+
+    .blockBetweenTwoRowProductSpan:hover, .blockBetweenTwoRowProductOneSpan:hover {
+      color: $colorOrange;
+    }
+
+    .leftBlockBetweenOne, .leftBlockBetweenTwo, .leftBlockBetweenThree {
+      @include heightAndWidth(8px, 8px);
+      position: absolute;
+      margin-right: 15px;
+      cursor: pointer;
+      border-top: 1px solid #4A4D4A;
+      border-left: 1px solid #4A4D4A;
+      transform: rotate(-135deg);
+    }
+
+    .leftBlockBetweenOne {
+      @include topAndLeft(3px, 127px);
+    }
+
+    .leftBlockBetweenTwo {
+      @include topAndLeft(3px, 258px);
+    }
+
+    .leftBlockBetweenThree {
+      @include topAndLeft(3px, 357px);
+    }
   }
 }
 

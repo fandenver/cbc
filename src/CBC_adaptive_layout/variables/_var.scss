@@ -75,11 +75,6 @@ input:focus, select:focus {
   }
 }
 
-.page {
-  flex: 1 1 auto;
-}
-
-
 // Шаблоны
 %tplFlexAndSpace {
   display: flex;
@@ -127,6 +122,19 @@ input:focus, select:focus {
 //-----------------------------------------------
 
 // Стили повторяющихся элементов
+
+.arrow {
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  right: 0;
+  margin-right: 15px;
+  cursor: pointer;
+  border-top: 3px solid #00156999;
+  border-left: 3px solid #00156999;
+  transform: rotate(-225deg);
+  transition: border-top-color 0.5s, border-left-color 0.5s, transform 0.3s;
+}
 
 .btn {
   background-color: $colorOrange;

@@ -1,6 +1,12 @@
 @import "../variables/var";
 
 .header {
+  margin: 0 0 28px 0;
+
+  &_main {
+
+  }
+
   &_top {
     margin: 0 0 10px 0;
 
@@ -40,6 +46,10 @@
   display: flex;
   flex-direction: column;
   margin: 15px 0 0 30px;
+
+  @media (max-width: 1340px) {
+    margin: 15px 0 0 0;
+  }
 
   @media (max-width: $md2+px) {
     margin: 0 0 0 0;

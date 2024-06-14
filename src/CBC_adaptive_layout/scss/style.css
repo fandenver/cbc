@@ -36,13 +36,17 @@ input:focus, select:focus {
   }
 }
 
-.page {
-  flex: 1 1 auto;
-}
-
-.afterNavBar {
-  display: flex;
-  justify-content: space-between;
+.arrow {
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  right: 0;
+  margin-right: 15px;
+  cursor: pointer;
+  border-top: 3px solid rgba(0, 21, 105, 0.6);
+  border-left: 3px solid rgba(0, 21, 105, 0.6);
+  transform: rotate(-225deg);
+  transition: border-top-color 0.5s, border-left-color 0.5s, transform 0.3s;
 }
 
 .btn {
@@ -316,42 +320,89 @@ html, body {
   text-decoration: underline;
 }
 
-.navigate {
-  width: 100%;
-  height: 60px;
-  background-color: #F0F0FF;
-  margin-top: 28px;
+.page {
+  flex: 1 1 auto;
 }
-@media (max-width: 1340px) {
-  .navigate {
-    display: none;
+.page_bar-navigate {
+  margin: 0 0 50px 0;
+}
+@media (min-width: 991.98px) {
+  .page_container {
+    display: flex;
   }
 }
+.page_side {
+  z-index: 10;
+  margin: 0 0 50px 0;
+  flex: 0 0 448px;
+}
+@media (min-width: 991.98px) {
+  .page_content {
+    margin: 0 0 0 40px;
+  }
+}
+.page_header {
+  margin: 0 0 20px 0;
+}
 
-.navigate-content_list {
+.navigate-bar {
+  width: 100%;
+  min-height: 60px;
+  background-color: #F0F0FF;
+}
+.navigate-bar_list {
   width: 100%;
   min-height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.navigate-content_option {
+@media (max-width: 430px) {
+  .navigate-bar_list {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.navigate-bar_option {
+  white-space: nowrap;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  padding: 20px 20px 20px 20px;
 }
-.navigate-content_option:hover {
+.navigate-bar_option:first-child {
+  padding: 20px 20px 20px 0;
+}
+.navigate-bar_option:last-child {
+  padding: 20px 0 20px 20px;
+}
+.navigate-bar_option:hover {
   color: #FFAF37;
 }
-.navigate-content_option a {
+@media (max-width: 991.98px) {
+  .navigate-bar_option:first-child {
+    display: none;
+  }
+}
+@media (max-width: 767.98px) {
+  .navigate-bar_option:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .navigate-bar_option:first-child, .navigate-bar_option:nth-child(2) {
+    display: block;
+  }
+}
+.navigate-bar_option a {
   font-size: 18px;
   position: relative;
 }
 @media (max-width: 1340px) {
-  .navigate-content_option a {
+  .navigate-bar_option a {
     font-size: 14px;
   }
 }
-.navigate-content_option a::after {
+.navigate-bar_option a::after {
   background-image: linear-gradient(to right, black 60%, transparent 0);
   position: absolute;
   left: 0;
@@ -365,341 +416,106 @@ html, body {
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
-.navigate-content_option a:hover:after {
+.navigate-bar_option a:hover:after {
   background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
 }
+@media (max-width: 430px) {
+  .navigate-bar_option a::after {
+    display: none;
+  }
+}
 
-.afterNavBar {
-  max-width: 1470px;
-  width: 100%;
-  margin: 50px auto auto auto;
-  padding: 0 30px;
+.menu-page {
+  display: flex;
+  flex-direction: column;
 }
-.afterNavBar .mainMenu {
-  max-width: 448px;
-  width: 100%;
-  min-width: 316px;
-}
-.afterNavBar .headerMainMenu {
-  width: 100%;
-  max-height: 60px;
-  height: 100%;
-  display: inline-block;
+.menu-page_header {
+  height: 60px;
+  display: flex;
+  align-items: center;
   border-radius: 10px 10px 0 0;
   background: #F0F0FF;
+  padding: 0 0 0 25px;
 }
-.afterNavBar .headerSpan {
-  display: flex;
-  padding-top: 17px;
-  padding-left: 21px;
+.menu-page_header span {
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
-  letter-spacing: 0;
-  text-align: left;
 }
-.afterNavBar .choiceChapter {
-  max-width: 447px;
-  width: 100%;
-  max-height: 676px;
-  height: 100%;
+.menu-page_body {
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
 }
-.afterNavBar .left {
-  height: 9px;
-  width: 9px;
-  margin-right: 15px;
-  cursor: pointer;
-  border-top: 3px solid rgba(0, 21, 105, 0.6);
-  border-left: 3px solid rgba(0, 21, 105, 0.6);
-  transform: rotate(-225deg);
-  transition: border-top-color 0.5s, border-left-color 0.5s, transform 0.3s;
-}
-.afterNavBar .commonSpanMainMenu:hover .left {
-  border-top-color: #FFFFFF;
-  border-left-color: #FFFFFF;
-}
-.afterNavBar .choiceChapter > div > :nth-child(1) {
-  height: 16px;
-  width: 20px;
-  margin-left: 20px;
-}
-.afterNavBar .choiceChapter > div > :nth-child(2) {
-  margin-left: 12px;
-}
-.afterNavBar #smallImageSize, .afterNavBar #smallTwoImageSize,
-.afterNavBar #smallFourImageSize, .afterNavBar #smallFiveImageSize,
-.afterNavBar #smallSixImageSize {
-  height: 20px;
-}
-.afterNavBar #newSticker {
-  height: 10px;
-  margin-top: 6px;
-}
-.afterNavBar #smallOneImageSize {
-  height: 24px;
-  width: 15px;
-  margin-top: -1px;
-  margin-left: 24px;
-}
-.afterNavBar .commonSpanMainMenu {
+.menu-page_item {
   display: flex;
   align-items: center;
-  flex-direction: row;
-  flex-grow: 1;
-  cursor: pointer;
-  transition: background-color 0.5s, color 0.3s;
-}
-.afterNavBar .commonSpanMainMenu:hover {
-  background-color: #FFAF37;
-  color: #FFFFFF;
-}
-.afterNavBar .choiceChapterOneBlockBack {
-  background-color: #001569;
-  flex-grow: 1;
-}
-.afterNavBar .twoChoice {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 386px;
-  width: 100%;
-  overflow: hidden;
-}
-.afterNavBar .rightSmall {
-  margin-right: 12px;
-}
-.afterNavBar .afterNavBarBannerAndSpan {
-  margin-left: 42px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu {
-  max-width: 922px;
-  width: 100%;
-  max-height: 736px;
-  height: 100%;
-  display: none;
+  padding: 10px 0 10px 0;
   position: relative;
-  justify-content: space-between;
-  align-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  animation: fadeIn 0.9s ease-in-out;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
 }
-@media (max-width: 1426px) {
-  .afterNavBar .afterNavBarBannerAndSpan .productMenu {
-    max-height: 1567px;
+@media (min-width: 991.98px) {
+  .menu-page_item:hover {
+    background-color: #FFAF37;
+    color: #FFFFFF;
   }
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+.menu-page_item img {
+  padding: 0 0 0 20px;
+}
+@media (max-width: 479.98px) {
+  .menu-page_item img {
+    padding: 0 0 0 10px;
   }
-  to {
-    opacity: 1;
+}
+.menu-page_item span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  margin: 0 0 0 15px;
+}
+@media (max-width: 479.98px) {
+  .menu-page_item span {
+    font-size: 13px;
+    margin: 0 0 0 10px;
   }
 }
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock {
-  height: 320px;
-  width: 210px;
-  align-items: center;
-  background-color: white;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
-  border: 0.4px solid #4A4D4A;
-  border-radius: 4px;
-  transition: background-color 0.5s;
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 96px;
+.header-page_content {
+  padding: 0 10px;
 }
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct:hover, .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct:hover,
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct:hover, .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct:hover {
-  background-color: #cec9c9;
+@media (max-width: 991.98px) {
+  .header-page_content {
+    text-align: center;
+  }
 }
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct {
-  background-color: #F0F0FF;
-  cursor: pointer;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct .pmPhoneMain {
-  height: 116px;
-  width: 45px;
-  margin-top: 45px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct .oneProductSpan {
-  margin-top: 22px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct {
-  background-color: #F0F0FF;
-  cursor: pointer;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct .pmTabletMain {
-  height: 118px;
-  width: 81px;
-  margin-top: 45px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct .twoProductSpan {
-  margin-top: 20px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct {
-  background-color: #F0F0FF;
-  cursor: pointer;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct .pmPodsMain {
-  height: 117px;
-  width: 93px;
-  margin-top: 48px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct .threeProductSpan {
-  margin-top: 18px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct {
-  background-color: #F0F0FF;
-  cursor: pointer;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct .pmCaseMain {
-  height: 117px;
-  width: 93px;
-  margin-top: 48px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct .fourProductSpan {
-  margin-top: 18px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .fiveProduct, .afterNavBar .afterNavBarBannerAndSpan .productMenu .sixProduct, .afterNavBar .afterNavBarBannerAndSpan .productMenu .sevenProduct, .afterNavBar .afterNavBarBannerAndSpan .productMenu .eightProduct {
-  display: flex;
-  justify-content: space-between;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .pmPhone {
-  height: 94px;
-  width: 59px;
-  margin-top: 8px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .pmPods {
-  margin-top: 16px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .pmClock {
-  margin-top: 9px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .pmTablet {
-  margin-top: 9px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanOne {
-  margin-top: 12px;
-  font-weight: 600;
-  color: black;
-  line-height: 17px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .fiveProductSpanOneTwo {
-  margin-top: 4px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanTwo {
-  font-weight: 300;
-  line-height: 21px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .sevenProductSpanOneTwo {
-  margin-top: 11px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanThree {
-  font-weight: 400;
-  line-height: 21px;
-  color: black;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanFour {
-  color: #001569;
-  font-size: 24px;
-  line-height: 29px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .inBasket {
-  height: 50px;
-  width: 190px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 11px;
-  margin-bottom: 14px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct {
-  height: 20px;
-  width: 350px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  top: 350px;
-  display: flex;
-  position: absolute;
-  flex-direction: row;
-  justify-content: space-between;
-  color: #4A4D4A;
-  font-size: 14px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductOneSpan {
-  cursor: pointer;
-  transition: color 0.5s;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan {
-  font-weight: 400;
-  line-height: 21px;
-  cursor: pointer;
-  transition: color 0.5s;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan:hover, .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductOneSpan:hover {
-  color: #FFAF37;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenOne, .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenTwo, .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenThree {
-  height: 8px;
-  width: 8px;
-  position: absolute;
-  margin-right: 15px;
-  cursor: pointer;
-  border-top: 1px solid #4A4D4A;
-  border-left: 1px solid #4A4D4A;
-  transform: rotate(-135deg);
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenOne {
-  top: 3px;
-  left: 127px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenTwo {
-  top: 3px;
-  left: 258px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenThree {
-  top: 3px;
-  left: 357px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .mainBanner {
-  width: 100%;
-  max-width: 922px;
-  max-height: 132px;
-  display: flex;
-  font-size: 36px;
-  line-height: 122%;
-  letter-spacing: 0;
-  text-align: left;
-  color: rgb(74, 77, 74);
+.header-page span {
   font-family: Montserrat, sans-serif;
-  animation: fadeIn 0.5s ease-in-out;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 42px;
 }
-@media (max-width: 1473px) {
-  .afterNavBar .afterNavBarBannerAndSpan .mainBanner {
+@media (max-width: 1340px) {
+  .header-page span {
     font-size: 30px;
+    line-height: 35px;
   }
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+@media (max-width: 991.98px) {
+  .header-page span {
+    font-size: 24px;
+    line-height: 29px;
+    font-family: Rubik, sans-serif;
   }
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBanner .bigText {
-  font-weight: 700;
-  line-height: 44px;
-}
-.afterNavBar .afterNavBarBannerAndSpan .mainBanner .orangeText {
+.header-page span span {
   font-family: Rubik, sans-serif;
+}
+.header-page span span span {
   color: #FFAF37;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage {
+
+.mainBannerImage {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -719,7 +535,7 @@ html, body {
     opacity: 1;
   }
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftMain {
+.mainBannerImage .leftMain {
   height: 175px;
   width: 240px;
   position: absolute;
@@ -729,7 +545,7 @@ html, body {
   border-left: 8px solid #1F347B;
   transform: rotate(-180deg);
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerTextOnImage {
+.mainBannerImage .bannerTextOnImage {
   height: 116px;
   width: 422px;
   margin-left: 400px;
@@ -741,7 +557,7 @@ html, body {
   line-height: 37px;
   transition: color 0.5s;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage #showOffer {
+.mainBannerImage #showOffer {
   height: 69px;
   width: 330px;
   display: flex;
@@ -749,13 +565,13 @@ html, body {
   align-items: center;
   margin-left: 440px;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon {
+.mainBannerImage .bannerButtonCommon {
   height: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner {
+.mainBannerImage .bannerButtonCommon .buttonBanner {
   height: 50px;
   width: 50px;
   cursor: pointer;
@@ -764,10 +580,10 @@ html, body {
   transition: background-color 0.5s;
   padding: 20px;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner:hover {
+.mainBannerImage .bannerButtonCommon .buttonBanner:hover {
   background-color: #FFAF37;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerLeft {
+.mainBannerImage .bannerButtonCommon .buttonBannerLeft {
   display: none;
   margin-left: 5px;
   animation: fadeIn 0.5s ease-in-out;
@@ -780,7 +596,7 @@ html, body {
     opacity: 1;
   }
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerRight {
+.mainBannerImage .bannerButtonCommon .buttonBannerRight {
   display: none;
   margin-left: 812px;
   animation: fadeIn 0.5s ease-in-out;
@@ -793,42 +609,42 @@ html, body {
     opacity: 1;
   }
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton, .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightBannerButton {
+.mainBannerImage .bannerButtonCommon .leftBannerButton, .mainBannerImage .bannerButtonCommon .rightBannerButton {
   height: 16px;
   width: 16px;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton {
+.mainBannerImage .bannerButtonCommon .leftBannerButton {
   border-top: 5px solid #001569;
   border-left: 5px solid #001569;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
+.mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
   position: relative;
   bottom: 2px;
   right: 2px;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerOne {
+.mainBannerImage .bannerButtonCommon .rightButtonBannerOne {
   left: 2px;
   top: 16px;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
+.mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
   transform: rotate(-45deg);
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerTwo, .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerTwo {
+.mainBannerImage .bannerButtonCommon .leftButtonBannerTwo, .mainBannerImage .bannerButtonCommon .rightButtonBannerTwo {
   position: relative;
   right: 3px;
   bottom: 2px;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftButtonBannerTwo {
+.mainBannerImage .leftButtonBannerTwo {
   transform: rotate(-225deg);
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner {
+.mainBannerImage .paginationBanner {
   height: 20px;
   width: 152px;
   display: flex;
   margin: 170px auto auto 370px;
   padding-bottom: 35px;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination {
+.mainBannerImage .paginationBanner .circlePagination {
   height: 20px;
   width: 20px;
   cursor: pointer;
@@ -837,10 +653,10 @@ html, body {
   border: 1px solid white;
   transition: background-color 0.5s;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination:hover {
+.mainBannerImage .paginationBanner .circlePagination:hover {
   background-color: #FFAF37;
 }
-.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePaginationOne {
+.mainBannerImage .paginationBanner .circlePaginationOne {
   background-color: #FFAF37;
 }
 
@@ -895,6 +711,204 @@ html, body {
   width: 30px;
   top: 7px;
   left: 15px;
+}
+
+.afterNavBarBannerAndSpan {
+  margin-left: 42px;
+}
+.afterNavBarBannerAndSpan .productMenu {
+  max-width: 922px;
+  width: 100%;
+  max-height: 736px;
+  height: 100%;
+  display: none;
+  position: relative;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  animation: fadeIn 0.9s ease-in-out;
+}
+@media (max-width: 1426px) {
+  .afterNavBarBannerAndSpan .productMenu {
+    max-height: 1567px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.afterNavBarBannerAndSpan .productMenuBlock {
+  display: none;
+  height: 320px;
+  width: 210px;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  border: 0.4px solid #4A4D4A;
+  border-radius: 4px;
+  transition: background-color 0.5s;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 96px;
+}
+.afterNavBarBannerAndSpan .oneProduct:hover, .afterNavBarBannerAndSpan .twoProduct:hover,
+.afterNavBarBannerAndSpan .threeProduct:hover, .afterNavBarBannerAndSpan .fourProduct:hover {
+  background-color: #cec9c9;
+}
+.afterNavBarBannerAndSpan .oneProduct {
+  background-color: #F0F0FF;
+  cursor: pointer;
+}
+.afterNavBarBannerAndSpan .oneProduct .pmPhoneMain {
+  height: 116px;
+  width: 45px;
+  margin-top: 45px;
+}
+.afterNavBarBannerAndSpan .oneProduct .oneProductSpan {
+  margin-top: 22px;
+}
+.afterNavBarBannerAndSpan .twoProduct {
+  background-color: #F0F0FF;
+  cursor: pointer;
+}
+.afterNavBarBannerAndSpan .twoProduct .pmTabletMain {
+  height: 118px;
+  width: 81px;
+  margin-top: 45px;
+}
+.afterNavBarBannerAndSpan .twoProduct .twoProductSpan {
+  margin-top: 20px;
+}
+.afterNavBarBannerAndSpan .threeProduct {
+  background-color: #F0F0FF;
+  cursor: pointer;
+}
+.afterNavBarBannerAndSpan .threeProduct .pmPodsMain {
+  height: 117px;
+  width: 93px;
+  margin-top: 48px;
+}
+.afterNavBarBannerAndSpan .threeProduct .threeProductSpan {
+  margin-top: 18px;
+}
+.afterNavBarBannerAndSpan .fourProduct {
+  background-color: #F0F0FF;
+  cursor: pointer;
+}
+.afterNavBarBannerAndSpan .fourProduct .pmCaseMain {
+  height: 117px;
+  width: 93px;
+  margin-top: 48px;
+}
+.afterNavBarBannerAndSpan .fourProduct .fourProductSpan {
+  margin-top: 18px;
+}
+.afterNavBarBannerAndSpan .fiveProduct, .afterNavBarBannerAndSpan .sixProduct, .afterNavBarBannerAndSpan .sevenProduct, .afterNavBarBannerAndSpan .eightProduct {
+  display: flex;
+  justify-content: space-between;
+}
+.afterNavBarBannerAndSpan .pmPhone {
+  height: 94px;
+  width: 59px;
+  margin-top: 8px;
+}
+.afterNavBarBannerAndSpan .pmPods {
+  margin-top: 16px;
+}
+.afterNavBarBannerAndSpan .pmClock {
+  margin-top: 9px;
+}
+.afterNavBarBannerAndSpan .pmTablet {
+  margin-top: 9px;
+}
+.afterNavBarBannerAndSpan .productBlockSpanOne {
+  margin-top: 12px;
+  font-weight: 600;
+  color: black;
+  line-height: 17px;
+}
+.afterNavBarBannerAndSpan .fiveProductSpanOneTwo {
+  margin-top: 4px;
+}
+.afterNavBarBannerAndSpan .productBlockSpanTwo {
+  font-weight: 300;
+  line-height: 21px;
+}
+.afterNavBarBannerAndSpan .sevenProductSpanOneTwo {
+  margin-top: 11px;
+}
+.afterNavBarBannerAndSpan .productBlockSpanThree {
+  font-weight: 400;
+  line-height: 21px;
+  color: black;
+}
+.afterNavBarBannerAndSpan .productBlockSpanFour {
+  color: #001569;
+  font-size: 24px;
+  line-height: 29px;
+}
+.afterNavBarBannerAndSpan .inBasket {
+  height: 50px;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 14px;
+}
+.afterNavBarBannerAndSpan .blockBetweenTwoRowProduct {
+  height: 20px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 350px;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #4A4D4A;
+  font-size: 14px;
+}
+.afterNavBarBannerAndSpan .blockBetweenTwoRowProduct .blockBetweenTwoRowProductOneSpan {
+  cursor: pointer;
+  transition: color 0.5s;
+}
+.afterNavBarBannerAndSpan .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan {
+  font-weight: 400;
+  line-height: 21px;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+.afterNavBarBannerAndSpan .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan:hover, .afterNavBarBannerAndSpan .blockBetweenTwoRowProduct .blockBetweenTwoRowProductOneSpan:hover {
+  color: #FFAF37;
+}
+.afterNavBarBannerAndSpan .blockBetweenTwoRowProduct .leftBlockBetweenOne, .afterNavBarBannerAndSpan .blockBetweenTwoRowProduct .leftBlockBetweenTwo, .afterNavBarBannerAndSpan .blockBetweenTwoRowProduct .leftBlockBetweenThree {
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  margin-right: 15px;
+  cursor: pointer;
+  border-top: 1px solid #4A4D4A;
+  border-left: 1px solid #4A4D4A;
+  transform: rotate(-135deg);
+}
+.afterNavBarBannerAndSpan .blockBetweenTwoRowProduct .leftBlockBetweenOne {
+  top: 3px;
+  left: 127px;
+}
+.afterNavBarBannerAndSpan .blockBetweenTwoRowProduct .leftBlockBetweenTwo {
+  top: 3px;
+  left: 258px;
+}
+.afterNavBarBannerAndSpan .blockBetweenTwoRowProduct .leftBlockBetweenThree {
+  top: 3px;
+  left: 357px;
 }
 
 .manyBanners {

@@ -36,8 +36,17 @@ input:focus, select:focus {
   }
 }
 
-.page {
-  flex: 1 1 auto;
+.arrow {
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  right: 0;
+  margin-right: 15px;
+  cursor: pointer;
+  border-top: 3px solid rgba(0, 21, 105, 0.6);
+  border-left: 3px solid rgba(0, 21, 105, 0.6);
+  transform: rotate(-225deg);
+  transition: border-top-color 0.5s, border-left-color 0.5s, transform 0.3s;
 }
 
 .btn {
