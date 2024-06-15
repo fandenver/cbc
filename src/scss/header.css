@@ -70,7 +70,7 @@ input:focus, select:focus {
   background-color: #1F347B;
   border-radius: 50%;
 }
-@media (max-width: 1500px) {
+@media (max-width: 1510px) {
   .pattern {
     display: none;
   }

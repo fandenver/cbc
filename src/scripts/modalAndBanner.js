@@ -10,16 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const commonMainMenuSelector = document.querySelectorAll('.commonSpanMainMenu');
     const arrowMainMenu = document.querySelectorAll('.left');
 
-    // hideMainBanner.addEventListener('mouseover', () => {
-    //     showNewImageRight.style.display = 'block';
-    //     showNewImageLeft.style.display = 'block';
-    // });
-    //
-    // hideMainBanner.addEventListener('mouseleave', () => {
-    //     showNewImageRight.style.display = 'none';
-    //     showNewImageLeft.style.display = 'none';
-    // });
-
     function disableScroll() {
         document.body.style.overflow = 'hidden';
     }
@@ -63,11 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function disableBlock() {
         modalRequestCall.style.display = 'none';
-    }
-
-    function oneEvent(background, backgroundSize) {
-        hideMainBanner.style.backgroundImage = background;
-        hideMainBanner.style.backgroundSize = backgroundSize;
     }
 
     commonMainMenuSelector.forEach((commonMainMenu, index) => {

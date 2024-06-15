@@ -1,29 +1,45 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const showNewImageRight = document.querySelector('.slider-page_arrow-button')[0];
-    const showNewImageLeft = document.querySelector('.slider-page_arrow-button')[0];
-    const textImage = document.querySelector('.slider-page_text-block');
-    const circleColorOne = document.querySelector('ul.slider-page_pagination-container > li:nth-child(1)');
-    const circleColorTwo = document.querySelector('ul.slider-page_pagination-container > li:nth-child(2)');
-    const circleColorThree = document.querySelector('ul.slider-page_pagination-container > li:nth-child(3)');
-    const circleColorFour = document.querySelector('ul.slider-page_pagination-container > li:nth-child(4)');
-    const circleColorFive = document.querySelector('ul.slider-page_pagination-container > li:nth-child(5)');
+    const sliderButtonRight = document.getElementsByClassName('slider-page_arrow-button')[0];
+    const sliderButtonLeft = document.getElementsByClassName('slider-page_arrow-button')[1];
+    const textImage = document.querySelector('.slider-page_text-block > span');
+    const circleSliderOne = document.querySelector('ul.slider-page_pagination-container > li:nth-child(1)');
+    const circleSliderTwo = document.querySelector('ul.slider-page_pagination-container > li:nth-child(2)');
+    const circleSliderThree = document.querySelector('ul.slider-page_pagination-container > li:nth-child(3)');
+    const circleSliderFour = document.querySelector('ul.slider-page_pagination-container > li:nth-child(4)');
+    const circleSliderFive = document.querySelector('ul.slider-page_pagination-container > li:nth-child(5)');
+    const slider = document.querySelector('.slider-page');
     let currentImageIndex = 0;
 
+    slider.addEventListener('mouseover', () => {
+        sliderButtonRight.style.display = 'flex';
+        sliderButtonLeft.style.display = 'flex';
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        sliderButtonRight.style.display = 'none';
+        sliderButtonLeft.style.display = 'none';
+    });
+
     const imagePaths = [
-        '../images/hat/mainBannerImage.png',
-        '../images/mapTransition/oneClickImage.png',
-        '../images/mapTransition/twoClickImage.png',
-        '../images/mapTransition/threeClickImage.png',
-        '../images/mapTransition/fourClickImage.png'
+        '../../src/images/hat/mainBannerImage.png',
+        '../../src/images/mapTransition/oneClickImage.png',
+        '../../src/images/mapTransition/twoClickImage.png',
+        '../../src/images/mapTransition/threeClickImage.png',
+        '../../src/images/mapTransition/fourClickImage.png'
     ];
 
     const circleArr = [
-        circleColorOne,
-        circleColorTwo,
-        circleColorThree,
-        circleColorFour,
-        circleColorFive
+        circleSliderOne,
+        circleSliderTwo,
+        circleSliderThree,
+        circleSliderFour,
+        circleSliderFive
     ];
+
+    function oneEvent(background, backgroundSize) {
+        slider.style.backgroundImage = background;
+        slider.style.backgroundSize = backgroundSize;
+    }
 
     circleArr.forEach((circle, index) => {
         circle.addEventListener('click', () => {
@@ -38,22 +54,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
             circleArr.forEach((el, idx) => {
                 if (idx === currentImageIndex) {
-                    el.classList.add('circlePaginationOne');
+                    el.classList.add('_active');
                 } else {
-                    el.classList.remove('circlePaginationOne');
+                    el.classList.remove('_active');
                 }
             });
         });
     });
 
-    showNewImageRight.addEventListener('click', () => {
+    sliderButtonLeft.addEventListener('click', () => {
         currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
 
         oneEvent(`url("${imagePaths[currentImageIndex]}")`, 'cover');
 
         const prevIndex = currentImageIndex === 0 ? imagePaths.length - 1 : currentImageIndex - 1;
-        circleArr[prevIndex].classList.remove('circlePaginationOne');
-        circleArr[currentImageIndex].classList.add('circlePaginationOne');
+        circleArr[prevIndex].classList.remove('_active');
+        circleArr[currentImageIndex].classList.add('_active');
 
         if (currentImageIndex === 2) {
             textImage.style.color = 'black';
@@ -62,13 +78,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    showNewImageLeft.addEventListener('click', () => {
-        circleArr[currentImageIndex].classList.remove('circlePaginationOne');
+    sliderButtonRight.addEventListener('click', () => {
+        circleArr[currentImageIndex].classList.remove('_active');
 
         currentImageIndex = (currentImageIndex === 0) ? imagePaths.length - 1 : currentImageIndex - 1;
         oneEvent(`url("${imagePaths[currentImageIndex]}")`, 'cover');
 
-        circleArr[currentImageIndex].classList.add('circlePaginationOne');
+        circleArr[currentImageIndex].classList.add('_active');
 
         if (currentImageIndex === 2) {
             textImage.style.color = 'black';

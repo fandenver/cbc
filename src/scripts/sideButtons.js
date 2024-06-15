@@ -13,7 +13,7 @@ itemsTab.forEach((itemTab) => {
             itemsTabCart.style.background = originalCartBackground;
         } else {
             itemsTabCart.classList.remove('_active');
-            itemsTabCart.style.background = 'url("../../src/CBC_adaptive_layout/images/hat/cart.png") center no-repeat'
+            itemsTabCart.style.background = 'url("../../src/images/hat/cart.png") center no-repeat'
         }
 
         itemTab.classList.add('_active');
