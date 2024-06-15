@@ -18,14 +18,14 @@ export const path = {
         images: `src/${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
         svg: `internet-shop/${srcFolder}/img/**/*.svg`,
         scss: `internet-shop/${srcFolder}/scss/**/*.scss`,
-        html: `${srcFolder}/CBC_adaptive_layout/CBC_Main_Page/*.html`,
+        html: `${srcFolder}/Main_Page/*.html`,
         files: `internet-shop/${srcFolder}/files/**/*.*`,
         svgIcons: `internet-shop/${srcFolder}/svgIcons/*.svg`,
     },
     watch: {
         js: `internet-shop/${srcFolder}/**/*.js`,
         scss: `internet-shop/${srcFolder}/scss/**/*.scss`,
-        html: `${srcFolder}/CBC_adaptive_layout/CBC_Main_Page/**/*.html`,
+        html: `${srcFolder}/Main_Page/**/*.html`,
         images: `internet-shop/${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
         files: `internet-shop/${srcFolder}/files/**/*.*`
     },

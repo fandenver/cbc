@@ -11,9 +11,9 @@ export const html = () => {
             })
         ))
         .pipe(fileInclude())
-        .pipe(app.plugins.replace(/scss\//g, '../src/CBC_adaptive_layout/scss/'))
-        .pipe(app.plugins.replace(/images_adaptive_layout\//g, '../src/CBC_adaptive_layout/images_adaptive_layout/'))
-        .pipe(app.plugins.replace(/scripts\//g, '../src/CBC_adaptive_layout/scripts/'))
+        .pipe(app.plugins.replace(/scss\//g, '../src/scss/'))
+        .pipe(app.plugins.replace(/images\//g, '../src/images/'))
+        .pipe(app.plugins.replace(/scripts\//g, '../src/scripts/'))
         .pipe(app.plugins.if(
             app.isBuild,
             webpHtmlnoSvg()
