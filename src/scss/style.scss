@@ -105,13 +105,16 @@ html, body {
   }
 
   &_container {
-    margin: 0 0 50px 0;
     max-height: 1584px;
     height: 100%;
     @media (min-width: $md2+px) {
       display: flex;
       max-height: 742px;
     }
+  }
+
+  &_main-content {
+    margin: 0 0 100px 0;
   }
 
   &_side {
@@ -145,6 +148,10 @@ html, body {
 
   &_side-buttons {
 
+  }
+
+  &_collage {
+    margin: 0 0 130px 0;
   }
 }
 
@@ -837,231 +844,347 @@ html, body {
   }
 }
 
-.manyBanners {
-  @include heightAndWidth(530px, 1410px);
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: 330px 330px 330px 330px;
-  grid-template-rows: 250px 250px;
-  flex-wrap: wrap;
-  margin: 100px auto auto auto;
+.collage-page {
+  &_columns {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
 
-  .workCBC, .reliableSupplier,
-  .fullComplex, .orderKey,
-  .directDeliveries, .qualityService,
-  .cooperation {
-    @include flexAndAlign(center, center);
-    text-align: center;
+  &_column {
+    flex: 0 1 25%;
+    padding: 0 15px;
+    margin: 0 0 15px 0;
+
+    @media (max-width: 1410px) {
+      flex: 0 1 33.333%;
+    }
+
+    @media (max-width: 1068px) {
+      flex: 0 1 50%;
+    }
+
+    @media (max-width: 728px) {
+      flex: 0 1 100%;
+    }
+
+    &_big-block {
+      flex: 0 1 50%;
+
+      @media (max-width: 1410px) {
+        display: none;
+      }
+    }
+  }
+
+  &_block {
     box-shadow: $boxShadow;
-    transition: $backgroundTransition;
-    cursor: pointer;
-    background-color: $colorWhite;
-  }
-
-  .reliableSupplierSpanOne, .fullComplexSpanOne {
-    font-size: 24px;
-    margin-top: 10px;
-  }
-
-  .reliableSupplierSpanTwo, .fullComplexSpanTwo,
-  .orderKeySpanTwo, .cooperationSpanTwo, .qualityServiceSpanTwo {
-    font-weight: 400;
-  }
-
-  .spanAndImageReliable, .spanAndImageFullComplex,
-  .spanAndImageOrderKey {
-    @extend %tplFlexAndColumn;
+    height: 250px;
+    background-color: #FFFFFF;
+    min-height: 200px;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-  }
-
-  .workCBC:hover, .reliableSupplier:hover,
-  .fullComplex:hover, .orderKey:hover,
-  .directDeliveries:hover, .qualityService:hover,
-  .cooperation:hover {
-    background-color: #cec9c9;
-  }
-
-  .workCBC {
-    @include heightAndWidth(250px, 330px);
-    background-color: #F0F0FF;
-
-    .workCBCSpan {
-      @include heightAndWidth(111px, 256px);
-      font-size: 30px;
-      line-height: 38px;
-    }
-  }
-
-  .reliableSupplier {
-    @include heightAndWidth(250px, 323px);
-
-    .spanAndImageReliable {
-      @include heightAndWidth(172px, 269px);
-      margin: 37px 30px;
-
-      .oneImageReliable {
-        @include heightAndWidth(60px, 60px);
-      }
-
-      .reliableSupplierSpanOne {
-        @include heightAndWidth(29px, 269px);
-        line-height: 29px;
-      }
-
-      .reliableSupplierSpanTwo {
-        @include heightAndWidth(63px, 194px);
-        margin-top: 10px;
-      }
-    }
-  }
-
-  .fullComplex {
-    @include heightAndWidth(250px, 330px);
-
-    .spanAndImageFullComplex {
-      @include heightAndWidth(181px, 292px);
-      margin: 43px 27px;
-
-      .twoImageReliableOne {
-        @include heightAndWidth(62px, 72px);
-        margin-top: 2px;
-      }
-
-      .fullComplexSpanOne {
-        @include heightAndWidth(31px, 215px);
-        padding-top: 2px;
-      }
-
-      .fullComplexSpanTwo {
-        @include heightAndWidth(71px, 292px);
-        padding-top: 8px;
-      }
-    }
-  }
-
-  .orderKey {
-    @include heightAndWidth(250px, 330px);
-
-    .spanAndImageOrderKey {
-      @include heightAndWidth(181px, 178px);
-      margin: 29px 36px;
-
-      .threeImageOrderKey {
-        @include heightAndWidth(70px, 50px);
-      }
-
-      .orderKeySpanOne {
-        @include heightAndWidth(29px, 187px);
-        font-size: 24px;
-        margin-top: 6px;
-      }
-
-      .orderKeySpanTwo {
-        @include heightAndWidth(63px, 281px);
-        margin-top: 8px;
-      }
-    }
-  }
-
-  .directDeliveries {
-    @include heightAndWidth(250px, 690px);
-    grid-area: 2/1/2/2;
+    padding: 0 25px;
     flex-direction: column;
-
-    .fourImageDirectDeliveries {
-      @include heightAndWidth(73px, 70px);
-      margin-top: -1px;
+    
+    @media (max-width: $md4+px) {
+      height: 200px;
     }
 
-    .directDeliveriesSpanOne {
-      @include heightAndWidth(29px, 213px);
-      font-size: 24px;
-      padding-top: 12px;
+    img {
+      margin: 0 0 15px 0;
+
+      @media (max-width: $md4+px) {
+        margin: 0 0 7px 0;
+      }
     }
 
-    .manyPictures {
-      @include heightAndWidth(67px, 630px);
-      @include flexAndAlign(space-between, center);
-      flex-direction: row;
-      margin-top: 40px;
+    &_first {
+      background-color: #F0F0FF;
 
-      .oneBottom {
-        @include heightAndWidth(56px, 45px);
-      }
+      p {
+        padding: 0 40px;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 37px;
+        text-align: center;
 
-      .twoBottom {
-        @include heightAndWidth(44px, 50px);
-      }
-
-      .threeBottom {
-        @include heightAndWidth(15px, 75px);
-      }
-
-      .fourBottom {
-        @include heightAndWidth(60px, 60px);
-      }
-
-      .fiveBottom {
-        @include heightAndWidth(12px, 80px);
-      }
-
-      .sixBottom {
-        @include heightAndWidth(46px, 70px);
-      }
-
-      .sevenBottom {
-        @include heightAndWidth(23px, 70px);
+        @media (max-width: $md4+px) {
+          font-size: 20px;
+          line-height: 24px;
+        }
       }
     }
   }
 
-  .qualityService {
-    @include heightAndWidth(250px, 330px);
-    @extend %tplFlexAndColumn;
-    align-items: center;
-    grid-area: 2/3/2/3;
-
-    .fiveImageOrderKey {
-      @include heightAndWidth(63px, 60px);
-      background: url("../images/manyBanners/fiveImage.png");
-    }
-
-    .qualityServiceSpanOne {
-      @include heightAndWidth(29px, 267px);
-      font-size: 24px;
-      margin-top: 15px;
-    }
-
-    .qualityServiceSpanTwo {
-      @include heightAndWidth(84px, 292px);
-      margin-top: 6px;
-    }
-  }
-
-  .cooperation {
-    @extend %tplFlexAndColumn;
-    @include heightAndWidth(250px, 330px);
-    align-items: center;
-    grid-area: 2/4/2/4;
-  }
-
-  .sixImageCooperation {
-    @include heightAndWidth(54px, 60px);
-    margin-top: -8px;
-  }
-
-  .cooperationSpanOne {
-    @include heightAndWidth(29px, 202px);
-    padding-top: 11px;
+  &_header {
     font-size: 24px;
+    line-height: 29px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 15px 0;
+    white-space: nowrap;
+
+    @media (max-width: $md4+px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
-  .cooperationSpanTwo {
-    @include heightAndWidth(84px, 292px);
-    padding-top: 20px;
+  &_content {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
     line-height: 21px;
+
+    &_bold {
+      font-weight: 500;
+
+      @media (max-width: $md4+px) {
+        font-weight: 400;
+      }
+    }
+
+    @media (max-width: $md4+px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
+
+  &_many-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+
+  //@include heightAndWidth(530px, 1410px);
+  //display: grid;
+  //grid-gap: 30px;
+  //grid-template-columns: 330px 330px 330px 330px;
+  //grid-template-rows: 250px 250px;
+  //flex-wrap: wrap;
+  //margin: 100px auto auto auto;
+  //
+  //.workCBC, .reliableSupplier,
+  //.fullComplex, .orderKey,
+  //.directDeliveries, .qualityService,
+  //.cooperation {
+  //  @include flexAndAlign(center, center);
+  //  text-align: center;
+  //  box-shadow: $boxShadow;
+  //  transition: $backgroundTransition;
+  //  cursor: pointer;
+  //  background-color: $colorWhite;
+  //}
+  //
+  //.reliableSupplierSpanOne, .fullComplexSpanOne {
+  //  font-size: 24px;
+  //  margin-top: 10px;
+  //}
+  //
+  //.reliableSupplierSpanTwo, .fullComplexSpanTwo,
+  //.orderKeySpanTwo, .cooperationSpanTwo, .qualityServiceSpanTwo {
+  //  font-weight: 400;
+  //}
+  //
+  //.spanAndImageReliable, .spanAndImageFullComplex,
+  //.spanAndImageOrderKey {
+  //  @extend %tplFlexAndColumn;
+  //  align-items: center;
+  //  text-align: center;
+  //}
+  //
+  //.workCBC:hover, .reliableSupplier:hover,
+  //.fullComplex:hover, .orderKey:hover,
+  //.directDeliveries:hover, .qualityService:hover,
+  //.cooperation:hover {
+  //  background-color: #cec9c9;
+  //}
+  //
+  //.workCBC {
+  //  @include heightAndWidth(250px, 330px);
+  //  background-color: #F0F0FF;
+  //
+  //  .workCBCSpan {
+  //    @include heightAndWidth(111px, 256px);
+  //    font-size: 30px;
+  //    line-height: 38px;
+  //  }
+  //}
+  //
+  //.reliableSupplier {
+  //  @include heightAndWidth(250px, 323px);
+  //
+  //  .spanAndImageReliable {
+  //    @include heightAndWidth(172px, 269px);
+  //    margin: 37px 30px;
+  //
+  //    .oneImageReliable {
+  //      @include heightAndWidth(60px, 60px);
+  //    }
+  //
+  //    .reliableSupplierSpanOne {
+  //      @include heightAndWidth(29px, 269px);
+  //      line-height: 29px;
+  //    }
+  //
+  //    .reliableSupplierSpanTwo {
+  //      @include heightAndWidth(63px, 194px);
+  //      margin-top: 10px;
+  //    }
+  //  }
+  //}
+  //
+  //.fullComplex {
+  //  @include heightAndWidth(250px, 330px);
+  //
+  //  .spanAndImageFullComplex {
+  //    @include heightAndWidth(181px, 292px);
+  //    margin: 43px 27px;
+  //
+  //    .twoImageReliableOne {
+  //      @include heightAndWidth(62px, 72px);
+  //      margin-top: 2px;
+  //    }
+  //
+  //    .fullComplexSpanOne {
+  //      @include heightAndWidth(31px, 215px);
+  //      padding-top: 2px;
+  //    }
+  //
+  //    .fullComplexSpanTwo {
+  //      @include heightAndWidth(71px, 292px);
+  //      padding-top: 8px;
+  //    }
+  //  }
+  //}
+  //
+  //.orderKey {
+  //  @include heightAndWidth(250px, 330px);
+  //
+  //  .spanAndImageOrderKey {
+  //    @include heightAndWidth(181px, 178px);
+  //    margin: 29px 36px;
+  //
+  //    .threeImageOrderKey {
+  //      @include heightAndWidth(70px, 50px);
+  //    }
+  //
+  //    .orderKeySpanOne {
+  //      @include heightAndWidth(29px, 187px);
+  //      font-size: 24px;
+  //      margin-top: 6px;
+  //    }
+  //
+  //    .orderKeySpanTwo {
+  //      @include heightAndWidth(63px, 281px);
+  //      margin-top: 8px;
+  //    }
+  //  }
+  //}
+  //
+  //.directDeliveries {
+  //  @include heightAndWidth(250px, 690px);
+  //  grid-area: 2/1/2/2;
+  //  flex-direction: column;
+  //
+  //  .fourImageDirectDeliveries {
+  //    @include heightAndWidth(73px, 70px);
+  //    margin-top: -1px;
+  //  }
+  //
+  //  .directDeliveriesSpanOne {
+  //    @include heightAndWidth(29px, 213px);
+  //    font-size: 24px;
+  //    padding-top: 12px;
+  //  }
+  //
+  //  .manyPictures {
+  //    @include heightAndWidth(67px, 630px);
+  //    @include flexAndAlign(space-between, center);
+  //    flex-direction: row;
+  //    margin-top: 40px;
+  //
+  //    .oneBottom {
+  //      @include heightAndWidth(56px, 45px);
+  //    }
+  //
+  //    .twoBottom {
+  //      @include heightAndWidth(44px, 50px);
+  //    }
+  //
+  //    .threeBottom {
+  //      @include heightAndWidth(15px, 75px);
+  //    }
+  //
+  //    .fourBottom {
+  //      @include heightAndWidth(60px, 60px);
+  //    }
+  //
+  //    .fiveBottom {
+  //      @include heightAndWidth(12px, 80px);
+  //    }
+  //
+  //    .sixBottom {
+  //      @include heightAndWidth(46px, 70px);
+  //    }
+  //
+  //    .sevenBottom {
+  //      @include heightAndWidth(23px, 70px);
+  //    }
+  //  }
+  //}
+  //
+  //.qualityService {
+  //  @include heightAndWidth(250px, 330px);
+  //  @extend %tplFlexAndColumn;
+  //  align-items: center;
+  //  grid-area: 2/3/2/3;
+  //
+  //  .fiveImageOrderKey {
+  //    @include heightAndWidth(63px, 60px);
+  //    //background: url(;
+  //  }
+  //
+  //  .qualityServiceSpanOne {
+  //    @include heightAndWidth(29px, 267px);
+  //    font-size: 24px;
+  //    margin-top: 15px;
+  //  }
+  //
+  //  .qualityServiceSpanTwo {
+  //    @include heightAndWidth(84px, 292px);
+  //    margin-top: 6px;
+  //  }
+  //}
+  //
+  //.cooperation {
+  //  @extend %tplFlexAndColumn;
+  //  @include heightAndWidth(250px, 330px);
+  //  align-items: center;
+  //  grid-area: 2/4/2/4;
+  //}
+  //
+  //.sixImageCooperation {
+  //  @include heightAndWidth(54px, 60px);
+  //  margin-top: -8px;
+  //}
+  //
+  //.cooperationSpanOne {
+  //  @include heightAndWidth(29px, 202px);
+  //  padding-top: 11px;
+  //  font-size: 24px;
+  //}
+  //
+  //.cooperationSpanTwo {
+  //  @include heightAndWidth(84px, 292px);
+  //  padding-top: 20px;
+  //  line-height: 21px;
+  //}
 }
 
 .twoBannersNextDiv {

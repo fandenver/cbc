@@ -348,7 +348,6 @@ html, body {
   margin: 0 0 50px 0;
 }
 .page_container {
-  margin: 0 0 50px 0;
   max-height: 1584px;
   height: 100%;
 }
@@ -357,6 +356,9 @@ html, body {
     display: flex;
     max-height: 742px;
   }
+}
+.page_main-content {
+  margin: 0 0 100px 0;
 }
 .page_side {
   z-index: 10;
@@ -375,6 +377,10 @@ html, body {
     margin: 0 0 0 0;
   }
 }
+.page_collage {
+  margin: 0 0 130px 0;
+}
+
 .navigate-bar {
   width: 100%;
   min-height: 60px;
@@ -1002,228 +1008,119 @@ html, body {
   left: 357px;
 }
 
-.manyBanners {
-  height: 530px;
-  width: 1410px;
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: 330px 330px 330px 330px;
-  grid-template-rows: 250px 250px;
+.collage-page_columns {
+  display: flex;
   flex-wrap: wrap;
-  margin: 100px auto auto auto;
+  margin: 0 -15px;
 }
-.manyBanners .workCBC, .manyBanners .reliableSupplier,
-.manyBanners .fullComplex, .manyBanners .orderKey,
-.manyBanners .directDeliveries, .manyBanners .qualityService,
-.manyBanners .cooperation {
+.collage-page_column {
+  flex: 0 1 25%;
+  padding: 0 15px;
+  margin: 0 0 15px 0;
+}
+@media (max-width: 1410px) {
+  .collage-page_column {
+    flex: 0 1 33.333%;
+  }
+}
+@media (max-width: 1068px) {
+  .collage-page_column {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 728px) {
+  .collage-page_column {
+    flex: 0 1 100%;
+  }
+}
+.collage-page_column_big-block {
+  flex: 0 1 50%;
+}
+@media (max-width: 1410px) {
+  .collage-page_column_big-block {
+    display: none;
+  }
+}
+.collage-page_block {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  height: 250px;
+  background-color: #FFFFFF;
+  min-height: 200px;
+  min-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
-  transition: background-color 0.5s;
-  cursor: pointer;
-  background-color: #fff;
-}
-.manyBanners .reliableSupplierSpanOne, .manyBanners .fullComplexSpanOne {
-  font-size: 24px;
-  margin-top: 10px;
-}
-.manyBanners .reliableSupplierSpanTwo, .manyBanners .fullComplexSpanTwo,
-.manyBanners .orderKeySpanTwo, .manyBanners .cooperationSpanTwo, .manyBanners .qualityServiceSpanTwo {
-  font-weight: 400;
-}
-.manyBanners .spanAndImageReliable, .manyBanners .spanAndImageFullComplex,
-.manyBanners .spanAndImageOrderKey {
-  align-items: center;
-  text-align: center;
-}
-.manyBanners .workCBC:hover, .manyBanners .reliableSupplier:hover,
-.manyBanners .fullComplex:hover, .manyBanners .orderKey:hover,
-.manyBanners .directDeliveries:hover, .manyBanners .qualityService:hover,
-.manyBanners .cooperation:hover {
-  background-color: #cec9c9;
-}
-.manyBanners .workCBC {
-  height: 250px;
-  width: 330px;
-  background-color: #F0F0FF;
-}
-.manyBanners .workCBC .workCBCSpan {
-  height: 111px;
-  width: 256px;
-  font-size: 30px;
-  line-height: 38px;
-}
-.manyBanners .reliableSupplier {
-  height: 250px;
-  width: 323px;
-}
-.manyBanners .reliableSupplier .spanAndImageReliable {
-  height: 172px;
-  width: 269px;
-  margin: 37px 30px;
-}
-.manyBanners .reliableSupplier .spanAndImageReliable .oneImageReliable {
-  height: 60px;
-  width: 60px;
-}
-.manyBanners .reliableSupplier .spanAndImageReliable .reliableSupplierSpanOne {
-  height: 29px;
-  width: 269px;
-  line-height: 29px;
-}
-.manyBanners .reliableSupplier .spanAndImageReliable .reliableSupplierSpanTwo {
-  height: 63px;
-  width: 194px;
-  margin-top: 10px;
-}
-.manyBanners .fullComplex {
-  height: 250px;
-  width: 330px;
-}
-.manyBanners .fullComplex .spanAndImageFullComplex {
-  height: 181px;
-  width: 292px;
-  margin: 43px 27px;
-}
-.manyBanners .fullComplex .spanAndImageFullComplex .twoImageReliableOne {
-  height: 62px;
-  width: 72px;
-  margin-top: 2px;
-}
-.manyBanners .fullComplex .spanAndImageFullComplex .fullComplexSpanOne {
-  height: 31px;
-  width: 215px;
-  padding-top: 2px;
-}
-.manyBanners .fullComplex .spanAndImageFullComplex .fullComplexSpanTwo {
-  height: 71px;
-  width: 292px;
-  padding-top: 8px;
-}
-.manyBanners .orderKey {
-  height: 250px;
-  width: 330px;
-}
-.manyBanners .orderKey .spanAndImageOrderKey {
-  height: 181px;
-  width: 178px;
-  margin: 29px 36px;
-}
-.manyBanners .orderKey .spanAndImageOrderKey .threeImageOrderKey {
-  height: 70px;
-  width: 50px;
-}
-.manyBanners .orderKey .spanAndImageOrderKey .orderKeySpanOne {
-  height: 29px;
-  width: 187px;
-  font-size: 24px;
-  margin-top: 6px;
-}
-.manyBanners .orderKey .spanAndImageOrderKey .orderKeySpanTwo {
-  height: 63px;
-  width: 281px;
-  margin-top: 8px;
-}
-.manyBanners .directDeliveries {
-  height: 250px;
-  width: 690px;
-  grid-area: 2/1/2/2;
+  padding: 0 25px;
   flex-direction: column;
 }
-.manyBanners .directDeliveries .fourImageDirectDeliveries {
-  height: 73px;
-  width: 70px;
-  margin-top: -1px;
+@media (max-width: 479.98px) {
+  .collage-page_block {
+    height: 200px;
+  }
 }
-.manyBanners .directDeliveries .directDeliveriesSpanOne {
-  height: 29px;
-  width: 213px;
+.collage-page_block img {
+  margin: 0 0 15px 0;
+}
+@media (max-width: 479.98px) {
+  .collage-page_block img {
+    margin: 0 0 7px 0;
+  }
+}
+.collage-page_block_first {
+  background-color: #F0F0FF;
+}
+.collage-page_block_first p {
+  padding: 0 40px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 37px;
+  text-align: center;
+}
+@media (max-width: 479.98px) {
+  .collage-page_block_first p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.collage-page_header {
   font-size: 24px;
-  padding-top: 12px;
+  line-height: 29px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 15px 0;
+  white-space: nowrap;
 }
-.manyBanners .directDeliveries .manyPictures {
-  height: 67px;
-  width: 630px;
+@media (max-width: 479.98px) {
+  .collage-page_header {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.collage-page_content {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.collage-page_content_bold {
+  font-weight: 500;
+}
+@media (max-width: 479.98px) {
+  .collage-page_content_bold {
+    font-weight: 400;
+  }
+}
+@media (max-width: 479.98px) {
+  .collage-page_content {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.collage-page_many-images {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  margin-top: 40px;
-}
-.manyBanners .directDeliveries .manyPictures .oneBottom {
-  height: 56px;
-  width: 45px;
-}
-.manyBanners .directDeliveries .manyPictures .twoBottom {
-  height: 44px;
-  width: 50px;
-}
-.manyBanners .directDeliveries .manyPictures .threeBottom {
-  height: 15px;
-  width: 75px;
-}
-.manyBanners .directDeliveries .manyPictures .fourBottom {
-  height: 60px;
-  width: 60px;
-}
-.manyBanners .directDeliveries .manyPictures .fiveBottom {
-  height: 12px;
-  width: 80px;
-}
-.manyBanners .directDeliveries .manyPictures .sixBottom {
-  height: 46px;
-  width: 70px;
-}
-.manyBanners .directDeliveries .manyPictures .sevenBottom {
-  height: 23px;
-  width: 70px;
-}
-.manyBanners .qualityService {
-  height: 250px;
-  width: 330px;
-  align-items: center;
-  grid-area: 2/3/2/3;
-}
-.manyBanners .qualityService .fiveImageOrderKey {
-  height: 63px;
-  width: 60px;
-  background: url("../images/manyBanners/fiveImage.png");
-}
-.manyBanners .qualityService .qualityServiceSpanOne {
-  height: 29px;
-  width: 267px;
-  font-size: 24px;
-  margin-top: 15px;
-}
-.manyBanners .qualityService .qualityServiceSpanTwo {
-  height: 84px;
-  width: 292px;
-  margin-top: 6px;
-}
-.manyBanners .cooperation {
-  height: 250px;
-  width: 330px;
-  align-items: center;
-  grid-area: 2/4/2/4;
-}
-.manyBanners .sixImageCooperation {
-  height: 54px;
-  width: 60px;
-  margin-top: -8px;
-}
-.manyBanners .cooperationSpanOne {
-  height: 29px;
-  width: 202px;
-  padding-top: 11px;
-  font-size: 24px;
-}
-.manyBanners .cooperationSpanTwo {
-  height: 84px;
-  width: 292px;
-  padding-top: 20px;
-  line-height: 21px;
+  width: 100%;
 }
 
 .twoBannersNextDiv {
