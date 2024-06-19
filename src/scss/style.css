@@ -37,6 +37,9 @@ input:focus, select:focus {
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: #FFAF37;
   color: #fff;
   cursor: pointer;
@@ -380,7 +383,9 @@ html, body {
 .page_collage {
   margin: 0 0 130px 0;
 }
-
+.page_banners {
+  margin: 0 0 100px 0;
+}
 .navigate-bar {
   width: 100%;
   min-height: 60px;
@@ -1123,197 +1128,238 @@ html, body {
   width: 100%;
 }
 
-.twoBannersNextDiv {
-  height: 402px;
-  width: 1410px;
+.banners-page_container {
   display: flex;
-  position: relative;
   justify-content: space-between;
-  margin: 130px auto auto auto;
+  position: relative;
+  flex-wrap: wrap;
 }
-.twoBannersNextDiv .leftTwoBanners {
-  height: 175px;
-  width: 240px;
-  top: -33px;
-  left: -34px;
-  position: absolute;
-  border-top: 8px solid #1F347B;
-  border-left: 8px solid #1F347B;
-  transform: rotate(0deg);
+.banners-page_column {
+  flex: 0 1 50%;
+  padding: 0 15px 0 0;
 }
-.twoBannersNextDiv .oneBanner, .twoBannersNextDiv .twoBanner {
-  height: 402px;
-  width: 688px;
-  display: flex;
+.banners-page_column:last-child {
+  padding: 0 0 0 15px;
 }
-.twoBannersNextDiv .oneSpanOneBannerTwoBanners, .twoBannersNextDiv .oneSpanTwoBannerTwoBanners {
-  font-size: 24px;
-  text-align: right;
-  line-height: 29px;
+@media (max-width: 991.98px) {
+  .banners-page_column {
+    flex: 0 1 100%;
+    padding: 15px 0;
+  }
+  .banners-page_column:last-child {
+    padding: 15px 0;
+  }
 }
-.twoBannersNextDiv .oneBannerSpanAndButton, .twoBannersNextDiv .twoBannerSpanAndButton {
-  align-items: self-end;
-  margin-top: 82px;
-  height: 239px;
-}
-.twoBannersNextDiv .twoSpanOneBannerTwoBanners, .twoBannersNextDiv .twoSpanTwoBannerTwoBanners {
-  text-align: right;
-  font-weight: 400;
-  line-height: 21px;
-}
-.twoBannersNextDiv .oneAndTwoBannerSmallImage {
-  height: 59px;
-  width: 60px;
-  position: absolute;
-  margin-left: 15px;
-  margin-top: 27px;
-}
-.twoBannersNextDiv .oneBanner {
+.banners-page_banner {
+  position: relative;
   background-color: #F0F0FF;
+  height: 400px;
+  padding: 30px 45px 0 15px;
 }
-.twoBannersNextDiv .oneBanner .oneBannerImage {
-  height: 240px;
-  width: 323px;
-  position: absolute;
-  margin-top: 162px;
-}
-.twoBannersNextDiv .oneBanner .oneBannerSpanAndButton {
-  width: 537px;
-  margin-left: 106px;
-}
-.twoBannersNextDiv .oneBanner .oneBannerSpanAndButton .twoSpanOneBannerTwoBanners {
-  margin-top: 32px;
-}
-.twoBannersNextDiv .oneBanner .oneBannerSpanAndButton #chooseTechnique {
-  height: 70px;
-  width: 300px;
-  margin-top: 16px;
-  text-transform: uppercase;
-}
-.twoBannersNextDiv .twoBanner {
+.banners-page_banner_color {
   background-color: #E3E1FF;
 }
-.twoBannersNextDiv .twoBanner .twoBannerImage {
-  height: 262px;
-  width: 344px;
+@media (max-width: 670px) {
+  .banners-page_banner {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0 20px 0;
+  }
+}
+.banners-page_images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 323px;
+}
+.banners-page_images img {
+  align-self: flex-start;
+  max-width: 100%;
+}
+@media (max-width: 1340px) and (min-width: 991.98px) {
+  .banners-page_images img {
+    max-width: 80%;
+  }
+}
+@media (max-width: 670px) {
+  .banners-page_images img {
+    max-width: 160px;
+    padding: 0 0 0 20px;
+  }
+}
+@media (max-width: 670px) {
+  .banners-page_images {
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 10px 0 0;
+  }
+}
+.banners-page_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: right;
   position: absolute;
-  margin-top: 115px;
+  right: 0;
+  top: 25%;
+  padding: 0 45px 0 0;
+  max-width: 536px;
+  max-height: 239px;
+  height: 100%;
 }
-.twoBannersNextDiv .twoBanner .twoBannerSpanAndButton {
-  width: 268px;
-  margin-left: 389px;
+@media (max-width: 1340px) {
+  .banners-page_content {
+    padding: 0 15px 0 0;
+  }
 }
-.twoBannersNextDiv .twoBanner .twoBannerSpanAndButton .twoSpanTwoBannerTwoBanners {
-  margin-top: 6px;
+@media (max-width: 1160px) and (min-width: 991.98px) {
+  .banners-page_content a {
+    font-size: 16px;
+  }
 }
-.twoBannersNextDiv .twoBanner .twoBannerSpanAndButton #assembleOffice {
-  height: 69px;
-  width: 268px;
-  margin-top: 17px;
-  text-transform: uppercase;
+@media (max-width: 670px) {
+  .banners-page_content a {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 670px) {
+  .banners-page_content {
+    position: relative;
+    padding: 0 0 0 0;
+    top: 0;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+.banners-page_content-last-banner {
+  max-width: 268px;
+}
+@media (max-width: 670px) {
+  .banners-page_content-last-banner {
+    max-width: 100%;
+  }
+}
+.banners-page_header {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  margin: 0 0 30px 0;
+  padding: 0 0 0 10px;
+}
+@media (max-width: 670px) {
+  .banners-page_header {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 5px;
+  }
+}
+.banners-page_description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0 0 20px 0;
+  max-width: 300px;
+}
+@media (max-width: 1340px) and (min-width: 991.98px) {
+  .banners-page_description {
+    max-width: 268px;
+  }
+}
+@media (max-width: 1160px) and (min-width: 991.98px) {
+  .banners-page_description {
+    max-width: 200px;
+  }
+}
+@media (max-width: 670px) {
+  .banners-page_description {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 4px;
+  }
+}
+.banners-page_button {
+  display: inline-flex;
+  padding: 20px;
+  max-width: 300px;
+}
+@media (max-width: 1340px) {
+  .banners-page_button {
+    max-width: 268px;
+  }
+}
+@media (max-width: 1160px) and (min-width: 991.98px) {
+  .banners-page_button {
+    max-width: 200px;
+  }
+}
+.banners-page_pattern {
+  left: -30px;
+  top: -30px;
+}
+.banners-page_pattern::after {
+  right: -5px;
+  top: -15px;
 }
 
-.oneFooter {
-  height: 300px;
-  width: 100%;
-  display: flex;
-  align-items: center;
+.customers-page {
   background-color: #F0F0FF;
-  margin-top: 100px;
+  max-height: 300px;
+  padding: 30px 0;
 }
-.oneFooter .oneFooterCenterBanner {
-  height: 258px;
-  width: 1389px;
-  display: grid;
-  position: relative;
-  list-style: none;
-  grid-row-gap: 18px;
-  grid-template-rows: 74px 166px;
-  grid-template-columns: 694px 695px;
-  margin: auto;
-  padding: 0;
-}
-.oneFooter .oneFooterCenterBanner .onBlockOneFooter {
-  height: 74px;
-  width: 687px;
-  line-height: 37px;
-  font-size: 30px;
-  align-self: flex-start;
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
-.oneFooter .oneFooterCenterBanner #twoBlockOneFooter {
-  height: 60px;
-  width: 400px;
+.customers-page_container {
   display: flex;
-  align-items: center;
-  cursor: pointer;
-  justify-self: right;
-  grid-column-start: 2;
-  grid-row-start: 1;
-  border: 2px solid #FFAF37;
-  padding-left: 20px;
-  transition: background-color 0.5s, color 0.5s;
-  background-color: #F0F0FF;
-  color: rgb(74, 77, 74);
+  flex-direction: column;
 }
-.oneFooter .oneFooterCenterBanner #twoBlockOneFooter:hover {
-  background-color: #001569;
-  color: #fff;
-}
-.oneFooter .oneFooterCenterBanner .arrowTwoBlockOneFooterSpan {
-  top: -30px;
-  left: 1215px;
-  position: absolute;
-}
-.oneFooter .oneFooterCenterBanner .threeBlockOneFooter {
-  height: 166px;
-  width: 1327px;
+.customers-page_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  margin-left: 62px;
-  font-size: 20px;
+  margin: 0 0 30px 0;
 }
-.oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter, .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter,
-.oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesThreeBlockOneFooter, .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFourBlockOneFooter,
-.oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFiveBlockOneFooter {
+.customers-page_header span {
+  padding: 0 25px 0 0;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 37px;
+}
+.customers-page_header a {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  height: 60px;
+  border: 2px solid #FFAF37;
+  padding: 25px 80px 25px 25px;
+}
+.customers-page_header a span {
+  white-space: nowrap;
+  font-size: 18px;
+  line-height: 21px;
+}
+.customers-page_brands {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.customers-page_brand {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.customers-page_brand span {
   text-align: center;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 500;
 }
-.oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter {
-  height: 161px;
-  width: 291px;
-}
-.oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter .oneImageOneFooter {
-  height: 100px;
-  width: 120px;
-}
-.oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter {
-  height: 104px;
-  width: 200px;
-}
-.oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter .twoImageOneFooter {
-  height: 66px;
-  width: 200px;
-}
-.oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesThreeBlockOneFooter {
-  height: 161px;
-  width: 342px;
-}
-.oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFourBlockOneFooter {
-  height: 85px;
-  width: 200px;
-}
-.oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFiveBlockOneFooter {
-  height: 162px;
-  width: 1509x;
+.customers-page_brand img {
+  max-width: 100%;
 }
 
 .bannerManyPictures {

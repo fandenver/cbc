@@ -37,6 +37,9 @@ input:focus, select:focus {
 }
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: #FFAF37;
   color: #fff;
   cursor: pointer;

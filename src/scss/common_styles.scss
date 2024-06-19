@@ -125,6 +125,9 @@ input:focus, select:focus {
 // Стили повторяющихся элементов
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: $colorOrange;
   color: $colorWhite;
   cursor: pointer;

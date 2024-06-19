@@ -153,6 +153,14 @@ html, body {
   &_collage {
     margin: 0 0 130px 0;
   }
+
+  &_banners {
+    margin: 0 0 100px 0;
+  }
+
+  &_customers {
+
+  }
 }
 
 .navigate-bar {
@@ -888,7 +896,7 @@ html, body {
     align-items: center;
     padding: 0 25px;
     flex-direction: column;
-    
+
     @media (max-width: $md4+px) {
       height: 200px;
     }
@@ -1187,204 +1195,350 @@ html, body {
   //}
 }
 
-.twoBannersNextDiv {
-  @include heightAndWidth(402px, 1410px);
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  margin: 130px auto auto auto;
+.banners-page {
 
-  .leftTwoBanners {
-    @include heightAndWidth(175px, 240px);
-    @include topAndLeft(-33px, -34px);
-    position: absolute;
-    border-top: 8px solid #1F347B;
-    border-left: 8px solid #1F347B;
-    transform: rotate(0deg);
-  }
-
-  .oneBanner, .twoBanner {
-    @include heightAndWidth(402px, 688px);
+  &_container {
     display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
   }
 
-  .oneSpanOneBannerTwoBanners, .oneSpanTwoBannerTwoBanners {
+  &_column {
+    flex: 0 1 50%;
+    padding: 0 15px 0 0;
+
+    &:last-child {
+      padding: 0 0 0 15px;
+    }
+
+    @media (max-width: $md2+px) {
+      flex: 0 1 100%;
+      padding: 15px 0;
+
+      &:last-child {
+        padding: 15px 0;
+      }
+    }
+  }
+
+  &_banner {
+    position: relative;
+    background-color: #F0F0FF;
+    height: 400px;
+    padding: 30px 45px 0 15px;
+
+    &_color {
+      background-color: #E3E1FF;
+    }
+
+    @media (max-width: 670px) {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 0 20px 0;
+    }
+  }
+
+  &_images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 323px;
+
+    img {
+      align-self: flex-start;
+      max-width: 100%;
+
+      @media (max-width: 1340px) and (min-width: $md2+px) {
+        max-width: 80%;
+      }
+
+      @media (max-width: 670px) {
+        max-width: 160px;
+        padding: 0 0 0 20px;
+      }
+    }
+
+    @media (max-width: 670px) {
+      max-width: 100%;
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 0 10px 0 0;
+    }
+  }
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    padding: 0 45px 0 0;
+    max-width: 536px;
+    max-height: 239px;
+    height: 100%;
+
+    @media (max-width: 1340px) {
+      padding: 0 15px 0 0;
+    }
+
+    a {
+      @media (max-width: 1160px) and (min-width: $md2+px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 670px) {
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 670px) {
+      position: relative;
+      padding: 0 0 0 0;
+      top: 0;
+      align-items: center;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &_content-last-banner {
+    max-width: 268px;
+
+    @media (max-width: 670px) {
+      max-width: 100%;
+    }
+  }
+
+  &_header {
     font-size: 24px;
-    text-align: right;
+    font-weight: 500;
     line-height: 29px;
+    margin: 0 0 30px 0;
+    padding: 0 0 0 10px;
+
+    @media (max-width: 670px) {
+      font-size: 18px;
+      line-height: 22px;
+      padding: 0 5px
+    }
   }
 
-  .oneBannerSpanAndButton, .twoBannerSpanAndButton {
-    @extend %tplFlexAndColumn;
-    align-items: self-end;
-    margin-top: 82px;
-    height: 239px;
-  }
-
-  .twoSpanOneBannerTwoBanners, .twoSpanTwoBannerTwoBanners {
-    text-align: right;
+  &_description {
+    font-size: 18px;
     font-weight: 400;
     line-height: 21px;
-  }
+    margin: 0 0 20px 0;
+    max-width: 300px;
 
-  .oneAndTwoBannerSmallImage {
-    @include heightAndWidth(59px, 60px);
-    position: absolute;
-    margin-left: 15px;
-    margin-top: 27px;
-  }
-
-  .oneBanner {
-    background-color: #F0F0FF;
-
-    .oneBannerImage {
-      @include heightAndWidth(240px, 323px);
-      position: absolute;
-      margin-top: 162px;
+    @media (max-width: 1340px) and (min-width: $md2+px) {
+      max-width: 268px;
     }
 
-    .oneBannerSpanAndButton {
-      width: 537px;
-      margin-left: 106px;
+    @media (max-width: 1160px) and (min-width: $md2+px) {
+      max-width: 200px;
+    }
 
-      .twoSpanOneBannerTwoBanners {
-        margin-top: 32px;
-      }
-
-      #chooseTechnique {
-        @include heightAndWidth(70px, 300px);
-        margin-top: 16px;
-        text-transform: uppercase;
-      }
+    @media (max-width: 670px) {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0 4px
     }
   }
 
-  .twoBanner {
-    background-color: #E3E1FF;
+  &_button {
+    display: inline-flex;
+    padding: 20px;
+    max-width: 300px;
 
-    .twoBannerImage {
-      @include heightAndWidth(262px, 344px);
-      position: absolute;
-      margin-top: 115px;
+    @media (max-width: 1340px) {
+      max-width: 268px;
     }
 
-    .twoBannerSpanAndButton {
-      width: 268px;
-      margin-left: 389px;
+    @media (max-width: 1160px) and (min-width: $md2+px) {
+      max-width: 200px;
+    }
+  }
 
-      .twoSpanTwoBannerTwoBanners {
-        margin-top: 6px;
-      }
+  &_pattern {
+    left: -30px;
+    top: -30px;
 
-      #assembleOffice {
-        @include heightAndWidth(69px, 268px);
-        margin-top: 17px;
-        text-transform: uppercase;
-      }
+    &::after {
+      right: -5px;
+      top: -15px;
     }
   }
 }
 
-.oneFooter {
-  @include heightAndWidth(300px, 100%);
-  display: flex;
-  align-items: center;
+.customers-page {
   background-color: #F0F0FF;
-  margin-top: 100px;
+  max-height: 300px;
+  padding: 30px 0;
 
-  .oneFooterCenterBanner {
-    @include heightAndWidth(258px, 1389px);
-    display: grid;
-    position: relative;
-    list-style: none;
-    grid-row-gap: 18px;
-    grid-template-rows: 74px 166px;
-    grid-template-columns: 694px 695px;
-    margin: auto;
-    padding: 0;
+  &_container {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .onBlockOneFooter {
-      @include heightAndWidth(74px, 687px);
-      line-height: 37px;
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 30px 0;
+
+    span {
+      padding: 0 25px 0 0;
       font-size: 30px;
-      align-self: flex-start;
-      grid-column-start: 1;
-      grid-row-start: 1;
+      font-weight: 500;
+      line-height: 37px;
     }
 
-    #twoBlockOneFooter {
-      @include heightAndWidth(60px, 400px);
+    a {
       display: flex;
       align-items: center;
-      cursor: pointer;
-      justify-self: right;
-      grid-column-start: 2;
-      grid-row-start: 1;
+      height: 60px;
       border: 2px solid $colorOrange;
-      padding-left: 20px;
-      transition: $backgroundTransition, color 0.5s;
-      background-color: #F0F0FF;
-      color: $colorGray;
+      padding: 25px 80px 25px 25px;
 
-      &:hover {
-        background-color: $colorBlue;
-        color: $colorWhite;
-      }
-    }
-
-    .arrowTwoBlockOneFooterSpan {
-      @include topAndLeft(-30px, 1215px);
-      position: absolute;
-    }
-
-    .threeBlockOneFooter {
-      @include heightAndWidth(166px, 1327px);
-      @include flexAndAlign(space-between, center);
-      flex-direction: row;
-      grid-column-start: 1;
-      grid-column-end: 2;
-      grid-row-start: 2;
-      margin-left: 62px;
-      font-size: 20px;
-
-      .imagesOneBlockOneFooter, .imagesTwoBlockOneFooter,
-      .imagesThreeBlockOneFooter, .imagesFourBlockOneFooter,
-      .imagesFiveBlockOneFooter {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .imagesOneBlockOneFooter {
-        @include heightAndWidth(161px, 291px);
-
-        .oneImageOneFooter {
-          @include heightAndWidth(100px, 120px);
-        }
-      }
-
-      .imagesTwoBlockOneFooter {
-        @include heightAndWidth(104px, 200px);
-
-        .twoImageOneFooter {
-          @include heightAndWidth(66px, 200px);
-        }
-      }
-
-      .imagesThreeBlockOneFooter {
-        @include heightAndWidth(161px, 342px);
-      }
-
-      .imagesFourBlockOneFooter {
-        @include heightAndWidth(85px, 200px);
-      }
-
-      .imagesFiveBlockOneFooter {
-        @include heightAndWidth(162px, 1509x);
+      span {
+        white-space: nowrap;
+        font-size: 18px;
+        line-height: 21px;
       }
     }
   }
+
+  &_brands {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_brand {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    span {
+      text-align: center;
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: 500;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  //@include heightAndWidth(300px, 100%);
+  //display: flex;
+  //align-items: center;
+  //background-color: #F0F0FF;
+  //margin-top: 100px;
+  //
+  //.oneFooterCenterBanner {
+  //  @include heightAndWidth(258px, 1389px);
+  //  display: grid;
+  //  position: relative;
+  //  list-style: none;
+  //  grid-row-gap: 18px;
+  //  grid-template-rows: 74px 166px;
+  //  grid-template-columns: 694px 695px;
+  //  margin: auto;
+  //  padding: 0;
+  //
+  //  .onBlockOneFooter {
+  //    @include heightAndWidth(74px, 687px);
+  //    line-height: 37px;
+  //    font-size: 30px;
+  //    align-self: flex-start;
+  //    grid-column-start: 1;
+  //    grid-row-start: 1;
+  //  }
+  //
+  //  #twoBlockOneFooter {
+  //    @include heightAndWidth(60px, 400px);
+  //    display: flex;
+  //    align-items: center;
+  //    cursor: pointer;
+  //    justify-self: right;
+  //    grid-column-start: 2;
+  //    grid-row-start: 1;
+  //    border: 2px solid $colorOrange;
+  //    padding-left: 20px;
+  //    transition: $backgroundTransition, color 0.5s;
+  //    background-color: #F0F0FF;
+  //    color: $colorGray;
+  //
+  //    &:hover {
+  //      background-color: $colorBlue;
+  //      color: $colorWhite;
+  //    }
+  //  }
+  //
+  //  .arrowTwoBlockOneFooterSpan {
+  //    @include topAndLeft(-30px, 1215px);
+  //    position: absolute;
+  //  }
+  //
+  //  .threeBlockOneFooter {
+  //    @include heightAndWidth(166px, 1327px);
+  //    @include flexAndAlign(space-between, center);
+  //    flex-direction: row;
+  //    grid-column-start: 1;
+  //    grid-column-end: 2;
+  //    grid-row-start: 2;
+  //    margin-left: 62px;
+  //    font-size: 20px;
+  //
+  //    .imagesOneBlockOneFooter, .imagesTwoBlockOneFooter,
+  //    .imagesThreeBlockOneFooter, .imagesFourBlockOneFooter,
+  //    .imagesFiveBlockOneFooter {
+  //      display: flex;
+  //      flex-direction: column;
+  //      align-items: center;
+  //      text-align: center;
+  //    }
+  //
+  //    .imagesOneBlockOneFooter {
+  //      @include heightAndWidth(161px, 291px);
+  //
+  //      .oneImageOneFooter {
+  //        @include heightAndWidth(100px, 120px);
+  //      }
+  //    }
+  //
+  //    .imagesTwoBlockOneFooter {
+  //      @include heightAndWidth(104px, 200px);
+  //
+  //      .twoImageOneFooter {
+  //        @include heightAndWidth(66px, 200px);
+  //      }
+  //    }
+  //
+  //    .imagesThreeBlockOneFooter {
+  //      @include heightAndWidth(161px, 342px);
+  //    }
+  //
+  //    .imagesFourBlockOneFooter {
+  //      @include heightAndWidth(85px, 200px);
+  //    }
+  //
+  //    .imagesFiveBlockOneFooter {
+  //      @include heightAndWidth(162px, 1509x);
+  //    }
+  //  }
+  //}
 }
 
 .bannerManyPictures {
