@@ -147,6 +147,38 @@ input:focus, select:focus {
   }
 }
 
+.arrow-button {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  display: inline-flex;
+  cursor: pointer;
+
+  &::before {
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    width: 40px;
+    background-color: $colorGray;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+  }
+
+  &::after {
+    left: 40px;
+    bottom: 4px;
+    height: 10px;
+    width: 10px;
+    border-top: 2px solid $colorGray;
+    border-left: 2px solid $colorGray;
+    transform: rotate(-225deg);
+  }
+}
+
 .pattern {
   height: 175px;
   width: 240px;

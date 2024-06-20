@@ -8,64 +8,6 @@ html, body {
   height: 100%;
 }
 
-.circle, .circleTwoBanners, .circleAfterManyPicturesBanner,
-.circleAfterTwoFooter, .circleBannerBeforeLastFooter {
-  @include heightAndWidth(24px, 24px);
-  position: absolute;
-  background-color: #1F347B;
-  border-radius: 50%;
-}
-
-.circle {
-  @include topAndLeft(430px, 939px);
-  padding-bottom: 10px;
-}
-
-.circleTwoBanners {
-  @include topAndLeft(138px, -42px);
-}
-
-.circleAfterManyPicturesBanner {
-  @include topAndLeft(247px, 1424px);
-}
-
-.circleAfterTwoFooter {
-  left: 143px;
-  bottom: 171px;
-  background-color: rgba(31, 52, 123, 0.2);
-}
-
-.circleBannerBeforeLastFooter {
-  @include topAndLeft(-9px, 147px);
-  background-color: rgba(31, 52, 123, 0.2);
-}
-
-.arrowLeftManyPictures {
-  @include heightAndWidth(20px, 20px);
-  display: inline-flex;
-  cursor: pointer;
-
-  &::before {
-    background-color: $colorGray;
-    @include heightAndWidth(2px, 40px);
-    top: 58px;
-    left: 117px;
-  }
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-  }
-
-  &::after {
-    @include heightAndWidth(10px, 10px);
-    @include topAndLeft(54px, 147px);
-    border-top: 2px solid $colorGray;
-    border-left: 2px solid $colorGray;
-    transform: rotate(-225deg);
-  }
-}
 
 .checkBoxAndSpan {
   @include heightAndWidth(30px, 205px);
@@ -159,6 +101,10 @@ html, body {
   }
 
   &_customers {
+    margin: 0 0 100px 0;
+  }
+
+  &_products-categories {
 
   }
 }
@@ -1380,7 +1326,6 @@ html, body {
 
 .customers-page {
   background-color: #F0F0FF;
-  max-height: 300px;
   padding: 30px 0;
 
   &_container {
@@ -1394,32 +1339,46 @@ html, body {
     align-items: center;
     margin: 0 0 30px 0;
 
-    span {
+    & > span {
       padding: 0 25px 0 0;
       font-size: 30px;
       font-weight: 500;
       line-height: 37px;
     }
 
-    a {
-      display: flex;
-      align-items: center;
-      height: 60px;
-      border: 2px solid $colorOrange;
-      padding: 25px 80px 25px 25px;
+    @media (max-width: $md2+px) {
+      text-align: center;
 
-      span {
-        white-space: nowrap;
-        font-size: 18px;
-        line-height: 21px;
+      & span {
+        padding: 0 0 0 0;
+      }
+    }
+
+    @media (max-width: $md4+px) {
+      & span {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    a {
+      display: inline-flex;
+
+      @media (max-width: $md2+px) {
+        display: none;
       }
     }
   }
 
   &_brands {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 30px 0;
+    }
   }
 
   &_brand {
@@ -1428,218 +1387,200 @@ html, body {
     flex-direction: column;
     justify-content: center;
 
+    @media (max-width: 1105px) {
+      margin: 0 0 20px 0;
+    }
+
     span {
       text-align: center;
       font-size: 20px;
       line-height: 23px;
       font-weight: 500;
+
+      @media (max-width: $md3+px) {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    &_college {
+      max-width: 250px;
+
+      @media (max-width: $md3+px) {
+        max-width: 132px;
+      }
+    }
+
+    &_mfti {
+      max-width: 195px;
+
+      @media (max-width: $md3+px) {
+        max-width: 80px;
+      }
+    }
+
+    &_planet {
+      max-width: 290px;
+
+      @media (max-width: $md3+px) {
+        max-width: 224px;
+      }
+    }
+
+    &_fgyp {
+      max-width: 190px;
+
+      @media (max-width: $md3+px) {
+        max-width: 104px;
+      }
+    }
+
+    &_ao {
+      max-width: 140px;
+
+      @media (max-width: $md3+px) {
+        max-width: 101px;
+      }
     }
 
     img {
       max-width: 100%;
+
+      @media (max-width: $md3+px) {
+        max-width: 80%;
+      }
     }
   }
 
-  //@include heightAndWidth(300px, 100%);
-  //display: flex;
-  //align-items: center;
-  //background-color: #F0F0FF;
-  //margin-top: 100px;
-  //
-  //.oneFooterCenterBanner {
-  //  @include heightAndWidth(258px, 1389px);
-  //  display: grid;
-  //  position: relative;
-  //  list-style: none;
-  //  grid-row-gap: 18px;
-  //  grid-template-rows: 74px 166px;
-  //  grid-template-columns: 694px 695px;
-  //  margin: auto;
-  //  padding: 0;
-  //
-  //  .onBlockOneFooter {
-  //    @include heightAndWidth(74px, 687px);
-  //    line-height: 37px;
-  //    font-size: 30px;
-  //    align-self: flex-start;
-  //    grid-column-start: 1;
-  //    grid-row-start: 1;
-  //  }
-  //
-  //  #twoBlockOneFooter {
-  //    @include heightAndWidth(60px, 400px);
-  //    display: flex;
-  //    align-items: center;
-  //    cursor: pointer;
-  //    justify-self: right;
-  //    grid-column-start: 2;
-  //    grid-row-start: 1;
-  //    border: 2px solid $colorOrange;
-  //    padding-left: 20px;
-  //    transition: $backgroundTransition, color 0.5s;
-  //    background-color: #F0F0FF;
-  //    color: $colorGray;
-  //
-  //    &:hover {
-  //      background-color: $colorBlue;
-  //      color: $colorWhite;
-  //    }
-  //  }
-  //
-  //  .arrowTwoBlockOneFooterSpan {
-  //    @include topAndLeft(-30px, 1215px);
-  //    position: absolute;
-  //  }
-  //
-  //  .threeBlockOneFooter {
-  //    @include heightAndWidth(166px, 1327px);
-  //    @include flexAndAlign(space-between, center);
-  //    flex-direction: row;
-  //    grid-column-start: 1;
-  //    grid-column-end: 2;
-  //    grid-row-start: 2;
-  //    margin-left: 62px;
-  //    font-size: 20px;
-  //
-  //    .imagesOneBlockOneFooter, .imagesTwoBlockOneFooter,
-  //    .imagesThreeBlockOneFooter, .imagesFourBlockOneFooter,
-  //    .imagesFiveBlockOneFooter {
-  //      display: flex;
-  //      flex-direction: column;
-  //      align-items: center;
-  //      text-align: center;
-  //    }
-  //
-  //    .imagesOneBlockOneFooter {
-  //      @include heightAndWidth(161px, 291px);
-  //
-  //      .oneImageOneFooter {
-  //        @include heightAndWidth(100px, 120px);
-  //      }
-  //    }
-  //
-  //    .imagesTwoBlockOneFooter {
-  //      @include heightAndWidth(104px, 200px);
-  //
-  //      .twoImageOneFooter {
-  //        @include heightAndWidth(66px, 200px);
-  //      }
-  //    }
-  //
-  //    .imagesThreeBlockOneFooter {
-  //      @include heightAndWidth(161px, 342px);
-  //    }
-  //
-  //    .imagesFourBlockOneFooter {
-  //      @include heightAndWidth(85px, 200px);
-  //    }
-  //
-  //    .imagesFiveBlockOneFooter {
-  //      @include heightAndWidth(162px, 1509x);
-  //    }
-  //  }
-  //}
+  &_btn {
+    padding: 25px 80px 25px 25px;
+    border: 2px solid $colorOrange;
+    position: relative;
+    white-space: nowrap;
+    font-size: 18px;
+    line-height: 21px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+    @media (min-width: $md2+px) {
+      &:hover {
+        color: #FFFFFF;
+        background-color: $colorBlue;
+      }
+    }
+
+    @media (max-width: 1040px) {
+      padding: 25px 60px 25px 5px;
+    }
+
+    &_footer {
+      display: none;
+
+      @media (max-width: $md2+px) {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 15px 60px 15px 5px;
+      }
+    }
+  }
+
+  &_arrow-button {
+    top: -3px;
+    left: 20px;
+
+    @media (max-width: 370px) {
+      top: 5px;
+      left: -10px;
+    }
+  }
 }
 
-.bannerManyPictures {
-  //@include heightAndWidth(804px, 1410px);
-  display: grid;
-  width: 100%;
-  height: 100%;
-  max-height: 804px;
-  max-width: 1410px;
-  margin: 100px auto 100px auto;
-  //grid-gap: 30px;
-  grid-column-gap: 2.12%;
-  grid-row-gap: 3.73%;
-  //grid-row-gap: 3.73%;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(4, 1fr);
+.products-categories-page {
+  min-height: 804px;
 
-  @include maxWidth() {
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: 1fr 1fr;
-    max-height: 1262px;
-    margin: 100px auto 300px auto;
-  }
-
-  .oneBannerManyPictures, .bannersManyPicturesContainer {
-    @include flexAndAlign(center, center);
-    justify-content: space-around;
-    max-height: 248px;
-    max-width: 330px;
-    width: 100%;
-    height: 100%;
+  &_items {
     display: flex;
-    position: relative;
-    flex-direction: column;
-    background-color: $colorWhite;
-    box-shadow: $boxShadow;
-    transition: color 0.5s;
-    cursor: pointer;
+    flex-wrap: wrap;
+    margin: 0 -11px;
   }
 
-  .oneBannerManyPictures:hover, .bannersManyPicturesContainer:hover {
-    color: $colorBlue;
-  }
+  &_column {
+    flex: 0 1 25%;
+    padding: 0 11px;
+    margin: 0 0 22px 0;
+    
+    @media (max-width: 1425px) {
+      flex: 0 1 33.333%;
+    }
 
-  .commonImageBannerManyPictures {
-    //@include heightAndWidth(154px, 180px);
-    width: 55%;
-    //padding-top: 15%;
-  }
+    @media (max-width: 1076px) {
+      flex: 0 1 50%;
+    }
 
-  .oneBannerManyPictures {
-    grid-area: 1/1/1/1;
-    background-color: #F0F0FF;
-
-    .oneBannerManyPicturesSpan {
-      text-align: center;
-      font-size: 30px;
-      line-height: 37px;
+    @media (max-width: $md3+px) {
+      flex: 0 1 100%;
     }
   }
 
-  .twoBannerManyPicturesTwoSpan, .eightBannerManyPicturesTwoSpan {
+  &_item {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 92%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 14px;
+    min-width: 330px;
+    min-height: 248px;
+    box-shadow: $boxShadow;
+
+    &_first {
+      background-color: #F0F0FF;
+      text-align: center;
+      padding: 0 30px;
+
+      span {
+        font-size: 30px;
+        line-height: 37px;
+        font-weight: 500;
+      }
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &_last {
+      padding: 80px 27px 27px 27px;
+    }
+
+    img {
+      max-width: 100%;
+      display: inline-block;
+      align-self: center;
+      margin: 0 0 30px 0;
+    }
   }
 
-  .arrowBannerManyPictures {
-    position: absolute;
-    //top: 159px;
-    top: 62%;
-    //left: 158px;
-    left: 48%;
+  &_link {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px 0 0;
+
+    span {
+      white-space: nowrap;
+    }
+
+    &_last {
+      justify-content: flex-end;
+    }
   }
 
-  .eightImageBannerManyPictures {
-    //@include heightAndWidth(187px, 222px);
-    width: 67%;
-    position: absolute;
-    top: 5px;
-  }
-
-  .elevenImageBannerManyPictures {
-    @include heightAndWidth(126px, 195px);
-    top: 5px;
-  }
-
-  .eightBannerManyPicturesTwoSpan {
-    margin-top: 165px;
-  }
-
-  .spanElevenBannerManyPictures {
-    font-weight: 400;
-    font-family: $fontFamilyMontserrat;
-    font-size: 14px;
-  }
-
-  #showAllOffer {
-    @include heightAndWidth(70px, 283px);
-    font-size: 14px;
+  &_btn {
+    padding: 25px 0;
+    margin: 0 0 40px 0;
   }
 }
 

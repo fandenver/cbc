@@ -58,6 +58,34 @@ input:focus, select:focus {
   }
 }
 
+.arrow-button {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  display: inline-flex;
+  cursor: pointer;
+}
+.arrow-button::before {
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  width: 40px;
+  background-color: rgb(74, 77, 74);
+}
+.arrow-button::before, .arrow-button::after {
+  content: "";
+  position: absolute;
+}
+.arrow-button::after {
+  left: 40px;
+  bottom: 4px;
+  height: 10px;
+  width: 10px;
+  border-top: 2px solid rgb(74, 77, 74);
+  border-left: 2px solid rgb(74, 77, 74);
+  transform: rotate(-225deg);
+}
+
 .pattern {
   height: 175px;
   width: 240px;
