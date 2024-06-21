@@ -105,7 +105,7 @@ html, body {
   }
 
   &_products-categories {
-
+    margin: 0 0 100px 0;
   }
 }
 
@@ -842,6 +842,14 @@ html, body {
     align-items: center;
     padding: 0 25px;
     flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    @media (min-width: $md2+px) {
+      &:hover {
+        background-color: #cec9c9;
+      }
+    }
 
     @media (max-width: $md4+px) {
       height: 200px;
@@ -913,232 +921,6 @@ html, body {
     align-items: center;
     width: 100%;
   }
-
-
-  //@include heightAndWidth(530px, 1410px);
-  //display: grid;
-  //grid-gap: 30px;
-  //grid-template-columns: 330px 330px 330px 330px;
-  //grid-template-rows: 250px 250px;
-  //flex-wrap: wrap;
-  //margin: 100px auto auto auto;
-  //
-  //.workCBC, .reliableSupplier,
-  //.fullComplex, .orderKey,
-  //.directDeliveries, .qualityService,
-  //.cooperation {
-  //  @include flexAndAlign(center, center);
-  //  text-align: center;
-  //  box-shadow: $boxShadow;
-  //  transition: $backgroundTransition;
-  //  cursor: pointer;
-  //  background-color: $colorWhite;
-  //}
-  //
-  //.reliableSupplierSpanOne, .fullComplexSpanOne {
-  //  font-size: 24px;
-  //  margin-top: 10px;
-  //}
-  //
-  //.reliableSupplierSpanTwo, .fullComplexSpanTwo,
-  //.orderKeySpanTwo, .cooperationSpanTwo, .qualityServiceSpanTwo {
-  //  font-weight: 400;
-  //}
-  //
-  //.spanAndImageReliable, .spanAndImageFullComplex,
-  //.spanAndImageOrderKey {
-  //  @extend %tplFlexAndColumn;
-  //  align-items: center;
-  //  text-align: center;
-  //}
-  //
-  //.workCBC:hover, .reliableSupplier:hover,
-  //.fullComplex:hover, .orderKey:hover,
-  //.directDeliveries:hover, .qualityService:hover,
-  //.cooperation:hover {
-  //  background-color: #cec9c9;
-  //}
-  //
-  //.workCBC {
-  //  @include heightAndWidth(250px, 330px);
-  //  background-color: #F0F0FF;
-  //
-  //  .workCBCSpan {
-  //    @include heightAndWidth(111px, 256px);
-  //    font-size: 30px;
-  //    line-height: 38px;
-  //  }
-  //}
-  //
-  //.reliableSupplier {
-  //  @include heightAndWidth(250px, 323px);
-  //
-  //  .spanAndImageReliable {
-  //    @include heightAndWidth(172px, 269px);
-  //    margin: 37px 30px;
-  //
-  //    .oneImageReliable {
-  //      @include heightAndWidth(60px, 60px);
-  //    }
-  //
-  //    .reliableSupplierSpanOne {
-  //      @include heightAndWidth(29px, 269px);
-  //      line-height: 29px;
-  //    }
-  //
-  //    .reliableSupplierSpanTwo {
-  //      @include heightAndWidth(63px, 194px);
-  //      margin-top: 10px;
-  //    }
-  //  }
-  //}
-  //
-  //.fullComplex {
-  //  @include heightAndWidth(250px, 330px);
-  //
-  //  .spanAndImageFullComplex {
-  //    @include heightAndWidth(181px, 292px);
-  //    margin: 43px 27px;
-  //
-  //    .twoImageReliableOne {
-  //      @include heightAndWidth(62px, 72px);
-  //      margin-top: 2px;
-  //    }
-  //
-  //    .fullComplexSpanOne {
-  //      @include heightAndWidth(31px, 215px);
-  //      padding-top: 2px;
-  //    }
-  //
-  //    .fullComplexSpanTwo {
-  //      @include heightAndWidth(71px, 292px);
-  //      padding-top: 8px;
-  //    }
-  //  }
-  //}
-  //
-  //.orderKey {
-  //  @include heightAndWidth(250px, 330px);
-  //
-  //  .spanAndImageOrderKey {
-  //    @include heightAndWidth(181px, 178px);
-  //    margin: 29px 36px;
-  //
-  //    .threeImageOrderKey {
-  //      @include heightAndWidth(70px, 50px);
-  //    }
-  //
-  //    .orderKeySpanOne {
-  //      @include heightAndWidth(29px, 187px);
-  //      font-size: 24px;
-  //      margin-top: 6px;
-  //    }
-  //
-  //    .orderKeySpanTwo {
-  //      @include heightAndWidth(63px, 281px);
-  //      margin-top: 8px;
-  //    }
-  //  }
-  //}
-  //
-  //.directDeliveries {
-  //  @include heightAndWidth(250px, 690px);
-  //  grid-area: 2/1/2/2;
-  //  flex-direction: column;
-  //
-  //  .fourImageDirectDeliveries {
-  //    @include heightAndWidth(73px, 70px);
-  //    margin-top: -1px;
-  //  }
-  //
-  //  .directDeliveriesSpanOne {
-  //    @include heightAndWidth(29px, 213px);
-  //    font-size: 24px;
-  //    padding-top: 12px;
-  //  }
-  //
-  //  .manyPictures {
-  //    @include heightAndWidth(67px, 630px);
-  //    @include flexAndAlign(space-between, center);
-  //    flex-direction: row;
-  //    margin-top: 40px;
-  //
-  //    .oneBottom {
-  //      @include heightAndWidth(56px, 45px);
-  //    }
-  //
-  //    .twoBottom {
-  //      @include heightAndWidth(44px, 50px);
-  //    }
-  //
-  //    .threeBottom {
-  //      @include heightAndWidth(15px, 75px);
-  //    }
-  //
-  //    .fourBottom {
-  //      @include heightAndWidth(60px, 60px);
-  //    }
-  //
-  //    .fiveBottom {
-  //      @include heightAndWidth(12px, 80px);
-  //    }
-  //
-  //    .sixBottom {
-  //      @include heightAndWidth(46px, 70px);
-  //    }
-  //
-  //    .sevenBottom {
-  //      @include heightAndWidth(23px, 70px);
-  //    }
-  //  }
-  //}
-  //
-  //.qualityService {
-  //  @include heightAndWidth(250px, 330px);
-  //  @extend %tplFlexAndColumn;
-  //  align-items: center;
-  //  grid-area: 2/3/2/3;
-  //
-  //  .fiveImageOrderKey {
-  //    @include heightAndWidth(63px, 60px);
-  //    //background: url(;
-  //  }
-  //
-  //  .qualityServiceSpanOne {
-  //    @include heightAndWidth(29px, 267px);
-  //    font-size: 24px;
-  //    margin-top: 15px;
-  //  }
-  //
-  //  .qualityServiceSpanTwo {
-  //    @include heightAndWidth(84px, 292px);
-  //    margin-top: 6px;
-  //  }
-  //}
-  //
-  //.cooperation {
-  //  @extend %tplFlexAndColumn;
-  //  @include heightAndWidth(250px, 330px);
-  //  align-items: center;
-  //  grid-area: 2/4/2/4;
-  //}
-  //
-  //.sixImageCooperation {
-  //  @include heightAndWidth(54px, 60px);
-  //  margin-top: -8px;
-  //}
-  //
-  //.cooperationSpanOne {
-  //  @include heightAndWidth(29px, 202px);
-  //  padding-top: 11px;
-  //  font-size: 24px;
-  //}
-  //
-  //.cooperationSpanTwo {
-  //  @include heightAndWidth(84px, 292px);
-  //  padding-top: 20px;
-  //  line-height: 21px;
-  //}
 }
 
 .banners-page {
@@ -1197,7 +979,7 @@ html, body {
       max-width: 100%;
 
       @media (max-width: 1340px) and (min-width: $md2+px) {
-        max-width: 80%;
+        max-width: 70%;
       }
 
       @media (max-width: 670px) {
@@ -1256,10 +1038,21 @@ html, body {
   }
 
   &_content-last-banner {
-    max-width: 268px;
 
-    @media (max-width: 670px) {
-      max-width: 100%;
+    &_first-place {
+      max-width: 268px;
+
+      @media (max-width: 670px) {
+        max-width: 100%;
+      }
+    }
+
+    &_second-place {
+      max-width: 340px;
+
+      @media (max-width: 670px) {
+        max-width: 100%;
+      }
     }
   }
 
@@ -1269,6 +1062,10 @@ html, body {
     line-height: 29px;
     margin: 0 0 30px 0;
     padding: 0 0 0 10px;
+
+    @media (max-width: 1162px) {
+      margin: 0 0 15px 0;
+    }
 
     @media (max-width: 670px) {
       font-size: 18px;
@@ -1304,6 +1101,11 @@ html, body {
     padding: 20px;
     max-width: 300px;
 
+    &_last {
+      padding: 20px 50px 20px 50px;
+      z-index: 10;
+    }
+
     @media (max-width: 1340px) {
       max-width: 268px;
     }
@@ -1311,15 +1113,41 @@ html, body {
     @media (max-width: 1160px) and (min-width: $md2+px) {
       max-width: 200px;
     }
+
+    &_equipment {
+      @media (max-width: 1160px) and (min-width: $md2+px) {
+        max-width: 250px;
+      }
+    }
+  }
+
+  br {
+    @media (max-width: $md2+px) {
+      display: none;
+    }
   }
 
   &_pattern {
-    left: -30px;
-    top: -30px;
 
-    &::after {
-      right: -5px;
-      top: -15px;
+    &_first-place {
+      left: -15px;
+      top: -30px;
+
+      &::after {
+        right: -5px;
+        top: -15px;
+      }
+    }
+
+    &_second-place {
+      right: -15px;
+      bottom: -30px;
+      transform: rotate(180deg);
+
+      &::after {
+        left: -15px;
+        bottom: -5px;
+      }
     }
   }
 }
@@ -1344,6 +1172,10 @@ html, body {
       font-size: 30px;
       font-weight: 500;
       line-height: 37px;
+
+      @media (min-width: $md2+px) {
+        max-width: 720px;
+      }
     }
 
     @media (max-width: $md2+px) {
@@ -1453,7 +1285,7 @@ html, body {
   }
 
   &_btn {
-    padding: 25px 80px 25px 25px;
+    padding: 18px 70px 18px 15px;
     border: 2px solid $colorOrange;
     position: relative;
     white-space: nowrap;
@@ -1470,7 +1302,7 @@ html, body {
     }
 
     @media (max-width: 1040px) {
-      padding: 25px 60px 25px 5px;
+      padding: 18px 60px 18px 5px;
     }
 
     &_footer {
@@ -1489,7 +1321,7 @@ html, body {
   }
 
   &_arrow-button {
-    top: -3px;
+    top: -2px;
     left: 20px;
 
     @media (max-width: 370px) {
@@ -1512,7 +1344,7 @@ html, body {
     flex: 0 1 25%;
     padding: 0 11px;
     margin: 0 0 22px 0;
-    
+
     @media (max-width: 1425px) {
       flex: 0 1 33.333%;
     }
@@ -1529,16 +1361,23 @@ html, body {
   &_item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     padding: 0 14px;
     min-width: 330px;
     min-height: 248px;
     box-shadow: $boxShadow;
+    cursor: pointer;
+
+    @media (max-width: $md4+px) {
+      min-height: 200px;
+      min-width: 300px;
+    }
 
     &_first {
       background-color: #F0F0FF;
       text-align: center;
       padding: 0 30px;
+      justify-content: center;
 
       span {
         font-size: 30px;
@@ -1553,14 +1392,31 @@ html, body {
     }
 
     &_last {
-      padding: 80px 27px 27px 27px;
+      padding: 80px 27px 10px 27px;
+
+      @media (max-width: $md4+px) {
+        padding: 80px 0 10px 0;
+      }
     }
 
     img {
       max-width: 100%;
       display: inline-block;
       align-self: center;
-      margin: 0 0 30px 0;
+
+      @media (max-width: $md4+px) {
+        max-width: 55%;
+      }
+    }
+
+    &_video-cart {
+      padding: 0 14px 11px 14px
+    }
+
+    &_computer-technique {
+      img {
+        margin: 0 0 11px 0;
+      }
     }
   }
 
@@ -1581,6 +1437,127 @@ html, body {
   &_btn {
     padding: 25px 0;
     margin: 0 0 40px 0;
+  }
+}
+
+.repair-page {
+  background-color: #F0F0FF;
+  padding: 30px 0;
+
+  &_container {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $md2+px) {
+      flex-direction: column;
+    }
+  }
+
+  &_info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 200px;
+    margin: 0 0 0 103 / $maxWidthContainer * 100vw;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 0 0;
+    }
+  }
+
+  &_header {
+    font-size: 24px;
+    line-height: 29px;
+
+    @media (max-width: $md2+px) {
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+
+    @media (max-width: $md4+px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &_content {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+
+    @media (max-width: $md2+px) {
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+
+    @media (max-width: $md4+px) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    align-self: flex-end;
+    margin: 0 103 / $maxWidthContainer * 100vw 0 30px;
+
+    @media (max-width: $md2+px) {
+      align-self: center;
+      margin: 0 0 0 0;
+    }
+  }
+
+  &_btn {
+    justify-content: space-between;
+    display: inline-flex;
+    padding: 18px 70px 18px 15px;
+    border: 2px solid $colorOrange;
+    position: relative;
+    white-space: nowrap;
+    font-size: 18px;
+    line-height: 21px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+    @media (max-width: $md2+px) {
+      display: none;
+    }
+
+    @media (min-width: $md2+px) {
+      &:hover {
+        color: #FFFFFF;
+        background-color: $colorBlue;
+      }
+    }
+
+    @media (max-width: 1040px) {
+      padding: 18px 60px 18px 5px;
+    }
+
+    &_footer {
+      display: none;
+
+      @media (max-width: $md2+px) {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 15px 60px 15px 5px;
+        margin: 0 0 30px 0;
+      }
+    }
+  }
+
+  &_arrow-button {
+    top: -2px;
+    left: 20px;
+
+    @media (max-width: 423px) {
+      top: 5px;
+      left: 0;
+    }
   }
 }
 

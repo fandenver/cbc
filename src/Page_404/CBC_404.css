@@ -77,7 +77,7 @@ input:focus, select:focus {
   position: absolute;
 }
 .arrow-button::after {
-  left: 40px;
+  left: 39px;
   bottom: 4px;
   height: 10px;
   width: 10px;
