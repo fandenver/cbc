@@ -43,9 +43,9 @@ input:focus, select:focus {
   background-color: #FFAF37;
   color: #fff;
   cursor: pointer;
-  font-size: 18px;
   font-family: Rubik, sans-serif;
   border: none;
+  font-size: 18px;
   line-height: 21px;
   font-weight: 500;
   text-transform: uppercase;
@@ -55,6 +55,57 @@ input:focus, select:focus {
 @media (min-width: 991.98px) {
   .btn:hover {
     background-color: #001569;
+  }
+}
+@media (max-width: 479.98px) {
+  .btn {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.border-art {
+  position: relative;
+}
+.border-art::before {
+  content: "";
+  position: absolute;
+  background-color: #FFFFFF;
+}
+.border-art::after {
+  content: "";
+  position: absolute;
+  background-color: #FFFFFF;
+}
+@media (max-width: 1510px) {
+  .border-art::before, .border-art::after {
+    display: none;
+  }
+}
+
+.border-items-art {
+  width: 100%;
+  border: 8px solid rgba(31, 52, 123, 0.2);
+}
+@media (max-width: 1510px) {
+  .border-items-art {
+    border: 0;
+  }
+}
+.border-items-art::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(31, 52, 123, 0.2);
+  border-radius: 50%;
+}
+.border-items-art::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(31, 52, 123, 0.2);
+}
+@media (max-width: 1510px) {
+  .border-items-art::before, .border-items-art::after {
+    display: none;
   }
 }
 

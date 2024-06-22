@@ -1,14 +1,14 @@
 // 1. вложенность
-// 2. неотображаемое в браузере комментирвоание
+// 2. неотображаемое в браузере комментирование
 // 3. @import "style.scss" - импорт scss из другого файла
 // 4. переменные
 // 5. @extend %tplFlexStyle - использование шаблона
 // 6. @include draft(18px) - использование миксина
 // 7. математические формулы: width: 300px / 960px *100%;
 
-// Получение процентной высоты линии = выстота line-height / font-size * 100% (32 / 24 = 133% - line-height)
+// Получение процентной высоты линии = высота line-height / font-size * 100% (32 / 24 = 133% - line-height)
 
-// выстоа ноута - 696px
+// высота ноута - 696px
 // высота монитора - 912px
 // ширина ноута - 1536px
 // ширина монитора - 1920px
@@ -33,6 +33,7 @@ $colorWhite: #fff;
 $colorGray: rgb(74, 77, 74);
 $colorOrange: #FFAF37;
 $colorBlue: #001569;
+$colorBlack: #4A4D4A;
 $boxShadow: 0 4px 20px 0 #00000040;
 $backgroundTransition: background-color 0.5s;
 //-----------------------------------------------
@@ -131,9 +132,9 @@ input:focus, select:focus {
   background-color: $colorOrange;
   color: $colorWhite;
   cursor: pointer;
-  font-size: 18px;
   font-family: $fontFamilyRubik;
   border: none;
+  font-size: 18px;
   line-height: 21px;
   font-weight: 500;
   text-transform: uppercase;
@@ -143,6 +144,61 @@ input:focus, select:focus {
   @media (min-width: $md2+px) {
     &:hover {
       background-color: $colorBlue;
+    }
+  }
+
+  @media (max-width: $md4+px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.border-art {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #FFFFFF;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #FFFFFF;
+  }
+
+  @media (max-width: 1510px) {
+    &::before, &::after {
+      display: none;
+    }
+  }
+}
+
+.border-items-art {
+  width: 100%;
+  border: 8px solid rgba(31, 52, 123, 0.2);
+
+  @media (max-width: 1510px) {
+    border: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(31, 52, 123, 0.2);
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(31, 52, 123, 0.2);
+  }
+
+  @media (max-width: 1510px) {
+    &::before, &::after {
+      display: none;
     }
   }
 }

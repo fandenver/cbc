@@ -37,13 +37,21 @@ html, body {
   }
 }
 
-// стили выше нужно зачистить
+// todo: стили выше нужно зачистить (заменить чек бокс так же как это сделано ниже с таким же чек боксом)
+
+.header {
+  margin: 0 0 28px 0;
+}
 
 .page {
   flex: 1 1 auto;
 
   &_bar-navigate {
     margin: 0 0 50px 0;
+
+    @media (max-width: $md2+px) {
+      display: none;
+    }
   }
 
   &_container {
@@ -57,6 +65,10 @@ html, body {
 
   &_main-content {
     margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 40px 0;
+    }
   }
 
   &_side {
@@ -94,18 +106,66 @@ html, body {
 
   &_collage {
     margin: 0 0 130px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 40px 0;
+    }
   }
 
   &_banners {
     margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 40px 0;
+    }
   }
 
   &_customers {
     margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 40px 0;
+    }
   }
 
   &_products-categories {
     margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  &_repair {
+    margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  &_computer-brands {
+    margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  &_consultation {
+    margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  &_map {
+    margin: 0 0 100px 0;
+
+    @media (max-width: $md2+px) {
+      margin: 0 0 40px 0;
+    }
   }
 }
 
@@ -1561,307 +1621,389 @@ html, body {
   }
 }
 
-.twoBannersAfterManyPicturesBanner {
-  @include heightAndWidth(402px, 1408px);
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  margin: 100px auto auto auto;
+.computer-brands-page {
 
-  .oneAfterManyPicturesBanner, .twoAfterManyPicturesBanner {
-    @include heightAndWidth(402px, 690px);
-    display: flex;
-    position: relative;
-  }
+  &_container {
 
-  .smallOneAfterManyPicturesBanner, .smallTwoAfterManyPicturesBanner {
-    @include heightAndWidth(60px, 60px);
-    position: absolute;
-    top: 30px;
-    left: 15px;
-  }
-
-  .oneSpanAfterManyPictures, .fourSpanAfterManyPictures {
-    text-align: right;
-    font-size: 24px;
-    line-height: 30px;
-    margin-bottom: 20px;
-  }
-
-  .oneAfterManyPicturesBlock, .twoAfterManyPicturesBlock {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .oneAfterManyPicturesBanner {
-    background-color: #F0F0FF;
-
-    .bigOneAfterManyPicturesBanner {
-      @include heightAndWidth(228px, 273px);
-      position: absolute;
-      top: 180px;
-      z-index: 100;
+    &::before {
+      width: 170px;
+      height: 8px;
+      right: 20px;
+      top: 0;
     }
 
-    .oneAfterManyPicturesBlock {
-      @include heightAndWidth(227px, 520px);
-      margin: 100px 35px auto auto;
-    }
-
-    .oneSpanAfterManyPictures {
-      @include heightAndWidth(84px, 520px);
-    }
-
-    .twoSpanAfterManyPictures {
-      @include heightAndWidth(42px, 464px);
-    }
-
-    #oneButtonAfterManyPicturesBanner {
-      @include heightAndWidth(65px, 348px);
-      text-transform: uppercase;
-    }
-  }
-
-  .twoSpanAfterManyPictures, .fiveSpanAfterManyPictures {
-    text-align: right;
-    margin-bottom: 20px;
-    font-weight: 400;
-  }
-
-  .twoAfterManyPicturesBanner {
-    background-color: #E3E1FF;
-
-    .fiveSpanAfterManyPictures {
-      @include heightAndWidth(63px, 263px);
-    }
-
-    #twoButtonAfterManyPicturesBanner {
-      @include heightAndWidth(69px, 268px);
-      text-transform: uppercase;
-      z-index: 100;
-    }
-
-    .bigTwoAfterManyPicturesBanner {
-      @include heightAndWidth(254px, 330px);
-      position: absolute;
-      top: 137px;
-      left: 5px;
-      z-index: 100;
-    }
-
-    .twoAfterManyPicturesBlock {
-      @include heightAndWidth(220px, 311px);
-      margin: 100px 35px auto auto;
-    }
-
-    .fourSpanAfterManyPictures {
-      @include heightAndWidth(52px, 311px);
-    }
-  }
-
-  .leftAfterManyPicturesBanner {
-    @include heightAndWidth(175px, 240px);
-    @include topAndLeft(260px, 1200px);
-    position: absolute;
-    border-top: 8px solid #1F347B;
-    border-left: 8px solid #1F347B;
-    transform: rotate(-180deg);
-  }
-
-  .circleAfterManyPicturesBanner {
-    @include topAndLeft(247px, 1424px);
-  }
-}
-
-.twoFooter {
-  @include heightAndWidth(300px, 100%);
-  margin: 100px auto auto auto;
-  background-color: #F0F0FF;
-
-  .twoFooterBlockAndImage {
-    @include heightAndWidth(260px, 1225px);
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    margin: auto;
-
-    .twoFooterBlock {
-      @include heightAndWidth(199px, 487px);
-      @extend %tplFlexAndColumn;
-      margin: 55px 240px auto auto;
-      left: 100px;
-      align-items: flex-start;
-
-      .twoFooterOneSpan {
-        @include heightAndWidth(60px, 487px);
-        font-size: 24px;
-        line-height: 30px;
-        margin-bottom: 20px;
-      }
-
-      .twoFooterTwoSpan {
-        @include heightAndWidth(42px, 343px);
-        font-size: 17px;
-        font-weight: 400;
-        margin-bottom: 20px;
-      }
-
-      .twoFooterButton {
-        @include heightAndWidth(61px, 450px);
-        display: flex;
-        align-items: center;
-        border: 2px solid $colorOrange;
-        background-color: #F0F0FF;
-        color: $colorGray;
-        transition: $backgroundTransition, color 0.5s;
-        padding-left: 20px;
-
-        &:hover {
-          background-color: $colorBlue;
-          color: $colorWhite;
-        }
-      }
-
-      .arrowTwoFooter {
-        @include topAndLeft(166px, 310px);
-        position: absolute;
-      }
-    }
-
-    .twoFooterImage {
-      @include heightAndWidth(251px, 464px);
-      margin-top: 25px;
-    }
-  }
-}
-
-.bannerAfterTwoFooter {
-  @include heightAndWidth(334px, 1410px);
-  @include flexAndAlign(center, center);
-  position: relative;
-  margin: 100px auto auto auto;
-  border-bottom: 8px solid rgba(31, 52, 123, 0.2);;
-  border-left: 8px solid rgba(31, 52, 123, 0.2);;
-  box-sizing: border-box;
-
-  .bannerAfterTwoFooterBlock {
-    @include heightAndWidth(270px, 1330px);
-    @extend %tplFlexAndColumn;
-
-    .bannerAfterTwoFooterSpan {
-      @include heightAndWidth(74px, 680px);
-      display: inline-block;
-      font-size: 30px;
-      line-height: 37px;
-    }
-
-    .bannerAfterTwoFooterDiv {
-      @include flexAndAlign(space-between, center);
-      @include heightAndWidth(146px, 1326px);
-      margin: auto auto 20px auto;
-
-      .bannerAfterTwoFooterOne {
-        @include heightAndWidth(146px, 150px);
-      }
-
-      .bannerAfterTwoFooterTwo {
-        @include heightAndWidth(80px, 200px);
-      }
-
-      .bannerAfterTwoFooterThree {
-        @include heightAndWidth(138px, 200px);
-      }
-
-      .bannerAfterTwoFooterFour {
-        @include heightAndWidth(133px, 200px);
-      }
-
-      .bannerAfterTwoFooterFive {
-        @include heightAndWidth(112px, 200px);
-      }
-    }
-  }
-
-  .leftAndRightMainAfterTwoFooter {
-    display: flex;
-    position: absolute;
-    margin: 45px 0 0 710px;
-
-    .leftMainAfterTwoFooter {
-      @include heightAndWidth(110px, 240px);
-      position: absolute;
-      left: 171px;
-      bottom: -75px;
-      border-top: 8px solid rgba(31, 52, 123, 0.2);
-      border-left: 8px solid rgba(31, 52, 123, 0.2);
-      transform: rotate(-270deg);
-    }
-
-    .leftMainAfterTwoFooterAfter {
-      @include heightAndWidth(1200px, 240px);
-      @include topAndLeft(-666px, -576px);
-      position: absolute;
-      border-left: 8px solid rgba(31, 52, 123, 0.2);;
+    &::after {
+      width: 90px;
+      height: 8px;
+      right: -21px;
+      top: 49px;
       transform: rotate(90deg);
     }
   }
-}
 
-.twoBannerAfterTwoFooter {
-  @include heightAndWidth(660px, 1405px);
-  @extend %tplFlexAndColumn;
-  margin: 100px auto auto auto;
-
-  .twoBannerAfterTwoFooterSpanBlock {
-    @include heightAndWidth(84px, 1146px);
-    @include flexAndAlign(center, center);
+  &_items {
+    display: flex;
     flex-direction: column;
-    margin: 0 auto 33px auto;
+    padding: 30px 20px 20px 20px;
 
-    .twoBannerAfterTwoFooterOneSpan {
-      font-size: 36px;
-      line-height: 30px;
+    @media (max-width: $md4+px) {
+      padding: 0 0;
     }
 
-    .twoBannerAfterTwoFooterTwoSpan {
-      padding-top: 10px;
-      font-size: 24px;
-      line-height: 42px;
+    &::before {
+      right: 164px;
+      top: -10px;
+      width: 27px;
+      height: 27px;
+    }
+
+    &::after {
+      width: 124px;
+      height: 8px;
+      right: 28px;
+      top: 98px;
     }
   }
 
-  .twoBannerAfterTwoFooterBlockMain {
-    @include heightAndWidth(546px, 1405px);
-    display: flex;
-    justify-content: space-between;
-    bottom: 0;
-    box-shadow: $boxShadow;
+  &_header {
+    font-size: 30px;
+    line-height: 37px;
+    margin: 0 0 60px 0;
+    max-width: 680px;
 
-    .mainPicture {
-      @include heightAndWidth(471px, 774px);
-      margin: 75px 0 0 90px;
+    @media (max-width: 1510px) {
+      align-self: center;
+      text-align: center;
     }
 
-    .twoBannerAfterTwoFooterBlockAfterImage {
-      @include heightAndWidth(461px, 331px);
-      @extend %tplFlexAndColumn;
-      margin: 42px 115px 0 0;
+    @media (max-width: 1030px) {
+      margin: 0 0 30px 0;
+    }
 
-      .twoBannerAfterTwoFooterField {
-        @include heightAndWidth(80px, 330px);
-        width: 330px;
-        height: 80px;
-        margin-bottom: 30px;
+    @media (max-width: $md4+px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &_footer {
+
+  }
+
+  &_brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1030px) {
+      justify-content: space-around;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 0 0 30px 0;
+
+      @media (max-width: $md4+px) {
+        max-width: 30%;
+      }
+    }
+  }
+}
+
+.consultation-page {
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $md2+px) {
+      box-shadow: $boxShadow;
+    }
+  }
+
+  &_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 30px 0;
+
+    @media (max-width: $md2+px) {
+      padding: 20px 0 0 0;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 42px;
+      margin: 0 0 15px 0;
+      text-align: center;
+
+      @media (max-width: 1200px) {
+        font-size: 28px;
+        line-height: 36px;
       }
 
-      #getConsultation {
-        @include heightAndWidth(80px, 330px);
-        text-transform: uppercase;
-        width: 330px;
-        height: 80px;
-        margin-bottom: 20px;
+      @media (max-width: $md2+px) {
+        font-size: 20px;
+        line-height: 24px;
       }
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 500;
+      text-align: center;
+
+      @media (max-width: 1200px) {
+        font-weight: 400;
+      }
+
+      @media (max-width: $md2+px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &_footer {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: $boxShadow;
+    padding: 40px 0 20px 0;
+
+    @media (max-width: $md2+px) {
+      box-shadow: none;
+      padding: 0 0 20px 0;
+    }
+
+    img {
+      max-width: 100%;
+      align-self: flex-start;
+
+      @media (max-width: 1200px) {
+        max-width: 50%;
+        align-self: center;
+      }
+
+      @media (max-width: $md2+px) {
+        display: none;
+      }
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $md2+px) {
+      width: 100%;
+    }
+  }
+
+  &_label {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      border: 1px solid $colorBlack;
+      padding: 28px 84px 28px 20px;
+      margin: 0 0 20px 0;
+
+      @media (max-width: $md4+px) {
+        padding: 18px 89px 18px 15px;
+
+        &::placeholder {
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+
+    button {
+      padding: 28px 52px 28px 52px;
+      margin: 0 0 20px 0;
+
+      @media (max-width: $md4+px) {
+        padding: 18px 52px 18px 52px;
+      }
+    }
+  }
+
+  &_checkbox {
+    display: flex;
+    justify-content: flex-start;
+
+    label {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: #4A4D4A;
+      }
+
+      &::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background: url("../images/twoBannerAfterTwoFooter/checkMark.png") center no-repeat;
+        transform: translate(50%, 50%);
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    span {
+      display: inline-block;
+      margin: 0 0 0 10px;
+      max-width: 164px;
+      font-size: 10px;
+      line-height: 15px;
+      font-weight: 300;
+      text-decoration: underline;
+    }
+  }
+}
+
+.map-page {
+
+  &_container {
+
+    &::before {
+      width: 170px;
+      height: 8px;
+      left: 20px;
+      top: 0;
+    }
+
+    &::after {
+      width: 90px;
+      height: 8px;
+      left: -21px;
+      top: 49px;
+      transform: rotate(90deg);
+    }
+  }
+
+  &_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 20px 20px;
+
+    @media (max-width: $md4+px) {
+      padding: 0 0;
+    }
+
+    &::before {
+      left: 164px;
+      top: -10px;
+      width: 27px;
+      height: 27px;
+    }
+
+    &::after {
+      width: 124px;
+      height: 8px;
+      left: 28px;
+      top: 98px;
+    }
+  }
+
+  &_header {
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    max-width: 580px;
+
+    @media (max-width: 1170px) {
+      margin: 0 0 20px 0;
+    }
+    
+    @media (max-width: $md3+px) {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+
+  &_content {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    img {
+      max-width: 100%;
+
+      @media (max-width: 1170px) and (min-width: $md2+px){
+        max-width: 50%;
+      }
+    }
+
+    @media (max-width: $md2+px) {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &_info-block {
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: 1170px) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &_contact {
+    padding: 10px 0 10px 40px;
+    margin: 0 0 5px 0;
+
+    span {
+      font-size: 20px;
+      line-height: 24px;
+
+      @media (max-width: $md3+px) {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    &_geo {
+      background: url("../images/bannerBeforeLastFooter/newGeo.png") left no-repeat;
+    }
+
+    &_phone {
+      background: url("../images/bannerBeforeLastFooter/newPhone.png") left no-repeat;
+    }
+
+    &_sms {
+      background: url("../images/bannerBeforeLastFooter/newSMS.png") left no-repeat;
+    }
+
+    &_whatsapp {
+      background: url("../images/hat/whatsApp.png") left no-repeat;
+    }
+
+    &_clock {
+      background: url("../images/bannerBeforeLastFooter/clock.png") left no-repeat;
     }
   }
 }
@@ -1937,7 +2079,7 @@ html, body {
 
       .maps {
         @include heightAndWidth(423px, 553px);
-        background: url("../images/bannerBeforeLastFooter/maps.png");
+        background: url("../images/bannerBeforeLastFooter/map.png");
         background-size: center / cover;
       }
     }
