@@ -1,0 +1,347 @@
+@import "common_styles";
+
+.footer {
+  background-color: #F0F0FF;
+  padding: 45px 0 0 0;
+
+  @media (max-width: $md2+px) {
+    padding: 10px 0 0 0;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_head {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20px 0;
+
+    img {
+    }
+
+    @media (max-width: $md2+px) {
+      display: flex;
+    }
+  }
+
+  &_columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -25px;
+
+    @media (max-width: $md3+px) {
+      margin: 0 -10px;
+    }
+  }
+
+  &_column {
+    flex: 0 1 18%;
+    padding: 0 25px;
+    margin: 0 0 25px 0;
+
+    &_image_mobile {
+      display: none;
+
+      @media (max-width: $md2+px) {
+        display: block;
+      }
+    }
+
+    &_image_no-mobile {
+      flex: 0 1 10%;
+
+      @media (max-width: $md2+px) {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      @media (max-width: $md2+px) {
+        display: none;
+      }
+    }
+
+    &_services {
+      @media (max-width: $md2+px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $md2+px) {
+      flex: 0 1 25%;
+    }
+
+    @media (max-width: $md3+px) {
+      flex: 0 1 50%;
+      padding: 0 10px;
+    }
+  }
+
+  &_logo-image {
+    align-self: flex-start;
+  }
+
+  &_info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    img {
+      max-width: 100%;
+      align-self: center;
+      margin: 0 0 15px 0;
+    }
+
+    li {
+      margin: 0 0 18px 0;
+    }
+
+    &_services {
+      @media (max-width: $md3+px) {
+        align-items: center;
+      }
+    }
+  }
+
+  &_header {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+
+    @media (max-width: $md3+px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &_inscription {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+
+    &_phone {
+      padding: 0 0 0 30px;
+      background: url("../images/hat/phone.png") left /20px no-repeat;
+
+      span {
+        white-space: nowrap;
+        font-size: 18px;
+        line-height: 21px;
+        font-family: $fontFamilyMontserrat;
+      }
+
+      @media (max-width: $md3+px) {
+        padding: 35px 0 0 0;
+        background: url("../images/hat/phone.png") top /20px no-repeat;
+
+
+        span {
+          font-size: 14px;
+          line-height: 17px;
+          font-family: $fontFamilyRubik
+        }
+      }
+    }
+
+    &_email {
+      padding: 0 0 0 35px;
+      background: url("../images/hat/sms.png") left /25px no-repeat;
+
+      span {
+        white-space: nowrap;
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+      @media (max-width: $md3+px) {
+        padding: 35px 0 0 0;
+        background: url("../images/hat/sms.png") top /25px no-repeat;
+
+        span {
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+    }
+
+    &_geo {
+      text-align: center;
+      line-height: 20px;
+      padding: 0 0 0 30px;
+      background: url("../images/hat/geo.png") left /20px no-repeat;
+
+      p {
+        white-space: nowrap;
+        font-family: $fontFamilyMontserrat;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      span {
+        white-space: nowrap;
+        font-family: $fontFamilyMontserrat;
+        font-size: 16px;
+      }
+
+      @media (max-width: $md3+px) {
+        padding: 35px 0 0 0;
+        background: url("../images/hat/geo.png") top /20px no-repeat;
+
+        span {
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+    }
+
+    @media (max-width: $md3+px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  //@include heightAndWidth(343px, 100%);
+  //@include flexAndAlign(center, center);
+  //position: relative;
+  //margin-top: 100px;
+  //background-color: #F0F0FF;
+  //
+  //.lastFooterMainBlock {
+  //  @include heightAndWidth(267px, 1408px);
+  //  display: flex;
+  //  justify-content: space-between;
+  //  flex-direction: row;
+  //
+  //  .lastFooterOneBlock, .lastFooterTwoBlock,
+  //  .lastFooterThreeBlock, .lastFooterFourBlock,
+  //  .lastFooterFiveBlock, .lastFooterSixBlock {
+  //    @extend %tplFlexAndColumn;
+  //    justify-content: space-between;
+  //  }
+  //
+  //  .lastFooterOneBlock {
+  //    @include heightAndWidth(222px, 209px);
+  //
+  //    .cbsFooter {
+  //      @include heightAndWidth(94px, 209px);
+  //    }
+  //
+  //    .lastFooterOneSpan {
+  //      @include heightAndWidth(103px, 209px);
+  //      line-height: 21px;
+  //    }
+  //  }
+  //
+  //  .lastFooterTwoBlock {
+  //    @include heightAndWidth(212px, 247px);
+  //  }
+  //
+  //  .lastFooterBlockBigSpan {
+  //    line-height: 21px;
+  //    font-weight: 700;
+  //  }
+  //
+  //  .lastFooterBlockSmallSpan {
+  //    font-size: 14px;
+  //    line-height: 17px;
+  //  }
+  //
+  //  .lastFooterThreeBlock {
+  //    @include heightAndWidth(176px, 167px);
+  //  }
+  //
+  //  .lastFooterFourBlock {
+  //    @include heightAndWidth(212px, 155px);
+  //  }
+  //
+  //  .lastFooterFiveBlock {
+  //    @include heightAndWidth(220px, 31px);
+  //    align-items: center;
+  //
+  //    .ig, .goldWhatsApp, .human {
+  //      @include heightAndWidth(30px, 30px);
+  //    }
+  //
+  //    .faceB {
+  //      @include heightAndWidth(41px, 20px);
+  //    }
+  //
+  //    .vk {
+  //      @include heightAndWidth(17px, 30px);
+  //    }
+  //  }
+  //
+  //  .lastFooterSixBlock {
+  //    @include heightAndWidth(168px, 185px);
+  //
+  //    .lastFooterSixBlockSpanImageOne, .lastFooterSixBlockSpanImageTwo,
+  //    .lastFooterSixBlockSpanImageThree {
+  //      display: flex;
+  //      flex-direction: row;
+  //      justify-content: space-between;
+  //      align-items: center;
+  //    }
+  //
+  //    .lastFooterSixBlockSpanImageOne {
+  //      @include heightAndWidth(22px, 185px);
+  //      font-family: $fontFamilyMontserrat;
+  //
+  //      .lastPhone {
+  //        @include heightAndWidth(19px, 18px);
+  //        width: 18px;
+  //        height: 19px;
+  //      }
+  //    }
+  //
+  //    .lastFooterSixBlockSpanImageTwo {
+  //      @include heightAndWidth(21px, 162px);
+  //      margin-left: -3px;
+  //
+  //      .lastSMS {
+  //        @include heightAndWidth(18px, 24px);
+  //      }
+  //    }
+  //
+  //    .lastFooterSixBlockSpanImageThree {
+  //      @include heightAndWidth(50px, 185px);
+  //
+  //      .lastGeo {
+  //        @include heightAndWidth(27px, 20px);
+  //      }
+  //
+  //      .lastFooterTwoSpan {
+  //        @include heightAndWidth(50px, 146px);
+  //        @extend %tplFlexAndColumn;
+  //        text-align: center;
+  //        margin-right: 8px;
+  //
+  //        .lastFooterTwoSpanOne {
+  //          font-family: $fontFamilyMontserrat;
+  //          font-weight: 600;
+  //          text-align: left;
+  //          line-height: 29px;
+  //          font-size: 20px;
+  //        }
+  //
+  //        .lastFooterTwoSpanTwo {
+  //          font-family: $fontFamilyMontserrat;
+  //          line-height: 23px;
+  //          font-size: 16px;
+  //        }
+  //      }
+  //    }
+  //  }
+  //
+  //  .visa {
+  //    @include heightAndWidth(60px, 197px);
+  //    position: absolute;
+  //    top: 251px;
+  //    margin-left: 1226px;
+  //  }
+  //}
+}
