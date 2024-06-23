@@ -1,15 +1,15 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const redirectErrorPage = document.querySelectorAll('div > button');
-
-    redirectErrorPage.forEach(button => {
-        if (!button.classList.contains('bottom-services_request-call') && !button.classList.contains('request-call-modal_send-request')) {
-            button.addEventListener('click', () => {
-                window.location.href = '../Page_404/CBC_404.html';
-            })
-        }
-    })
-})
-
+// document.addEventListener('DOMContentLoaded', function () {
+//     const redirectErrorPage = document.querySelectorAll('div > button');
+//
+//     redirectErrorPage.forEach(button => {
+//         if (!button.classList.contains('bottom-services_request-call') && !button.classList.contains('request-call-modal_send-request')) {
+//             button.addEventListener('click', () => {
+//                 window.location.href = '../Main_Page/CBC_404.html';
+//             })
+//         }
+//     })
+// })
+// todo: возможно этот файл не нужен и его нужно удалить
 //document.addEventListener('DOMContentLoaded', function () {
 //     const redirectErrorPage = document.querySelectorAll('div > button');
 //

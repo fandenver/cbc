@@ -1,5 +1,8 @@
-const burgerButton = document.querySelector('.icon-menu');
+const burgerButtons = document.querySelectorAll('.icon-menu');
 
-burgerButton.addEventListener('click', function () {
-    burgerButton.classList.toggle('_active')
-})
+for (let index = 0; index < burgerButtons.length; index++) {
+    const burgerButton = burgerButtons[index];
+    burgerButton.addEventListener('click', function () {
+        burgerButton.classList.toggle('_active')
+    })
+}

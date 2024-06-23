@@ -324,47 +324,57 @@ input:focus {
 
 body {
   overflow: hidden;
+  font-family: Rubik, sans-serif;
+  color: #4A4D4A;
+  font-weight: 500;
 }
 
-.errorBlockMain {
-  height: 700px;
-  width: 1430px;
+.error-page_container {
   display: flex;
-  margin: auto;
+  justify-content: center;
 }
-.errorBlockMain .labelError {
-  height: 138px;
-  width: 329px;
-  margin: -4px 0 0 2px;
+.error-page_container img {
+  max-width: 100%;
+  align-self: flex-start;
 }
-.errorBlockMain .errorBlock {
-  height: 700px;
-  width: 830px;
-  align-items: center;
-  font-family: Rubik, sans-serif;
-  font-weight: 500;
-  color: #4A4D4A;
-  margin: 36px 0 0 -10px;
+@media (max-width: 991.98px) {
+  .error-page_container img {
+    max-width: 50%;
+  }
 }
-.errorBlockMain .errorBlock .error_404 {
-  height: 403px;
-  width: 804px;
-  margin-bottom: 25px;
+@media (max-width: 1200px) {
+  .error-page_container {
+    flex-direction: column;
+  }
 }
-.errorBlockMain .errorBlock .errorBlockSpanOne {
+.error-page_info-block {
+  display: flex;
+  flex-direction: column;
+}
+.error-page_info-block p {
   font-size: 36px;
   line-height: 43px;
-  margin-bottom: 25px;
+  text-align: center;
+  margin: 0 0 15px 0;
 }
-.errorBlockMain .errorBlock .errorBlockSpanTwo {
+.error-page_info-block span {
   font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 25px;
+  line-height: 29px;
+  text-align: center;
+  margin: 0 0 15px 0;
 }
-.errorBlockMain .errorBlock #errorBlockBtn {
-  height: 60px;
-  width: 330px;
-  font-size: 18px;
+.error-page_info-block img {
+  max-width: 100%;
+  align-self: center;
+}
+@media (max-width: 991.98px) {
+  .error-page_info-block img {
+    max-width: 50%;
+  }
+}
+.error-page_btn {
+  align-self: center;
+  padding: 20px 35px;
 }
 
 /*# sourceMappingURL=CBC_404.css.map */

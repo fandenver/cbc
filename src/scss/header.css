@@ -523,7 +523,7 @@ input:focus {
   }
   .icon-menu._active span:first-child {
     transform: rotate(-45deg);
-    top: calc(37% - 1px);
+    top: calc(36% - 1px);
   }
   .icon-menu._active span:last-child {
     transform: rotate(45deg);
