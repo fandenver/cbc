@@ -13,6 +13,10 @@ ul {
   font-size: 14px;
 }
 
+a.text {
+  text-decoration: none;
+}
+
 input:focus, select:focus {
   outline: none;
 }
@@ -393,7 +397,6 @@ html, body {
   }
 }
 .page_side {
-  z-index: 10;
   margin: 0 0 50px 0;
   flex: 0 0 448px;
 }

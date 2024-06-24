@@ -51,7 +51,10 @@ ul {
   border: 0;
   text-decoration: none;
   font-size: 14px;
-  //font-family: "Roboto, ";
+}
+
+a.text {
+  text-decoration: none;
 }
 
 input:focus, select:focus {

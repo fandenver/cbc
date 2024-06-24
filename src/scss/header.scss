@@ -175,6 +175,11 @@
       align-items: flex-start;
     }
   }
+
+  &_burger-menu {
+    top: 100%;
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 .icon-menu {
@@ -185,7 +190,7 @@
     width: 42px;
     height: 42px;
     cursor: pointer;
-    z-index: 16;
+    z-index: 5;
 
     span {
       transition: all 0.3s ease 0s;
@@ -226,6 +231,68 @@
   }
 }
 
+.burger-menu-services-header {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  opacity: 0.8;
+  padding: 10px 10px 20px 10px;
+  min-width: 200px;
+  z-index: 10;
+  animation: fadeIn 0.4s ease-in-out;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  &_header {
+    font-size: 12px;
+    line-height: 15px;
+    border-bottom: 0.5px solid #FFFFFF;
+    margin: 0 0 10px 0;
+    color: #FFFFFF;
+  }
+
+  li {
+    margin: 0 0 5px 0;
+
+    a {
+      color: #FFFFFF;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &:last-child {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  ul:last-child > li {
+    margin: 0 0 10px 0;
+    line-height: 20px;
+  }
+
+  &_email {
+    padding: 0 0 0 30px;
+    background: url("../images/hat/sms.png") left / 23px no-repeat;;
+  }
+
+  &_phone {
+    padding: 0 0 0 30px;
+    background: url("../images/hat/phone.png") left / 20px no-repeat;;
+  }
+
+  &_geo {
+    padding: 0 0 0 30px;
+    background: url("../images/hat/geo.png") left / 20px no-repeat;;
+  }
+}
+
 .bottom-services {
   display: flex;
 
@@ -233,6 +300,7 @@
     display: flex;
     flex-direction: column;
     flex: 0 1 40%;
+    position: relative;
 
     &:last-child {
       flex: 0 1 60%;
@@ -377,35 +445,40 @@
     flex-direction: column;
     width: 100%;
     position: absolute;
-    max-height: 690px;
+    overflow-y: scroll;
     overflow-x: hidden;
     background-color: $colorWhite;
     box-shadow: $boxShadow;
-    z-index: 400;
+    z-index: 6;
     cursor: pointer;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     border: 1px solid $colorBlue;
-  }
+    max-height: 490px;
 
-  &::-webkit-scrollbar {
-    background-color: #FFFF;
-    width: 7px;
-  }
+    &::-webkit-scrollbar {
+      background-color: #FFFF;
+      width: 7px;
+    }
 
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 21, 105, 0.7);
-    border-radius: 10px;
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 21, 105, 0.7);
+      border-radius: 10px;
+    }
   }
 
   &_optionDropDawn {
-    height: 69px;
+    min-height: 69px;
     display: flex;
     align-items: center;
     color: $colorGray;
     transition: all 0.3s ease 0s;
     padding-left: 20px;
     border-bottom: 1px solid rgba(74, 77, 74, 0.5);
+
+    &:last-child {
+      border-bottom: 0;
+    }
 
     span {
       font-size: 20px;
@@ -414,6 +487,10 @@
     &:hover {
       background-color: $colorBlue;
       color: $colorOrange;
+    }
+    
+    @media (max-width: $md2+px) {
+      min-height: 50px;
     }
   }
 

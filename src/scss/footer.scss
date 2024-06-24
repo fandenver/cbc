@@ -18,6 +18,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 0 20px 0;
+    position: relative;
 
     img {
     }
@@ -40,7 +41,7 @@
 
   &_column {
     flex: 0 1 18%;
-    padding: 0 25px;
+    padding: 0 20px;
     margin: 0 0 25px 0;
 
     &_image_mobile {
@@ -48,11 +49,19 @@
 
       @media (max-width: $md2+px) {
         display: block;
+
+        img {
+          margin: 0 0 15px 0;
+        }
       }
     }
 
     &_image_no-mobile {
-      flex: 0 1 10%;
+      flex: 0 0 10%;
+
+      img {
+        margin: 0 40% 15px 0;
+      }
 
       @media (max-width: $md2+px) {
         display: none;
@@ -60,6 +69,11 @@
     }
 
     &:first-child {
+
+      li:first-child {
+        margin: 0 0 0 0;
+      }
+
       @media (max-width: $md2+px) {
         display: none;
       }
@@ -94,7 +108,7 @@
   &_logo-image-big {
     align-self: flex-start;
     margin: 0 0 0 0;
-    
+
     @media (max-width: $md3+px) {
       display: none;
     }
@@ -119,7 +133,6 @@
     img {
       max-width: 100%;
       align-self: center;
-      margin: 0 0 15px 0;
     }
 
     li {
@@ -134,8 +147,10 @@
   }
 
   &_logo-description {
+    display: inline-block;
     font-size: 18px;
     line-height: 21px;
+    margin: 15px 0 0 0;
   }
 
   &_header {
@@ -232,6 +247,16 @@
     @media (max-width: $md3+px) {
       font-size: 13.5px;
       line-height: 17px;
+    }
+  }
+
+  &_burger-menu {
+    right: 0;
+    top: 100%;
+    border-radius: 10px 0 0 10px;
+
+    @media (max-width: $md2+px) and (min-width: $md3+px){
+      top: 70%;
     }
   }
 }

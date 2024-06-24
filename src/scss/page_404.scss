@@ -12,18 +12,15 @@ body {
   &_container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 
     img {
       max-width: 100%;
       align-self: flex-start;
 
       @media (max-width: $md2+px) {
-        max-width: 50%;
+        max-width: 25%;
       }
-    }
-
-    @media (max-width: 1200px) {
-      flex-direction: column;
     }
   }
 
@@ -36,6 +33,11 @@ body {
       line-height: 43px;
       text-align: center;
       margin: 0 0 15px 0;
+
+      @media (max-width: $md2+px) {
+        font-size: 28px;
+        line-height: 36px;
+      }
     }
 
     span {
@@ -43,15 +45,16 @@ body {
       line-height: 29px;
       text-align: center;
       margin: 0 0 15px 0;
+
+      @media (max-width: $md2+px) {
+        font-size: 20px;
+        line-height: 28px;
+      }
     }
 
     img {
       max-width: 100%;
       align-self: center;
-
-      @media (max-width: $md2+px) {
-        max-width: 50%;
-      }
     }
   }
 

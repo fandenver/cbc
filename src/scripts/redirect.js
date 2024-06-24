@@ -4,7 +4,7 @@
 //     redirectErrorPage.forEach(button => {
 //         if (!button.classList.contains('bottom-services_request-call') && !button.classList.contains('request-call-modal_send-request')) {
 //             button.addEventListener('click', () => {
-//                 window.location.href = '../Main_Page/CBC_404.html';
+//                 window.location.href = '../Main_Page/page_404.html';
 //             })
 //         }
 //     })
