@@ -1,0 +1,50 @@
+@import "common_styles";
+
+.catalog-page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 40px;
+  flex: 1 1 auto;
+
+  &_categories {
+    display: flex;
+    margin: 0 -15px;
+  }
+
+  &_column {
+    display: flex;
+    flex: 0 1 25%;
+    padding: 0 15px;
+
+    &:last-child .catalog-page_category-block {
+      padding: 15px 10px 0 10px;
+    }
+  }
+
+  &_category-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F0F0FF;
+    padding: 30px 10px 0 10px;
+    flex: 1 1 210px;
+    box-shadow: $boxShadow;
+    border: 1px solid #4A4D4A;
+    border-radius: 5px;
+
+    img {
+      max-width: 100%;
+      align-self: center;
+    }
+  }
+
+  &_category-name {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  &_sorting {
+    display: flex;
+  }
+}
