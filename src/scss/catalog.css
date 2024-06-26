@@ -329,20 +329,53 @@ input:focus {
 .catalog-page {
   display: flex;
   flex-direction: column;
-  margin: 0 0 0 40px;
-  flex: 1 1 auto;
+  margin: 0 0 0 30px;
+  flex: 1 1 100%;
+}
+@media (max-width: 991.98px) {
+  .catalog-page {
+    margin: 0 0 0 0;
+  }
 }
 .catalog-page_categories {
   display: flex;
-  margin: 0 -15px;
+  margin: 0 -15px 10px -15px;
+  flex-wrap: wrap;
+}
+@media (max-width: 479.98px) {
+  .catalog-page_categories {
+    margin: 0 -10px 10px -10px;
+  }
 }
 .catalog-page_column {
   display: flex;
+  height: 229px;
   flex: 0 1 25%;
   padding: 0 15px;
+  margin: 0 0 30px 0;
 }
 .catalog-page_column:last-child .catalog-page_category-block {
   padding: 15px 10px 0 10px;
+}
+@media (max-width: 1440px) {
+  .catalog-page_column {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 479.98px) {
+  .catalog-page_column {
+    height: 140px;
+    padding: 0 10px;
+  }
+  .catalog-page_column:last-child .catalog-page_category-block {
+    padding: 5px 5px;
+  }
+  .catalog-page_column:last-child .catalog-page_category-block img {
+    max-width: 24%;
+  }
+  .catalog-page_column:first-child .catalog-page_category-block img {
+    max-width: 24%;
+  }
 }
 .catalog-page_category-block {
   display: flex;
@@ -357,15 +390,165 @@ input:focus {
 }
 .catalog-page_category-block img {
   max-width: 100%;
-  align-self: center;
+  margin: 0 0 10px 0;
+}
+@media (max-width: 479.98px) {
+  .catalog-page_category-block {
+    padding: 5px 5px;
+    justify-content: center;
+  }
+  .catalog-page_category-block img {
+    max-width: 35%;
+  }
 }
 .catalog-page_category-name {
-  font-size: 18px;
-  line-height: 21px;
   text-align: center;
 }
+.catalog-page_category-name span {
+  font-size: 18px;
+  line-height: 21px;
+}
+@media (max-width: 479.98px) {
+  .catalog-page_category-name span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
 .catalog-page_sorting {
+  margin: 0 0 30px 0;
+}
+.catalog-page_watch-more {
   display: flex;
+  border: 1px solid #4A4D4A;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+.catalog-page_watch-more span {
+  padding: 3px 0 0 25px;
+  z-index: 10;
+  background: url("../images/catalog/arrow-circle.png") left no-repeat;
+}
+@media (min-width: 991.98px) {
+  .catalog-page_watch-more:hover {
+    color: #FFFFFF;
+    background-color: #001569;
+  }
+}
+
+.sorting-page {
+  display: flex;
+  align-items: center;
+}
+.sorting-page_item {
+  margin: 0 15px 0 0;
+  padding: 0 20px 0 0;
+  background: url("../images/catalog/check-mark.png") right no-repeat;
+}
+.sorting-page_item span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+.sorting-page_item._active span {
+  font-weight: 500;
+}
+@media (max-width: 479.98px) {
+  .sorting-page_item:not(:first-child) {
+    display: none;
+  }
+}
+
+.products-page {
+  display: flex;
+  margin: 0 -15px;
+  flex-wrap: wrap;
+}
+.products-page_column {
+  display: flex;
+  flex: 0 1 25%;
+  margin: 0 0 30px 0;
+  padding: 0 15px;
+  height: 320px;
+}
+@media (max-width: 1440px) {
+  .products-page_column {
+    flex: 0 1 33.333%;
+  }
+}
+@media (max-width: 1212px) and (min-width: 991.98px) {
+  .products-page_column {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 767.98px) {
+  .products-page_column {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 479.98px) {
+  .products-page_column {
+    flex: 0 1 100%;
+  }
+}
+.products-page_product-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px 0 10px;
+  flex: 1 1 210px;
+  border: 1px solid #4A4D4A;
+  border-radius: 5px;
+}
+.products-page_product-block img {
+  max-width: 100%;
+  margin: 0 0 10px 0;
+}
+.products-page_product-name {
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+.products-page_product-name span {
+  font-size: 14px;
+  line-height: 17px;
+}
+.products-page_product-article {
+  margin: 0 0 10px 0;
+}
+.products-page_product-article span {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+}
+.products-page_product-storage {
+  margin: 0 0 10px 0;
+}
+.products-page_product-storage span {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.products-page_product-price {
+  margin: 0 0 10px 0;
+}
+.products-page_product-price span {
+  color: #001569;
+  font-size: 24px;
+  line-height: 29px;
+}
+.products-page_product-button {
+  height: 50px;
+  width: 100%;
+}
+.products-page_product-button span {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 0 0 0 40px;
+  background: url("../images/sideMenuButtons/basket.png") left no-repeat;
 }
 
 /*# sourceMappingURL=catalog.css.map */

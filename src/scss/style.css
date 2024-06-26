@@ -379,13 +379,11 @@ html, body {
   }
 }
 .page_container {
-  max-height: 1584px;
   height: 100%;
 }
 @media (min-width: 991.98px) {
   .page_container {
     display: flex;
-    max-height: 742px;
   }
 }
 .page_main-content {

@@ -8,7 +8,6 @@ html, body {
   height: 100%;
 }
 
-
 .checkBoxAndSpan {
   @include heightAndWidth(30px, 205px);
   display: flex;
@@ -55,11 +54,9 @@ html, body {
   }
 
   &_container {
-    max-height: 1584px;
     height: 100%;
     @media (min-width: $md2+px) {
       display: flex;
-      max-height: 742px;
     }
   }
 
@@ -646,11 +643,9 @@ html, body {
 }
 
 .afterNavBarBannerAndSpan {
-  @extend %tplFlexAndColumn;
   margin-left: 42px;
 
   .productMenu {
-    //@include heightAndWidth(736px, 922px);
     max-width: 922px;
     width: 100%;
     max-height: 736px;
@@ -680,7 +675,6 @@ html, body {
   .productMenuBlock {
     display: none;
     @include heightAndWidth(320px, 210px);
-    @extend %tplFlexAndColumn;
     align-items: center;
     background-color: $colorWhite;
     box-shadow: $boxShadow;
