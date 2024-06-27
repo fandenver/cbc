@@ -474,11 +474,11 @@ html, body {
     margin: 0 0 40px 0;
   }
 }
-.page_catalog {
+.page_promotion {
   margin: 0 0 100px 0;
 }
 @media (max-width: 991.98px) {
-  .page_catalog {
+  .page_promotion {
     margin: 0 0 40px 0;
   }
 }
