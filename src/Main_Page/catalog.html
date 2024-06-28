@@ -142,6 +142,35 @@
                             </li>
                         </ul>
                     </nav>
+                    <form action="#" class="filter">
+                        <div class="filter_title">Фильтр по параметрам</div>
+                        <div class="filter_content">
+                            <div class="filter_section section-filter">
+                                <div class="section-filter_title">Цена</div>
+                                <div class="section-filter_body">
+                                    <div class="price-filter">
+                                        <div class="price-filter_values">
+                                            <div class="price-filter_column">
+                                                <label class="price-filter_label">
+                                                    <input type="number" class="price-filter_input">
+                                                </label>
+                                            </div>
+                                            <div class="price-filter_column">
+                                                <label class="price-filter_label">
+                                                    <input type="number" class="price-filter_input">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="price-filter_slider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter_footer">
+                            <button type="submit" class="filter_btn btn">Показать</button>
+                            <button type="reset" class="filter_btn btn btn_grey">Сбросить</button>
+                        </div>
+                    </form>
                 </aside>
                 <div class="page_catalog catalog-page">
                     <div class="catalog-page_categories">
@@ -558,8 +587,10 @@
                 <div class="products-page">
                     <div class="products-page_column products-page_column_promotion">
                         <div class="products-page_product-block products-page_product-block_promotion">
-                            <div class="products-page_label products-page_label_sale"><span>Выбирайте по<br> акции в СВС</span></div>
-                            <div class="products-page_label products-page_label_medal"><span>Хиты продаж<br> в СВС</span></div>
+                            <div class="products-page_label products-page_label_sale"><span>Выбирайте по<br> акции в СВС</span>
+                            </div>
+                            <div class="products-page_label products-page_label_medal">
+                                <span>Хиты продаж<br> в СВС</span></div>
                             <a class="products-page_watch-all"><span>Смотреть все</span></a>
                         </div>
                     </div>
@@ -569,7 +600,8 @@
                             <img class="promotion-page_top-sale" src="../images/catalog/promotionMenu/top-sale.png"
                                  alt="sale">
                             <img class="promotion-page_heart" src="../images/sideMenuButtons/heart.png" alt="heart">
-                            <img class="promotion-page_columns" src="../images/sideMenuButtons/columns.png" alt="columns">
+                            <img class="promotion-page_columns" src="../images/sideMenuButtons/columns.png"
+                                 alt="columns">
                             <img src="../images/catalog/promotionMenu/printer.png" alt="printer">
                             <div class="products-page_product-name products-page_product-name_promotion">
                                 <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
@@ -590,7 +622,8 @@
                     <div class="products-page_column products-page_column_promotion">
                         <div class="products-page_product-block products-page_product-block_promotion">
                             <span class="promotion-page_text-sale-blue">Акция</span>
-                            <img class="promotion-page_top-sale" src="../images/catalog/promotionMenu/sale-background.png"
+                            <img class="promotion-page_top-sale"
+                                 src="../images/catalog/promotionMenu/sale-background.png"
                                  alt="">
                             <img class="promotion-page_heart" src="../images/sideMenuButtons/heart.png" alt="">
                             <img class="promotion-page_columns" src="../images/sideMenuButtons/columns.png" alt="">
@@ -638,7 +671,8 @@
                     <div class="products-page_column products-page_column_promotion">
                         <div class="products-page_product-block products-page_product-block_promotion">
                             <span class="promotion-page_text-sale-blue">Акция</span>
-                            <img class="promotion-page_top-sale" src="../images/catalog/promotionMenu/sale-background.png"
+                            <img class="promotion-page_top-sale"
+                                 src="../images/catalog/promotionMenu/sale-background.png"
                                  alt="">
                             <img class="promotion-page_heart" src="../images/sideMenuButtons/heart.png" alt="">
                             <img class="promotion-page_columns" src="../images/sideMenuButtons/columns.png" alt="">
@@ -686,7 +720,8 @@
                     <div class="products-page_column products-page_column_promotion">
                         <div class="products-page_product-block products-page_product-block_promotion">
                             <span class="promotion-page_text-sale-blue">Акция</span>
-                            <img class="promotion-page_top-sale" src="../images/catalog/promotionMenu/sale-background.png"
+                            <img class="promotion-page_top-sale"
+                                 src="../images/catalog/promotionMenu/sale-background.png"
                                  alt="">
                             <img class="promotion-page_heart" src="../images/sideMenuButtons/heart.png" alt="">
                             <img class="promotion-page_columns" src="../images/sideMenuButtons/columns.png" alt="">
@@ -1070,13 +1105,15 @@
         </div>
     </main>
     @@include('html/footer.html', {})
+    <script src="wnumb-1.2.0/wNumb.min.js"></script>
+    <script src="../../node_modules/nouislider/dist/nouislider.min.js"></script>
     <script src="../scripts/modalAndBanner.js"></script>
     <script src="../scripts/dropDawn.js"></script>
     <script src="../scripts/redirect.js"></script>
     <script src="../scripts/toolTip.js"></script>
     <script src="../scripts/BurgerMenu.js"></script>
-    <script src="../scripts/sideButtons.js"></script>
     <script src="../scripts/searchSlider.js"></script>
+    <script src="../scripts/noUISlider.js"></script>
 </div>
 </body>
 </html>

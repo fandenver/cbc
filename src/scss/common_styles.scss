@@ -271,19 +271,11 @@ input[type="search"]::-webkit-search-results-decoration {
 input {
   cursor: text;
   font-size: 18px;
-  padding-left: 20px;
   color: $colorGray;
   font-family: $fontFamilyRubik;
 
   &[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-  }
-
-  &:focus {
-    border: 1px solid $colorBlue;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    outline: none;
   }
 }
 

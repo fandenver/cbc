@@ -182,18 +182,11 @@ input[type=search]::-webkit-search-results-decoration {
 input {
   cursor: text;
   font-size: 18px;
-  padding-left: 20px;
   color: rgb(74, 77, 74);
   font-family: Rubik, sans-serif;
 }
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
-}
-input:focus {
-  border: 1px solid #001569;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  outline: none;
 }
 
 .close {
@@ -397,6 +390,14 @@ html, body {
 .page_side {
   margin: 0 0 50px 0;
   flex: 0 0 448px;
+}
+.page_menu {
+  margin: 0 0 50px 0;
+}
+@media (max-width: 991.98px) {
+  .page_menu {
+    margin: 0 0 40px 0;
+  }
 }
 .page_content {
   display: flex;

@@ -1,5 +1,168 @@
 @import "common_styles";
 
+.filter {
+  display: flex;
+  flex-direction: column;
+  box-shadow: $boxShadow;
+  border-radius: 10px 10px 0 0;
+
+  &_title {
+    background-color: #F0F0FF;
+    transition: all 0.3s ease 0s;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 20px 0 20px 20px;
+  }
+
+  &_section {
+
+  }
+}
+
+.section-filter {
+  padding: 25px 0 10px 20px;
+
+  &_title {
+    font-size: 24px;
+    line-height: 29px;
+    position: relative;
+    margin: 0 0 20px 0;
+
+    &::after {
+      cursor: pointer;
+      position: absolute;
+      content: "";
+      width: 17px;
+      height: 12px;
+      right: 20px;
+      top: 10px;
+      background: url("../images/catalog/arrow-filter.png") 0 0 no-repeat;
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &_body {
+
+  }
+}
+
+.price-filter {
+
+  &_values {
+    display: flex;
+    margin: 0 0 40px 0;
+  }
+
+  &_column {
+    display: flex;
+    flex: 0 1 50%;
+    padding: 0 25px;
+
+
+    &:first-child {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background: url("../images/catalog/dash.png") center no-repeat;
+        width: 18px;
+        height: 3px;
+        right: 0;
+        top: 50%;
+      }
+    }
+  }
+
+  &_label {
+    flex: 0 1 138px;
+    border: 1px solid #4A4D4A;
+  }
+
+  &_input {
+    height: 60px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 0 15px;
+  }
+
+  &_slider {
+    height: 4px;
+    background-color: #eaeaea;
+    margin: 0 11px 50px 11px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      background-color: #eaeaea;
+      width: 11px;
+      height: 4px;
+      position: absolute;
+      top: 0;
+    }
+
+    &::before {
+      left: -11px;
+    }
+
+    &::after {
+      right: -11px;
+    }
+
+    .noUi-base,
+    .noUi-connects {
+      position: relative;
+      height: 4px;
+    }
+
+    .noUi-origin,
+    .noUi-connect {
+      will-change: transform;
+      position: absolute;
+      width: 100%;
+      height: 10%;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      transform-origin: 0 0;
+      transform-style: flat;
+    }
+
+    .noUi-connect {
+      background-color: #ffcda5;
+      width: 100%;
+      height: 100%;
+      top: 0;
+    }
+
+    .noUi-handle {
+      position: absolute;
+      top: -10px;
+      right: -12px;
+      width: 23px;
+      height: 23px;
+      border: 1px solid #f68038;
+      background-color: #FFFFFF;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 3.3px;
+        top: 3.3px;
+        border-radius: 50%;
+        background-color: #f68038;
+      }
+    }
+  }
+}
+
+
 .catalog-page {
   display: flex;
   flex-direction: column;
@@ -460,3 +623,4 @@
     }
   }
 }
+

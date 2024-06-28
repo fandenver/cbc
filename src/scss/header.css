@@ -182,18 +182,11 @@ input[type=search]::-webkit-search-results-decoration {
 input {
   cursor: text;
   font-size: 18px;
-  padding-left: 20px;
   color: rgb(74, 77, 74);
   font-family: Rubik, sans-serif;
 }
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
-}
-input:focus {
-  border: 1px solid #001569;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  outline: none;
 }
 
 .close {
@@ -718,6 +711,13 @@ input:focus {
   height: 40px;
   width: 100%;
   border: 1px solid #000;
+  padding: 0 45px 0 20px;
+}
+.bottom-header_searchField:focus {
+  border: 1px solid #001569;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  outline: none;
 }
 .bottom-header_searchButton {
   position: absolute;
