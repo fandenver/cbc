@@ -57,7 +57,7 @@ let _slideDown = (target, duration = 500) => {
     }, duration)
 }
 
-let _slideToggle = (target, duration = 500) => {
+export let _slideToggle = (target, duration = 500) => {
     if (!target.classList.contains('_slide')) {
         target.classList.add('_slide');
         if (window.getComputedStyle(target).display === 'none') {
@@ -69,7 +69,6 @@ let _slideToggle = (target, duration = 500) => {
 }
 
 searchField.addEventListener('click', () => {
-    // selectBtnSearch.classList.toggle('_active');
     _slideToggle(searchDropDawn);
 });
 

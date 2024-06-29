@@ -67,6 +67,17 @@ input:focus, select:focus {
     line-height: 20px;
   }
 }
+.btn_grey {
+  color: #4A4D4A;
+  background-color: #FFFFFF;
+  border: 1px solid #001569;
+}
+@media (min-width: 991.98px) {
+  .btn_grey:hover {
+    color: #000000;
+    background-color: #a1a1a1;
+  }
+}
 
 .border-art {
   position: relative;
@@ -187,6 +198,51 @@ input {
 }
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.checkbox {
+  position: relative;
+}
+.checkbox_input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.checkbox_input:checked + .checkbox_text:before {
+  border: 2px solid #4A4D4A;
+}
+.checkbox_input:checked + .checkbox_text:after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background: url("../images/catalog/checkbox-background.png") center no-repeat;
+}
+.checkbox_text {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4A4D4A;
+  cursor: pointer;
+}
+.checkbox_text:before {
+  content: "";
+  align-self: flex-start;
+  margin: 0 10px 0 0;
+  flex: 0 0 20px;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border: 1px solid #4A4D4A;
+  border-radius: 3px;
 }
 
 .close {
@@ -480,6 +536,14 @@ html, body {
 }
 @media (max-width: 991.98px) {
   .page_promotion {
+    margin: 0 0 40px 0;
+  }
+}
+.page_products-slider {
+  margin: 0 0 100px 0;
+}
+@media (max-width: 991.98px) {
+  .page_products-slider {
     margin: 0 0 40px 0;
   }
 }
@@ -1233,6 +1297,14 @@ html, body {
   width: 100%;
 }
 
+.banners-page_first {
+  margin: 0 0 30px 0;
+}
+@media (max-width: 991.98px) {
+  .banners-page_first {
+    margin: 0 0 0 0;
+  }
+}
 .banners-page_container {
   display: flex;
   justify-content: space-between;

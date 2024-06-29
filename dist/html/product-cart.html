@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="../../src/images/favicon/favicon.png" type="image/x-icon">
-    <title>Каталог</title>
+    <title>Карточка товара</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../../src/scss/header.css">
     <link rel="stylesheet" href="../../src/scss/footer.css">
     <link rel="stylesheet" href="../../src/scss/catalog.css">
+    <link rel="stylesheet" href="../../src/scss/product-cart.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 <div class="wrapper">
@@ -326,704 +328,178 @@
                             </li>
                         </ul>
                     </nav>
-                    <form action="#" class="filter">
-                        <div class="filter_title">Фильтр по параметрам</div>
-                        <div class="filter_body">
-                            <div class="filter_section section-filter">
-                                <div class="section-filter_title _active">Цена</div>
-                                <div class="section-filter_body">
-                                    <div class="price-filter">
-                                        <div class="price-filter_values">
-                                            <div class="price-filter_column">
-                                                <label class="price-filter_label">
-                                                    <input id="price-start" type="number" class="price-filter_input">
-                                                </label>
-                                            </div>
-                                            <div class="price-filter_column">
-                                                <label class="price-filter_label">
-                                                    <input id="price-end" type="number" class="price-filter_input">
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="price-filter_slider"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="filter_section section-filter">
-                                <div class="section-filter_title _active">Бренд</div>
-                                <div class="section-filter_body section-filter_body_checkbox">
-                                    <div class="section-filter_brands">
-                                       <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">ALCATEL</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">APPLE</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">ARIAN</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">ARK</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">ASUS</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">AUDIO-TECHNICA</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">BBK</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">BEATS</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">BELKIN</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">ALCATEL</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">APPLE</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">ARIAN</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">ARK</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">ASUS</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">AUDIO-TECHNICA</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">BBK</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">BEATS</span>
-                                       </label>
-                                        <label class="section-filter_checkbox checkbox">
-                                           <input class="checkbox_input" type="checkbox">
-                                           <span class="checkbox_text">BELKIN</span>
-                                       </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter_footer">
-                            <button type="submit" class="filter_btn btn">Показать</button>
-                            <button type="reset" class="filter_btn btn btn_grey">Сбросить</button>
-                        </div>
-                    </form>
                 </aside>
-                <div class="page_catalog catalog-page">
-                    <div class="catalog-page_categories">
-                        <div class="catalog-page_column">
-                            <div class="catalog-page_category-block">
-                                <img src="../../src/images/catalog/productMenu/pmPhoneMain.png" alt="mobile">
-                                <div class="catalog-page_category-name"><span>Сотовые телефоны</span></div>
-                            </div>
+                <div class="page_product-cart product-cart">
+                    <div class="product-cart_content">
+                        <div class="product-cart_slider">
+                            <img src="../../src/images/product-cart/hp-big.png" alt="cartridge">
                         </div>
-                        <div class="catalog-page_column">
-                            <div class="catalog-page_category-block">
-                                <img src="../../src/images/catalog/productMenu/pmTabletMain.png" alt="mobile">
-                                <div class="catalog-page_category-name"><span>Планшеты</span></div>
-                            </div>
-                        </div>
-                        <div class="catalog-page_column">
-                            <div class="catalog-page_category-block">
-                                <img src="../../src/images/catalog/productMenu/pmPodsMain.png" alt="mobile">
-                                <div class="catalog-page_category-name"><span>Аксессуары для мобильной связи</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="catalog-page_column">
-                            <div class="catalog-page_category-block">
-                                <img src="../../src/images/catalog/productMenu/pmCaseMain.png" alt="mobile">
-                                <div class="catalog-page_category-name"><span>Аксессуары для планшетных устройств</span>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="product-cart_description"></div>
                     </div>
-                    <div class="catalog-page_sorting sorting-page">
-                        <div class="sorting-page_item _active"><span>По популярности</span></div>
-                        <div class="sorting-page_item"><span>По алфавиту</span></div>
-                        <div class="sorting-page_item"><span>По цене</span></div>
-                    </div>
-                    <div class="catalog-page_products products-page">
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmPhone.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmPods.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmClock.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmTablet.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmPhone.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmPods.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmClock.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmTablet.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmPhone.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmPods.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmClock.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmTablet.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmPhone.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmPods.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmClock.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmTablet.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmPhone.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmPods.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmClock.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                        <div class="products-page_column">
-                            <div class="products-page_product-block">
-                                <img src="../../src/images/catalog/productMenu/pmTablet.png" alt="mobile device">
-                                <div class="products-page_product-name">
-                                    <span>Смартфон Xiaomi Poco X3 Pro 128Gb 6Gb голубой</span>
-                                </div>
-                                <div class="products-page_product-article">
-                                    <span>Артикул: 1514353</span>
-                                </div>
-                                <div class="products-page_product-storage">
-                                    <span>В наличии / На складе</span>
-                                </div>
-                                <div class="products-page_product-price">
-                                    <span>23985 ₽</span>
-                                </div>
-                                <button class="products-page_product-button btn"><span>в корзину</span></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog-page_watch-more"><span>Смотреть еще</span></div>
-                    <div class="catalog-page_pagination pagination-catalog">
-                        <div class="pagination-catalog_items">
-                            <div class="pagination-catalog_item _active"><span>1</span></div>
-                            <div class="pagination-catalog_item"><span>2</span></div>
-                            <div class="pagination-catalog_item"><span>3</span></div>
-                            <div class="pagination-catalog_item"><span>4</span></div>
-                            <div class="pagination-catalog_item"><span>...</span></div>
-                            <div class="pagination-catalog_item"><span>51</span></div>
-                        </div>
-                    </div>
+                    <div class="product-cart_info"></div>
                 </div>
             </div>
         </div>
-        <div class="page_promotion promotion-page">
-            <div class="promotion-page_container _limit_container">
-                <div class="products-page">
-                    <div class="products-page_column products-page_column_promotion">
-                        <div class="products-page_product-block products-page_product-block_promotion products-page_product-block_promotion_justify">
-                            <div class="products-page_label products-page_label_sale"><span>Выбирайте по<br> акции в СВС</span>
+        <div class="page_side-buttons buttons-side">
+            <ul class="buttons-side_list">
+                <li><a class="buttons-side_item buttons-side_item_cart _active"></a></li>
+                <li><a class="buttons-side_item buttons-side_item_heart"></a></li>
+                <li><a class="buttons-side_item buttons-side_item_columns"></a></li>
+            </ul>
+        </div>
+        <div class="page_products-slider products-slider">
+            <div class="products-slider_container _limit_container">
+                <div class="products-slider_arrow products-slider_arrow_left"></div>
+                <div class="products-slider_arrow products-slider_arrow_right"></div>
+                <div class="products-slider_header">Так же рекомендуем посмотреть</div>
+                <div class="products-slider_body products-page _swiper">
+                    <div class="products-page_column products-page_column_promotion products-slider_column">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
                             </div>
-                            <div class="products-page_label products-page_label_medal">
-                                <span>Хиты продаж<br> в СВС</span></div>
-                            <a class="products-page_watch-all"><span>Смотреть все</span></a>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
                         </div>
                     </div>
                     <div class="products-page_column products-page_column_promotion">
-                        <div class="products-page_product-block products-page_product-block_promotion">
-                            <span class="promotion-page_text-sale">Хит<br> продаж</span>
-                            <img class="promotion-page_top-sale" src="../../src/images/catalog/promotionMenu/top-sale.png"
-                                 alt="sale">
-                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="heart">
+                        <div class="products-page_product-block products-slider_block">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png"
+                                 alt="heart">
                             <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
                                  alt="columns">
-                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                            <img src="../../src/images/product-cart/cartridge.png" alt="cartridge">
                             <div class="products-page_product-name products-page_product-name_promotion">
-                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                                <span>
+                                    Картридж струйный Cactus CS-BCI24BK черный (9.2мл) <br>для Canon<br>
+                                    S200/ S200x/ S300/ S330 /S30i /250/ i320/ i350/ i450/ i455/ i470D/ i475D/ MP110
+                                </span>
                             </div>
-                            <div class="products-page_product-article products-page_product-article_promotion">
-                                <span>Артикул: 1097110</span>
-                            </div>
-                            <div class="products-page_product-storage products-page_product-storage_promotion">
-                                <span>В наличии / На складе</span>
-                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
                             <div class="products-page_product-price products-page_product-price_promotion">
-                                <span>65400 ₽</span>
+                                <span>110 ₽ / шт</span>
                             </div>
                             <button class="products-page_product-button products-page_product-button_promotion btn">
                                 <span>в корзину</span></button>
                         </div>
                     </div>
                     <div class="products-page_column products-page_column_promotion">
-                        <div class="products-page_product-block products-page_product-block_promotion">
-                            <span class="promotion-page_text-sale-blue">Акция</span>
-                            <img class="promotion-page_top-sale"
-                                 src="../../src/images/catalog/promotionMenu/sale-background.png"
-                                 alt="">
-                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
-                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png" alt="">
-                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
                             <div class="products-page_product-name products-page_product-name_promotion">
-                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
                             </div>
-                            <div class="products-page_product-article products-page_product-article_promotion">
-                                <span>Артикул: 1097110</span>
-                            </div>
-                            <div class="products-page_product-storage products-page_product-storage_promotion">
-                                <span>В наличии / На складе</span>
-                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
                             <div class="products-page_product-price products-page_product-price_promotion">
-                                <span>65400 ₽</span>
+                                <span>38990 ₽</span>
                             </div>
                             <button class="products-page_product-button products-page_product-button_promotion btn">
                                 <span>в корзину</span></button>
                         </div>
                     </div>
                     <div class="products-page_column products-page_column_promotion">
-                        <div class="products-page_product-block products-page_product-block_promotion">
-                            <span class="promotion-page_text-sale">Хит<br> продаж</span>
-                            <img class="promotion-page_top-sale" src="../../src/images/catalog/promotionMenu/top-sale.png"
-                                 alt="">
-                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
-                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png" alt="">
-                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
                             <div class="products-page_product-name products-page_product-name_promotion">
-                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
                             </div>
-                            <div class="products-page_product-article products-page_product-article_promotion">
-                                <span>Артикул: 1097110</span>
-                            </div>
-                            <div class="products-page_product-storage products-page_product-storage_promotion">
-                                <span>В наличии / На складе</span>
-                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
                             <div class="products-page_product-price products-page_product-price_promotion">
-                                <span>65400 ₽</span>
+                                <span>38990 ₽</span>
                             </div>
                             <button class="products-page_product-button products-page_product-button_promotion btn">
                                 <span>в корзину</span></button>
                         </div>
                     </div>
                     <div class="products-page_column products-page_column_promotion">
-                        <div class="products-page_product-block products-page_product-block_promotion">
-                            <span class="promotion-page_text-sale-blue">Акция</span>
-                            <img class="promotion-page_top-sale"
-                                 src="../../src/images/catalog/promotionMenu/sale-background.png"
-                                 alt="">
-                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
-                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png" alt="">
-                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
                             <div class="products-page_product-name products-page_product-name_promotion">
-                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
                             </div>
-                            <div class="products-page_product-article products-page_product-article_promotion">
-                                <span>Артикул: 1097110</span>
-                            </div>
-                            <div class="products-page_product-storage products-page_product-storage_promotion">
-                                <span>В наличии / На складе</span>
-                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
                             <div class="products-page_product-price products-page_product-price_promotion">
-                                <span>65400 ₽</span>
+                                <span>38990 ₽</span>
                             </div>
                             <button class="products-page_product-button products-page_product-button_promotion btn">
                                 <span>в корзину</span></button>
                         </div>
                     </div>
                     <div class="products-page_column products-page_column_promotion">
-                        <div class="products-page_product-block products-page_product-block_promotion">
-                            <span class="promotion-page_text-sale">Хит<br> продаж</span>
-                            <img class="promotion-page_top-sale" src="../../src/images/catalog/promotionMenu/top-sale.png"
-                                 alt="">
-                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
-                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png" alt="">
-                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                        <div class="products-page_product-block products-slider_block">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png"
+                                 alt="heart">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="columns">
+                            <img src="../../src/images/product-cart/cartridge.png" alt="cartridge">
                             <div class="products-page_product-name products-page_product-name_promotion">
-                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                                <span>
+                                    Картридж струйный Cactus CS-BCI24BK черный (9.2мл) <br>для Canon<br>
+                                    S200/S200x/S300/S330/S30i/250/ i320/ i350/ i450/ i455/ i470D/ i475D/ MP110
+                                </span>
                             </div>
-                            <div class="products-page_product-article products-page_product-article_promotion">
-                                <span>Артикул: 1097110</span>
-                            </div>
-                            <div class="products-page_product-storage products-page_product-storage_promotion">
-                                <span>В наличии / На складе</span>
-                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
                             <div class="products-page_product-price products-page_product-price_promotion">
-                                <span>65400 ₽</span>
+                                <span>110 ₽ / шт</span>
                             </div>
                             <button class="products-page_product-button products-page_product-button_promotion btn">
                                 <span>в корзину</span></button>
                         </div>
                     </div>
                     <div class="products-page_column products-page_column_promotion">
-                        <div class="products-page_product-block products-page_product-block_promotion">
-                            <span class="promotion-page_text-sale-blue">Акция</span>
-                            <img class="promotion-page_top-sale"
-                                 src="../../src/images/catalog/promotionMenu/sale-background.png"
-                                 alt="">
-                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
-                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png" alt="">
-                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
                             <div class="products-page_product-name products-page_product-name_promotion">
-                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
                             </div>
-                            <div class="products-page_product-article products-page_product-article_promotion">
-                                <span>Артикул: 1097110</span>
-                            </div>
-                            <div class="products-page_product-storage products-page_product-storage_promotion">
-                                <span>В наличии / На складе</span>
-                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
                             <div class="products-page_product-price products-page_product-price_promotion">
-                                <span>65400 ₽</span>
+                                <span>38990 ₽</span>
                             </div>
                             <button class="products-page_product-button products-page_product-button_promotion btn">
                                 <span>в корзину</span></button>
                         </div>
                     </div>
                     <div class="products-page_column products-page_column_promotion">
-                        <div class="products-page_product-block products-page_product-block_promotion">
-                            <span class="promotion-page_text-sale">Хит<br> продаж</span>
-                            <img class="promotion-page_top-sale" src="../../src/images/catalog/promotionMenu/top-sale.png"
-                                 alt="">
-                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
-                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png" alt="">
-                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
                             <div class="products-page_product-name products-page_product-name_promotion">
-                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
                             </div>
-                            <div class="products-page_product-article products-page_product-article_promotion">
-                                <span>Артикул: 1097110</span>
-                            </div>
-                            <div class="products-page_product-storage products-page_product-storage_promotion">
-                                <span>В наличии / На складе</span>
-                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
                             <div class="products-page_product-price products-page_product-price_promotion">
-                                <span>65400 ₽</span>
+                                <span>38990 ₽</span>
                             </div>
                             <button class="products-page_product-button products-page_product-button_promotion btn">
                                 <span>в корзину</span></button>
@@ -1115,6 +591,365 @@
                 </div>
             </div>
         </div>
+        <div class="page_promotion promotion-page promotion-page_cart">
+            <div class="promotion-page_container _limit_container">
+                <div class="products-page">
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-page_product-block_promotion products-page_product-block_promotion_justify">
+                            <div class="products-page_label products-page_label_sale"><span>Выбирайте по<br> акции в СВС</span>
+                            </div>
+                            <div class="products-page_label products-page_label_medal">
+                                <span>Хиты продаж<br> в СВС</span></div>
+                            <a class="products-page_watch-all"><span>Смотреть все</span></a>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-page_product-block_promotion">
+                            <span class="promotion-page_text-sale">Хит<br> продаж</span>
+                            <img class="promotion-page_top-sale"
+                                 src="../../src/images/catalog/promotionMenu/top-sale.png"
+                                 alt="sale">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png"
+                                 alt="heart">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="columns">
+                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                            </div>
+                            <div class="products-page_product-article products-page_product-article_promotion">
+                                <span>Артикул: 1097110</span>
+                            </div>
+                            <div class="products-page_product-storage products-page_product-storage_promotion">
+                                <span>В наличии / На складе</span>
+                            </div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>65400 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-page_product-block_promotion">
+                            <span class="promotion-page_text-sale-blue">Акция</span>
+                            <img class="promotion-page_top-sale"
+                                 src="../../src/images/catalog/promotionMenu/sale-background.png"
+                                 alt="">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="">
+                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                            </div>
+                            <div class="products-page_product-article products-page_product-article_promotion">
+                                <span>Артикул: 1097110</span>
+                            </div>
+                            <div class="products-page_product-storage products-page_product-storage_promotion">
+                                <span>В наличии / На складе</span>
+                            </div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>65400 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-page_product-block_promotion">
+                            <span class="promotion-page_text-sale">Хит<br> продаж</span>
+                            <img class="promotion-page_top-sale"
+                                 src="../../src/images/catalog/promotionMenu/top-sale.png"
+                                 alt="">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="">
+                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                            </div>
+                            <div class="products-page_product-article products-page_product-article_promotion">
+                                <span>Артикул: 1097110</span>
+                            </div>
+                            <div class="products-page_product-storage products-page_product-storage_promotion">
+                                <span>В наличии / На складе</span>
+                            </div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>65400 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-page_product-block_promotion">
+                            <span class="promotion-page_text-sale-blue">Акция</span>
+                            <img class="promotion-page_top-sale"
+                                 src="../../src/images/catalog/promotionMenu/sale-background.png"
+                                 alt="">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="">
+                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                            </div>
+                            <div class="products-page_product-article products-page_product-article_promotion">
+                                <span>Артикул: 1097110</span>
+                            </div>
+                            <div class="products-page_product-storage products-page_product-storage_promotion">
+                                <span>В наличии / На складе</span>
+                            </div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>65400 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-page_product-block_promotion">
+                            <span class="promotion-page_text-sale">Хит<br> продаж</span>
+                            <img class="promotion-page_top-sale"
+                                 src="../../src/images/catalog/promotionMenu/top-sale.png"
+                                 alt="">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="">
+                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                            </div>
+                            <div class="products-page_product-article products-page_product-article_promotion">
+                                <span>Артикул: 1097110</span>
+                            </div>
+                            <div class="products-page_product-storage products-page_product-storage_promotion">
+                                <span>В наличии / На складе</span>
+                            </div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>65400 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-page_product-block_promotion">
+                            <span class="promotion-page_text-sale-blue">Акция</span>
+                            <img class="promotion-page_top-sale"
+                                 src="../../src/images/catalog/promotionMenu/sale-background.png"
+                                 alt="">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="">
+                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                            </div>
+                            <div class="products-page_product-article products-page_product-article_promotion">
+                                <span>Артикул: 1097110</span>
+                            </div>
+                            <div class="products-page_product-storage products-page_product-storage_promotion">
+                                <span>В наличии / На складе</span>
+                            </div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>65400 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-page_product-block_promotion">
+                            <span class="promotion-page_text-sale">Хит<br> продаж</span>
+                            <img class="promotion-page_top-sale"
+                                 src="../../src/images/catalog/promotionMenu/top-sale.png"
+                                 alt="">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png" alt="">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="">
+                            <img src="../../src/images/catalog/promotionMenu/printer.png" alt="printer">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>МФУ лазерный Kyocera Ecosys M3145dn (1102TF3NL0) A4 Duplex Net белый/черный</span>
+                            </div>
+                            <div class="products-page_product-article products-page_product-article_promotion">
+                                <span>Артикул: 1097110</span>
+                            </div>
+                            <div class="products-page_product-storage products-page_product-storage_promotion">
+                                <span>В наличии / На складе</span>
+                            </div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>65400 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page_products-slider products-slider products-slider_color">
+            <div class="products-slider_container _limit_container">
+                <div class="products-slider_arrow products-slider_arrow_left"></div>
+                <div class="products-slider_arrow products-slider_arrow_right"></div>
+                <div class="products-slider_header">Так же рекомендуем посмотреть</div>
+                <div class="products-slider_body products-page _swiper">
+                    <div class="products-page_column products-page_column_promotion products-slider_column">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png"
+                                 alt="heart">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="columns">
+                            <img src="../../src/images/product-cart/cartridge.png" alt="cartridge">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Картридж струйный Cactus CS-BCI24BK черный (9.2мл) <br>для Canon<br>
+                                    S200/ S200x/ S300/ S330 /S30i /250/ i320/ i350/ i450/ i455/ i470D/ i475D/ MP110
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>110 ₽ / шт</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png"
+                                 alt="heart">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="columns">
+                            <img src="../../src/images/product-cart/cartridge.png" alt="cartridge">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Картридж струйный Cactus CS-BCI24BK черный (9.2мл) <br>для Canon<br>
+                                    S200/S200x/S300/S330/S30i/250/ i320/ i350/ i450/ i455/ i470D/ i475D/ MP110
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>110 ₽ / шт</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="page_banners banners-page banners-page_first">
             <div class="banners-page_container _limit_container">
                 <div class="banners-page_column">
@@ -1189,6 +1024,167 @@
                         </div>
                     </div>
                     <div class="banners-page_pattern_second-place pattern"></div>
+                </div>
+            </div>
+        </div>
+        <div class="page_products-slider products-slider">
+            <div class="products-slider_container _limit_container">
+                <div class="products-slider_arrow products-slider_arrow_left"></div>
+                <div class="products-slider_arrow products-slider_arrow_right"></div>
+                <div class="products-slider_header">Так же рекомендуем посмотреть</div>
+                <div class="products-slider_body products-page _swiper">
+                    <div class="products-page_column products-page_column_promotion products-slider_column">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png"
+                                 alt="heart">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="columns">
+                            <img src="../../src/images/product-cart/cartridge.png" alt="cartridge">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Картридж струйный Cactus CS-BCI24BK черный (9.2мл) <br>для Canon<br>
+                                    S200/ S200x/ S300/ S330 /S30i /250/ i320/ i350/ i450/ i455/ i470D/ i475D/ MP110
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>110 ₽ / шт</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img class="promotion-page_heart" src="../../src/images/sideMenuButtons/heart.png"
+                                 alt="heart">
+                            <img class="promotion-page_columns" src="../../src/images/sideMenuButtons/columns.png"
+                                 alt="columns">
+                            <img src="../../src/images/product-cart/cartridge.png" alt="cartridge">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Картридж струйный Cactus CS-BCI24BK черный (9.2мл) <br>для Canon<br>
+                                    S200/S200x/S300/S330/S30i/250/ i320/ i350/ i450/ i455/ i470D/ i475D/ MP110
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>110 ₽ / шт</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
+                    <div class="products-page_column products-page_column_promotion">
+                        <div class="products-page_product-block products-slider_block">
+                            <img src="../../src/images/product-cart/TV.png" alt="TV">
+                            <div class="products-page_product-name products-page_product-name_promotion">
+                                <span>
+                                    Телевизор LED Sony 50" KDL50WF665BR
+                                    черный/серебристый/FULL HD/50Hz/DVB-T/DVB-T2/DVB-C/DVB-S/DVB-S2/USB/WiFi/Smart TV
+                                </span>
+                            </div>
+                            <img src="../../src/images/product-cart/stars.png" alt="stars" class="products-slider_stars">
+                            <div class="products-slider_quantity">Много</div>
+                            <div class="products-page_product-price products-page_product-price_promotion">
+                                <span>38990 ₽</span>
+                            </div>
+                            <button class="products-page_product-button products-page_product-button_promotion btn">
+                                <span>в корзину</span></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1351,15 +1347,14 @@
         </div>
     </div>
 </footer>
-    <script src="../../node_modules/nouislider/dist/nouislider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../../src/scripts/modalAndBanner.js"></script>
     <script src="../../src/scripts/dropDawn.js"></script>
     <script src="../../src/scripts/redirect.js"></script>
     <script src="../../src/scripts/toolTip.js"></script>
     <script src="../../src/scripts/BurgerMenu.js"></script>
-    <script type="module" src="../../src/scripts/searchSlider.js"></script>
-    <script type="module" src="../../src/scripts/filterSliderTab.js"></script>
-    <script src="../../src/scripts/noUISlider.js"></script>
+    <script src="../../src/scripts/sideButtons.js"></script>
+    <script src="../../src/scripts/swiper.js"></script>
 </div>
 </body>
 </html>

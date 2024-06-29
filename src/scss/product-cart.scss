@@ -1,0 +1,94 @@
+@import "common_styles";
+
+.product-cart {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 30px;
+  flex: 1 1 100%;
+}
+
+// todo: разобраться почему на мобильных устройствах слайдер плохо работает
+.products-slider {
+  background-color: #F0F0FF;
+  padding: 40px 0;
+  flex-wrap: nowrap;
+
+  &_color {
+    background-color: #FFFFFF;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &_arrow {
+    position: absolute;
+    cursor: pointer;
+    background: #FFFFFF url("../images/product-cart/arrow.png") 15px center no-repeat;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    top: 50%;
+    z-index: 2;
+    box-shadow: $boxShadow;
+    transition: all 0.3s ease 0s;
+
+    &_left {
+      left: -50px;
+    }
+
+    &_right {
+      right: -50px;
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 1570px) {
+      display: none;
+    }
+    
+    @media (min-width: $md2+px) {
+      &:hover {
+        background-color: $colorBlue;
+      }
+    }
+  }
+
+  &_header {
+    max-width: 327px;
+    font-size: 30px;
+    line-height: 37px;
+    margin: 0 0 30px 0;
+  }
+
+  &_body {
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  &_block {
+    height: 506px;
+    padding: 20px 10px 20px 10px;
+
+    @media (max-width: $md4+px) {
+      height: 442px;
+    }
+  }
+
+  &_stars {
+    margin: 0 0 10px 0;
+  }
+
+  &_quantity {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0 0 0 30px;
+    background: url("../images/product-cart/check-mark-green.png") left no-repeat;
+    margin: 0 0 20px 0;
+    
+    @media (max-width: $md4+px) {
+      margin: 0 0 10px 0;
+    }
+  }
+}

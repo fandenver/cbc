@@ -13,7 +13,6 @@ export const html = () => {
         .pipe(fileInclude())
         .pipe(app.plugins.replace(/scss\//g, '../src/scss/'))
         .pipe(app.plugins.replace(/images\//g, '../src/images/'))
-        .pipe(app.plugins.replace(/src="wnumb-1.2.0\//g, 'src="../../src/wnumb-1.2.0/'))
         .pipe(app.plugins.replace(/scripts\//g, '../src/scripts/'))
         .pipe(app.plugins.if(
             app.isBuild,

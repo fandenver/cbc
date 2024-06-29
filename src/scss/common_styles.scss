@@ -146,6 +146,19 @@ input:focus, select:focus {
     font-size: 16px;
     line-height: 20px;
   }
+
+  &_grey {
+    color: #4A4D4A;
+    background-color: #FFFFFF;
+    border: 1px solid #001569;
+
+    @media (min-width: $md2+px) {
+      &:hover {
+        color: #000000;
+        background-color: #a1a1a1;
+      }
+    }
+  }
 }
 
 .border-art {
@@ -276,6 +289,56 @@ input {
 
   &[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
+  }
+}
+
+.checkbox {
+  position: relative;
+
+  &_input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    &:checked + .checkbox_text:before {
+      border: 2px solid $colorBlack;
+    }
+
+    &:checked + .checkbox_text:after {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      background: url("../images/catalog/checkbox-background.png") center no-repeat;
+    }
+  }
+
+  &_text {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    line-height: 17px;
+    color: $colorBlack;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      align-self: flex-start;
+      margin: 0 10px 0 0;
+      flex: 0 0 20px;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background: #FFFFFF;
+      border: 1px solid #4A4D4A;
+      border-radius: 3px;
+    }
   }
 }
 

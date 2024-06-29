@@ -144,24 +144,103 @@
                     </nav>
                     <form action="#" class="filter">
                         <div class="filter_title">Фильтр по параметрам</div>
-                        <div class="filter_content">
+                        <div class="filter_body">
                             <div class="filter_section section-filter">
-                                <div class="section-filter_title">Цена</div>
+                                <div class="section-filter_title _active">Цена</div>
                                 <div class="section-filter_body">
                                     <div class="price-filter">
                                         <div class="price-filter_values">
                                             <div class="price-filter_column">
                                                 <label class="price-filter_label">
-                                                    <input type="number" class="price-filter_input">
+                                                    <input id="price-start" type="number" class="price-filter_input">
                                                 </label>
                                             </div>
                                             <div class="price-filter_column">
                                                 <label class="price-filter_label">
-                                                    <input type="number" class="price-filter_input">
+                                                    <input id="price-end" type="number" class="price-filter_input">
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="price-filter_slider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter_section section-filter">
+                                <div class="section-filter_title _active">Бренд</div>
+                                <div class="section-filter_body section-filter_body_checkbox">
+                                    <div class="section-filter_brands">
+                                       <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">ALCATEL</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">APPLE</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">ARIAN</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">ARK</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">ASUS</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">AUDIO-TECHNICA</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">BBK</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">BEATS</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">BELKIN</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">ALCATEL</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">APPLE</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">ARIAN</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">ARK</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">ASUS</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">AUDIO-TECHNICA</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">BBK</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">BEATS</span>
+                                       </label>
+                                        <label class="section-filter_checkbox checkbox">
+                                           <input class="checkbox_input" type="checkbox">
+                                           <span class="checkbox_text">BELKIN</span>
+                                       </label>
                                     </div>
                                 </div>
                             </div>
@@ -586,7 +665,7 @@
             <div class="promotion-page_container _limit_container">
                 <div class="products-page">
                     <div class="products-page_column products-page_column_promotion">
-                        <div class="products-page_product-block products-page_product-block_promotion">
+                        <div class="products-page_product-block products-page_product-block_promotion products-page_product-block_promotion_justify">
                             <div class="products-page_label products-page_label_sale"><span>Выбирайте по<br> акции в СВС</span>
                             </div>
                             <div class="products-page_label products-page_label_medal">
@@ -852,7 +931,7 @@
                 </div>
             </div>
         </div>
-        <div class="page_banners banners-page">
+        <div class="page_banners banners-page banners-page_first">
             <div class="banners-page_container _limit_container">
                 <div class="banners-page_column">
                     <div class="banners-page_banner">
@@ -867,7 +946,7 @@
                                 в Жуковском</p>
                             <p class="banners-page_description">Специалист бесплатно подберет решение под ваши
                                 требования.</p>
-                            <a href="page_404.html" class="banners-page_button btn">Подобрать технику</a>
+                            <a href="page-404.html" class="banners-page_button btn">Подобрать технику</a>
                         </div>
                     </div>
                     <div class="banners-page_pattern_first-place pattern"></div>
@@ -885,119 +964,6 @@
                                 а
                                 также вкусным кофе</p>
                             <a class="banners-page_button banners-page_button_last btn">Собрать офис</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="page_products-categories products-categories-page">
-            <div class="products-categories-page_container _limit_container">
-                <div class="products-categories-page_items">
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item products-categories-page_item_first">
-                            <span class="products-categories-page_header">Топ категорий СВС</span>
-                        </div>
-                    </div>
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item">
-                            <img src="../images/bannerManyPictures/twoImageBannerManyPictures.png" alt="no">
-                            <div class="products-categories-page_link">
-                                <div><span>Процессоры</span></div>
-                                <div class="products-categories-page_arrow-button arrow-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item">
-                            <img src="../images/bannerManyPictures/threeImageBannerManyPictures.png" alt="no">
-                            <div class="products-categories-page_link">
-                                <span>Ноутбуки</span>
-                                <div class="arrow-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item">
-                            <img src="../images/bannerManyPictures/fourImageBannerManyPictures.png" alt="no">
-                            <div class="products-categories-page_link">
-                                <span>Системные блоки</span>
-                                <div class="arrow-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item">
-                            <img src="../images/bannerManyPictures/fiveImageBannerManyPictures.png" alt="no">
-                            <div class="products-categories-page_link">
-                                <span>Мониторы</span>
-                                <div class="arrow-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item">
-                            <img src="../images/bannerManyPictures/sixImageBannerManyPictures.png" alt="no">
-                            <div class="products-categories-page_link">
-                                <span>Принтеры</span>
-                                <div class="arrow-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item">
-                            <img src="../images/bannerManyPictures/sevenImageBannerManyPictures.png" alt="no">
-                            <div class="products-categories-page_link">
-                                <span>МФУ</span>
-                                <div class="arrow-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item products-categories-page_item_video-cart">
-                            <img src="../images/bannerManyPictures/eightImageBannerManyPictures.png" alt="no">
-                            <div class="products-categories-page_link">
-                                <span>Видеокарты</span>
-                                <div class="arrow-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item">
-                            <img src="../images/bannerManyPictures/nineImageBannerManyPictures.png" alt="no">
-                            <div class="products-categories-page_link">
-                                <span>Картриджи</span>
-                                <div class="arrow-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item">
-                            <img src="../images/bannerManyPictures/tenImageBannerManyPictures.png"
-                                 alt="no">
-                            <div class="products-categories-page_link">
-                                <span>Микрофоны</span>
-                                <div class="arrow-button"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item products-categories-page_item_computer-technique">
-                            <img src="../images/bannerManyPictures/elevenImageBannerManyPictures.png" alt="no">
-                            <div>
-                                <p>Компьютерная техника</p>
-                                <div class="products-categories-page_link">
-                                    <p class="spanElevenBannerManyPictures">Офис “под ключ”</p>
-                                    <div class="arrow-button"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="products-categories-page_column">
-                        <div class="products-categories-page_item products-categories-page_item_last">
-                            <a class="products-categories-page_btn btn">ПОСМОТРЕТЬ ВСЕ КАТЕГОРИИ</a>
-                            <div class="products-categories-page_link products-categories-page_link_last">
-                                <div class="arrow-button"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1105,14 +1071,14 @@
         </div>
     </main>
     @@include('html/footer.html', {})
-    <script src="wnumb-1.2.0/wNumb.min.js"></script>
     <script src="../../node_modules/nouislider/dist/nouislider.min.js"></script>
     <script src="../scripts/modalAndBanner.js"></script>
     <script src="../scripts/dropDawn.js"></script>
     <script src="../scripts/redirect.js"></script>
     <script src="../scripts/toolTip.js"></script>
     <script src="../scripts/BurgerMenu.js"></script>
-    <script src="../scripts/searchSlider.js"></script>
+    <script type="module" src="../scripts/searchSlider.js"></script>
+    <script type="module" src="../scripts/filterSliderTab.js"></script>
     <script src="../scripts/noUISlider.js"></script>
 </div>
 </body>
