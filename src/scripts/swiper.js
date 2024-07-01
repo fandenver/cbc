@@ -38,3 +38,18 @@ if (document.querySelector('.products-slider')) {
         },
     });
 }
+
+if (document.querySelector('.product-cart_slider')) {
+    let productSlider = new Swiper('.product-cart_slider-body', {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        speed: 800,
+        loop: true,
+        navigation: {
+            nextEl: '.product-cart_arrow_right',
+            prevEl: '.product-cart_arrow_left'
+        },
+    });
+}

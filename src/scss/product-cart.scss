@@ -5,7 +5,233 @@
   flex-direction: column;
   margin: 0 0 0 30px;
   flex: 1 1 100%;
+
+  &_content {
+    display: flex;
+    box-shadow: $boxShadow;
+    border-radius: 10px;
+    padding: 20px 25px 25px 25px;
+  }
+
+  &_pictures {
+    flex: 0 1 45%;
+  }
+
+  &_image-block {
+    position: relative;
+    padding: 0 60px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_slider {
+    position: relative;
+    flex: 0 1 100%
+  }
+
+  &_arrow {
+    width: 10px;
+    height: 14px;
+    position: absolute;
+    background: url("../images/product-cart/arrow-slider.png") center no-repeat;
+    top: 35%;
+    cursor: pointer;
+    z-index: 2;
+
+    &_left {
+      left: -25px;
+      transform: rotate(180deg);
+    }
+
+    &_right {
+      right: -25px;
+    }
+  }
+
+  &_cartridge {
+    margin: 0 0 30px 0;
+    max-width: 100%;
+  }
+
+  &_description {
+    flex: 0 1 55%;
+  }
+
+  &_slider-body {
+    display: flex;
+    max-width: 223px;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  &_slide {
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &_description {
+
+  }
 }
+
+.description-product-cart {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 20px;
+
+  &_header {
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0 0 15px 0;
+  }
+
+  &_parameters {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(74, 77, 74, 0.5);
+    padding: 0 0 5px 0;
+    margin: 0 0 25px 0;
+
+    p {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      margin: 0 0 10px 0;
+      &:last-child {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+
+  &_quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 20px 0;
+  }
+
+  &_count {
+    font-size: 24px;
+    line-height: 29px;
+    color: #001569;
+    margin: 0 0 15px 0;
+  }
+
+  &_counter {
+    display: flex;
+    width: 173px;
+    height: 41px;
+    box-shadow: $boxShadow;
+    border-radius: 5px;
+  }
+
+  &_counter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 1 33.333%;
+    border-right: 1px solid rgba(74, 77, 74, 0.5);
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    @media (min-width: $md2+px) {
+      &:hover {
+        background-color: $colorBlue;
+        color: #FFFFFF;
+      }
+
+      &:first-child:hover {
+        background-color: $colorBlue;
+        color: #FFFFFF;
+        border-radius: 5px 0 0 5px;
+      }
+
+      &:last-child:hover {
+        background-color: $colorBlue;
+        color: #FFFFFF;
+        border-radius: 0 5px 5px 0;
+      }
+    }
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  &_buttons {
+    display: flex;
+    margin: 0 -34px 15px -34px;
+  }
+
+  &_button-column {
+    flex: 0 1 50%;
+    padding: 0 34px;
+  }
+
+  &_buy {
+    padding: 17px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #001569;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    span {
+      font-family: Rubik, sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      padding: 10px 0 10px 40px;
+      background: url("../images/product-cart/pointer.png") left no-repeat;
+    }
+    
+    @media (min-width: $md2+px) {
+      &:hover {
+        background-color: $colorBlue;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &_condition {
+    font-size: 10px;
+    text-decoration: underline;
+    font-weight: 300;
+    max-width: 250px;
+    margin: 0 0 30px 0;
+  }
+
+  &_deliveries {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_delivery {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    padding: 15px 0 15px 70px;
+    margin: 0 0 20px 0;
+
+    &:last-child {
+      margin: 0 0 0 0;
+    }
+
+    &_office {
+      background: url("../images/product-cart/office.png") left no-repeat;
+    }
+
+    &_car {
+      background: url("../images/product-cart/car.png") left no-repeat;
+    }
+  }
+}
+
 
 // todo: разобраться почему на мобильных устройствах слайдер плохо работает
 .products-slider {
@@ -47,7 +273,7 @@
     @media (max-width: 1570px) {
       display: none;
     }
-    
+
     @media (min-width: $md2+px) {
       &:hover {
         background-color: $colorBlue;
@@ -86,7 +312,7 @@
     padding: 0 0 0 30px;
     background: url("../images/product-cart/check-mark-green.png") left no-repeat;
     margin: 0 0 20px 0;
-    
+
     @media (max-width: $md4+px) {
       margin: 0 0 10px 0;
     }
