@@ -381,11 +381,22 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0 0 0 30px;
   flex: 1 1 100%;
 }
+@media (max-width: 991.98px) {
+  .product-cart {
+    margin: 0 0 0 0;
+  }
+}
 .product-cart_content {
   display: flex;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
   border-radius: 10px;
   padding: 20px 25px 25px 25px;
+  margin: 0 0 30px 0;
+}
+@media (max-width: 1440px) {
+  .product-cart_content {
+    flex-direction: column;
+  }
 }
 .product-cart_pictures {
   flex: 0 1 45%;
@@ -396,6 +407,11 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 1440px) {
+  .product-cart_image-block {
+    margin: 0 0 20px 0;
+  }
 }
 .product-cart_slider {
   position: relative;
@@ -433,6 +449,76 @@ input[type=number]::-webkit-inner-spin-button {
 .product-cart_slide img {
   max-width: 100%;
 }
+.info-product-cart {
+  display: flex;
+  flex-direction: column;
+}
+.info-product-cart_tabs {
+  display: flex;
+  margin: 0 0 15px 0;
+}
+.info-product-cart_tab {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  border: 1px solid rgba(74, 77, 74, 0.5);
+  padding: 14px 0;
+  flex: 0 1 240px;
+  cursor: pointer;
+  text-align: center;
+}
+.info-product-cart_tab._active {
+  border: 0 solid #FFAF37;
+  border-top-width: 2px;
+  background-color: #F0F0FF;
+  color: #001569;
+}
+.info-product-cart_block {
+  display: none;
+}
+.info-product-cart_block._active {
+  display: block;
+}
+.info-product-cart_item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 25px 0;
+}
+.info-product-cart_content {
+  display: flex;
+}
+.info-product-cart_column {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 70%;
+}
+.info-product-cart_column:last-child {
+  flex: 0 1 30%;
+  padding: 0 0 0 10px;
+}
+.info-product-cart_header {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0 0 10px 0;
+}
+.info-product-cart_options {
+  display: flex;
+  align-items: center;
+}
+.info-product-cart_options hr {
+  flex: 1 1 auto;
+  border-bottom: 1px solid rgba(74, 77, 74, 0.5);
+}
+.info-product-cart_option {
+  padding: 0 20px 0 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+.info-product-cart_option_empty {
+  height: 21px;
+}
+
 .description-product-cart {
   display: flex;
   flex-direction: column;
@@ -513,9 +599,19 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   margin: 0 -34px 15px -34px;
 }
+@media (max-width: 1440px) {
+  .description-product-cart_buttons {
+    margin: 0 -10px 15px -10px;
+  }
+}
 .description-product-cart_button-column {
   flex: 0 1 50%;
   padding: 0 34px;
+}
+@media (max-width: 1440px) {
+  .description-product-cart_button-column {
+    padding: 0 10px;
+  }
 }
 .description-product-cart_buy {
   padding: 17px 20px;
@@ -525,6 +621,7 @@ input[type=number]::-webkit-inner-spin-button {
   transition: all 0.3s ease 0s;
 }
 .description-product-cart_buy span {
+  white-space: nowrap;
   font-family: Rubik, sans-serif;
   font-weight: 500;
   font-size: 12px;
