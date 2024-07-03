@@ -476,7 +476,7 @@
   }
 
   &_optionDropDawn {
-    min-height: 69px;
+    min-height: 50px;
     display: flex;
     align-items: center;
     color: $colorGray;
@@ -496,14 +496,11 @@
       background-color: $colorBlue;
       color: $colorOrange;
     }
-    
-    @media (max-width: $md2+px) {
-      min-height: 50px;
-    }
   }
 
   &_optionDropDawn_no_result {
-    @include heightAndWidth(69px, 688px);
+    height: 50px;
+    width: 100%;
     display: none;
     padding-left: 20px;
     align-items: center;

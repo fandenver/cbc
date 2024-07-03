@@ -816,7 +816,7 @@ input[type=number]::-webkit-inner-spin-button {
   border-radius: 10px;
 }
 .bottom-header_optionDropDawn {
-  min-height: 69px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   color: rgb(74, 77, 74);
@@ -834,14 +834,9 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: #001569;
   color: #FFAF37;
 }
-@media (max-width: 991.98px) {
-  .bottom-header_optionDropDawn {
-    min-height: 50px;
-  }
-}
 .bottom-header_optionDropDawn_no_result {
-  height: 69px;
-  width: 688px;
+  height: 50px;
+  width: 100%;
   display: none;
   padding-left: 20px;
   align-items: center;

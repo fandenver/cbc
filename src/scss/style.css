@@ -649,6 +649,7 @@ html, body {
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  position: relative;
 }
 .menu-page_item {
   display: flex;
@@ -688,6 +689,35 @@ html, body {
   margin-right: 15px;
   height: 9px;
   width: 9px;
+}
+
+.sub-menu-page {
+  display: flex;
+  width: 962px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 30px 30px;
+  background-color: #FFFFFF;
+  z-index: 5;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+}
+.sub-menu-page_column {
+  flex: 0 1 33.333%;
+}
+.sub-menu-page_block {
+  margin: 0 0 40px 0;
+}
+.sub-menu-page_header {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 20px 0;
+}
+.sub-menu-page_name {
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .header-page {
