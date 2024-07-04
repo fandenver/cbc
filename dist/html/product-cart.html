@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
           rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../src/scss/style.css">
+    <link rel="stylesheet" href="../../src/scss/page.css">
     <link rel="stylesheet" href="../../src/scss/header.css">
     <link rel="stylesheet" href="../../src/scss/footer.css">
     <link rel="stylesheet" href="../../src/scss/catalog.css">
@@ -29,42 +29,21 @@
                         <div class="services-header_number"><span>+7 495 723-09-71</span></div>
                         <a class="services-header_services">
                             <span>Сервисный центр</span>
-                            <div class="toolTypeBavBarOne"><span><span class="boldText">Сервисный центр</span> - это специализированное учреждение,
-                    где осуществляется обслуживание и ремонт различной техники</span>
-                            </div>
                         </a>
                         <a class="services-header_services">
                             <span>Доставка и оплата</span>
-                            <div class="toolTypeBavBarTwo">
-                <span><span class="boldText">Доставка</span> - это процесс доставки товара или услуги из места
-                    продажи или производства к покупателю или заказчику. </span>
-                            </div>
                         </a>
                         <a class="services-header_services">
                             <span>Отзывы</span>
-                            <div class="toolTypeBavBarThree">
-                                <span><span class="boldText">Отзывы</span> - это мнения, комментарии или оценки.</span>
-                            </div>
                         </a>
                         <a class="services-header_services">
                             <span>Личный кабинет</span>
-                            <div class="toolTypeBavBarFour">
-                <span><span class="boldText">Личный кабинет</span> - это защищенная и персонализированная часть веб-сайта,
-                    предназначенная для конкретного пользователя.</span>
-                            </div>
                         </a>
                         <a class="services-header_services">
                             <span>О компании</span>
-                            <div class="toolTypeBavBarFive">
-                <span><span class="boldText">Кампания</span> это организованное мероприятие
-                    или действие в рамках какого-либо события или цели. </span>
-                            </div>
                         </a>
                         <a class="services-header_services">
                             <span>Контакты</span>
-                            <div class="toolTypeBavBarSix">
-                                <span><span class="boldText">Контакты</span> означают информацию о способах связи с каким-то лицом или организацией.</span>
-                            </div>
                         </a>
                     </div>
                     <div class="services-header_bottom bottom-services">
@@ -126,13 +105,11 @@
                                     <input class="request-call-modal_input" placeholder="Комментарий *" type="text">
                                     <button class="request-call-modal_send-request btn">Отправить запрос</button>
                                 </label>
-                                <div class="checkBoxAndSpan">
-                                    <div class="checkMarkBlock">
-                                        <img src="../../../src/images/twoBannerAfterTwoFooter/checkMark.png"
-                                             alt="no"
-                                             class="checkMark">
-                                    </div>
-                                    <span class="spanAfterCheckMark">Нажимая на кнопку я соглашаюсь<br> с политикой конфиденциальности</span>
+                                <div class="consultation-page_checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                    </label>
+                                    <span>Нажимая на кнопку я соглашаюсь с политикой конфиденциальности</span>
                                 </div>
                             </form>
                         </div>
@@ -154,7 +131,7 @@
                                  class="modal_success_mail">
                             <img src="../../../src/images/oneModal/overModal/overModalSmallImage.png" alt="no"
                                  class="modal_success_man">
-                            <span class="modal_success_close close">Закрыть</span>
+                            <span class="close">Закрыть</span>
                         </div>
                     </div>
                 </div>
@@ -209,40 +186,35 @@
                 <ul class="navigate-bar_list">
                     <li class="navigate-bar_option">
                         <a>КОМПЛЕКСНАЯ ПОСТАВКА</a>
-                        <div class="toolTipOne">
-                <span>
-                    <span class="boldText">Комплексная поставка</span> - это процесс, при котором поставщик предоставляет
-                не только продукцию, но и дополнительные услуги или решения, связанные с этим продуктом
-                продукции или услуги.
-                </span>
+                        <div class="navigate-bar_tooltype">
+                            <span>Комплексная поставка</span> - это процесс, при котором поставщик
+                            предоставляет
+                            не только продукцию, но и дополнительные услуги или решения, связанные с этим продуктом
+                            продукции или услуги.
                         </div>
                     </li>
                     <li class="navigate-bar_option">
                         <a>ПУСКО-НАКЛАДКА IT-ОБОРУДОВАНИЯ</a>
-                        <div class="toolTipTwo">
-                <span>
-                <span class="boldText">Пуско-накладка</span> (или запуск-накладка) в области информационных технологий относится
-                к процессу внедрения нового оборудования или программного обеспечения
-                в существующую IT-инфраструктуру организации.
-                </span>
+                        <div class="navigate-bar_tooltype">
+                            <span>Пуско-накладка</span> (или запуск-накладка) в области информационных
+                            технологий относится
+                            к процессу внедрения нового оборудования или программного обеспечения
+                            в существующую IT-инфраструктуру организации.
                         </div>
                     </li>
                     <li class="navigate-bar_option">
                         <a>АУДИТ И ОПТИМИЗАЦИЯ ПАРКА ПЕЧАТИ</a>
-                        <div class="toolTipThree">
-                <span>
-                <span class="boldText">Аудит и оптимизация парка печати</span> относятся к процессу анализа и улучшения системы печати
-                в организации для повышения эффективности, снижения издержек и улучшения процессов
-                управления документами.
-                </span>
+                        <div class="navigate-bar_tooltype">
+                            <span>Аудит и оптимизация парка печати</span> относятся к процессу анализа и улучшения
+                            системы печати
+                            в организации для повышения эффективности, снижения издержек и улучшения процессов
+                            управления документами.
                         </div>
                     </li>
                     <li class="navigate-bar_option">
                         <a>ТЕНДЕРЫ</a>
-                        <div class="toolTipFour">
-                <span>
-                <span class="boldText">Тендеры</span> - это процесс конкуренции среди потенциальных поставщиков.
-                </span>
+                        <div class="navigate-bar_tooltype">
+                            <span>Тендеры</span> - это процесс конкуренции среди потенциальных поставщиков.
                         </div>
                     </li>
                 </ul>
@@ -256,75 +228,235 @@
                             <span>Каталог</span>
                         </div>
                         <ul class="menu-page_body">
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/first.png" alt="no">
-                                <span>Компьютеры и комплектующие</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/first.png" alt="no">
+                                    <span>Компьютеры и комплектующие</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/second.png" alt="no">
-                                <span>Периферия и аксессуары</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/second.png" alt="no">
+                                    <span>Периферия и аксессуары</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/three.png" alt="no">
-                                <span>Цифровое фото и видео</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/three.png" alt="no">
+                                    <span>Цифровое фото и видео</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/four.png" alt="no">
-                                <span>Сетевое оборудование</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/four.png" alt="no">
+                                    <span>Сетевое оборудование</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/five.png" alt="no">
-                                <span>Расходные материалы</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/five.png" alt="no">
+                                    <span>Расходные материалы</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/six.png" alt="no">
-                                <span>Смартфоны, планшетыи аксессуары</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/six.png" alt="no">
+                                    <span>Смартфоны, планшетыи аксессуары</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/seven.png" alt="no">
-                                <span>Телевизоры, аудио-видео техника<br> и аксессуары</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/seven.png" alt="no">
+                                    <span>Телевизоры, аудио-видео техника<br> и аксессуары</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/eight.png" alt="no">
-                                <span>Автомобильная техника<br> и электроника</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/eight.png" alt="no">
+                                    <span>Автомобильная техника<br> и электроника</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/nine.png" alt="no">
-                                <span>Системы безопасности, СКС<br> и инженерное оборудование</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/nine.png" alt="no">
+                                    <span>Системы безопасности, СКС<br> и инженерное оборудование</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/ten.png" alt="no">
-                                <span>Спорт, активный отдых, хобби</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/ten.png" alt="no">
+                                    <span>Спорт, активный отдых, хобби</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/eleven.png" alt="no">
-                                <span>Офисная техника</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/eleven.png" alt="no">
+                                    <span>Офисная техника</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/twelve.png" alt="no">
-                                <span>Канцтовары и мебель</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/twelve.png" alt="no">
+                                    <span>Канцтовары и мебель</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/thirteen.png" alt="no">
-                                <span>Акции</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/thirteen.png" alt="no">
+                                    <span>Акции</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
                             </li>
-                            <li class="menu-page_item">
-                                <img src="../../src/images/mainMenu/fourteen.png" alt="no">
-                                <span>Новинки</span>
-                                <div class="menu-page_arrow arrow-blue"></div>
+                            <li>
+                                <a href="catalog.html" class="menu-page_item">
+                                    <img src="../../src/images/mainMenu/fourteen.png" alt="no">
+                                    <span>Новинки</span>
+                                    <div class="menu-page_arrow arrow-blue"></div>
+                                </a>
+                            </li>
+                            <li class="page_sub-menu sub-menu-page">
+                                <div class="sub-menu-page_column">
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Процессоры</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-1151</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-AM4</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-201</a>1
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Процессоры</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-115</a>1
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-AM4</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-201</a>1
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Процессоры</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-115</a>1
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-AM4</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-201</a>1
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Процессоры</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-1151</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-AM4</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-2011</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sub-menu-page_column">
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Устройства охлаждения</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html"
+                                                   class="sub-menu-page_name">Socket-1155/1156</a></li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-ALL</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Термопаста</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Устройства охлаждения</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html"
+                                                   class="sub-menu-page_name">Socket-1155/1156</a></li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-ALL</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Термопаста</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Устройства охлаждения</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html"
+                                                   class="sub-menu-page_name">Socket-1155/1156</a></li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-ALL</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Термопаста</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Устройства охлаждения</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html"
+                                                   class="sub-menu-page_name">Socket-1155/1156</a></li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-ALL</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Термопаста</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sub-menu-page_column">
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Материнские Платы</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-1151v2</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-AM4</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Материнские Платы</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-1151v2</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-AM4</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Материнские Платы</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-1151v2</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-AM4</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="sub-menu-page_block">
+                                        <div class="sub-menu-page_header">Материнские Платы</div>
+                                        <ul class="sub-menu-page_content">
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-1151v2</a>
+                                            </li>
+                                            <li><a href="product-cart.html" class="sub-menu-page_name">Socket-AM4</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </nav>
@@ -1610,6 +1742,8 @@
     <script src="../../src/scripts/sideButtons.js"></script>
     <script src="../../src/scripts/productTabs.js"></script>
     <script src="../../src/scripts/counter.js"></script>
+    <script src="../../src/scripts/subMenu.js"></script>
+    <script type="module" src="../../src/scripts/searchSlider.js"></script>
     <script src="../../src/scripts/swiper.js"></script>
 </div>
 </body>

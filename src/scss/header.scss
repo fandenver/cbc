@@ -783,6 +783,24 @@
   &_footer {
     width: 100%;
     height: 295px;
+
+    span {
+      display: inline-block;
+      position: absolute;
+      cursor: pointer;
+      font-size: 14px;
+      color: #001569;
+      transition: color 0.5s;
+      bottom: 30px;
+      right: 30px;
+
+      @media (min-width: $md2+px) {
+        &:hover {
+          color: $colorBlue;
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
   &_mail {
@@ -796,26 +814,7 @@
     left: 157px;
     position: absolute;
   }
-
-  &_close {
-    display: inline-block;
-    position: absolute;
-    cursor: pointer;
-    font-size: 14px;
-    color: #001569;
-    transition: color 0.5s;
-    bottom: 30px;
-    right: 30px;
-
-    @media (min-width: $md2+px) {
-      &:hover {
-        color: $colorBlue;
-        text-decoration: underline;
-      }
-    }
-  }
 }
-
 //======================================================================================================================
 
 

@@ -100,6 +100,7 @@
   }
 
   &_slide {
+    cursor: pointer;
 
     img {
       max-width: 100%;
@@ -506,7 +507,6 @@
     }
 }
 
-// todo: разобраться почему на мобильных устройствах слайдер плохо работает
 .products-slider {
   background-color: #F0F0FF;
   padding: 40px 0;
@@ -520,6 +520,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    min-width: 0;
   }
 
   &_arrow {
@@ -544,7 +545,28 @@
     }
 
     @media (max-width: 1570px) {
-      display: none;
+      top: 65%;
+      opacity: 0.5;
+      background: url("../images/product-cart/arrow.png") 15px center no-repeat;
+
+      &_left {
+      left: 23px;
+      }
+
+      &_right {
+      right: 23px;
+      }
+    }
+
+    @media (max-width: $md4+px) {
+
+      &_left {
+      left: 13px;
+      }
+
+      &_right {
+      right: 13px;
+      }
     }
 
     @media (min-width: $md2+px) {

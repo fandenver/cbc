@@ -1,28 +1,23 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const buttonNavBar = document.querySelectorAll('.alignSpan > div');
-    const toolTipMainBar = document.querySelectorAll('.alignSpan > div > div');
-    const buttonsArray = Array.from(buttonNavBar);
-    const spanToolTipNavBar = document.querySelectorAll('.navBar > div > span');
-    const spanArray = Array.from(spanToolTipNavBar);
-    const toolTipNavBar = document.querySelectorAll('.navBar > div > div');
+const navBarOptions = document.querySelectorAll('.navigate-bar_option');
 
-    buttonsArray.forEach((button, index) => {
-        button.addEventListener('mouseover', () => {
-            toolTipMainBar[index].style.display = 'flex';
-        });
+navBarOptions.forEach((navBarOption) => {
+    const toolTypeBlock = navBarOption.querySelector('.navigate-bar_tooltype');
 
-        button.addEventListener('mouseout', () => {
-            toolTipMainBar[index].style.display = 'none';
-        });
+    navBarOption.addEventListener('mouseover', () => {
+        if (toolTypeBlock) {
+            toolTypeBlock.style.display = 'block';
+        }
     });
 
-    spanArray.forEach((button, index) => {
-        button.addEventListener('mouseover', () => {
-            toolTipNavBar[index].style.display = 'flex';
-        });
-
-        button.addEventListener('mouseout', () => {
-            toolTipNavBar[index].style.display = 'none';
-        });
+    navBarOption.addEventListener('mouseleave', () => {
+        if (toolTypeBlock) {
+            toolTypeBlock.style.display = 'none';
+        }
     });
-})
+
+    if (toolTypeBlock) {
+        toolTypeBlock.addEventListener('mouseleave', () => {
+            toolTypeBlock.style.display = 'none';
+        });
+    }
+});
