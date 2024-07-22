@@ -27,7 +27,6 @@ if (document.querySelector('.products-slider')) {
     let productSlider = new Swiper('.products-slider_body', {
         observer: true,
         observeParents: true,
-        // slidesPerView: 4,
         spaceBetween: 0,
         speed: 800,
         loop: false,
@@ -36,24 +35,18 @@ if (document.querySelector('.products-slider')) {
             prevEl: '.products-slider_arrow_left'
         },
         breakpoints: {
-            480: {
+            768: {
                 slidesPerView: 1,
             },
-            768: {
-                slidesPerView: 2,
-            },
             992: {
-                slidesPerView: 3,
+                slidesPerView: 2,
             },
             1212: {
-                slidesPerView: 2,
+                slidesPerView: 3,
             },
             1440: {
-                slidesPerView: 3
-            },
-            1600: {
                 slidesPerView: 4
-            }
+            },
         },
     });
 }
