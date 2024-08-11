@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         searchButton.addEventListener('click', () => {
             if (searchText !== '') {
                 searchButton.addEventListener('click', () => {
-                    window.location.href = '../Main_Page/page-404.html';
+                    window.location.href = '../page-404.html';
                 })
             } else {
                 window.location.href = '';

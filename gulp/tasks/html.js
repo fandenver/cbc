@@ -11,9 +11,10 @@ export const html = () => {
             })
         ))
         .pipe(fileInclude())
-        .pipe(app.plugins.replace(/scss\//g, '../src/scss/'))
-        .pipe(app.plugins.replace(/images\//g, '../src/images/'))
-        .pipe(app.plugins.replace(/scripts\//g, '../src/scripts/'))
+        .pipe(app.plugins.replace(/scss\//g, 'css/'))
+        .pipe(app.plugins.replace(/"images\//g, '"../images/'))
+        .pipe(app.plugins.replace(/scripts\//g, 'scripts/'))
+        .pipe(app.plugins.replace(/node_modules\//g, 'node_modules/'))
         .pipe(app.plugins.if(
             app.isBuild,
             webpHtmlnoSvg()

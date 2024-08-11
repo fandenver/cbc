@@ -1,4 +1,4 @@
-@import "common_styles";
+@import "var";
 
 .header {
 
@@ -531,7 +531,7 @@
     text-align: center;
 
     @media (max-width: $md2+px) {
-      margin: 0 200 / $maxWidthContainer * 100vw 0 0;
+      margin: 0 calc(200 / $maxWidthContainer * 100vw) 0 0;
 
       &:first-child {
         margin: 0 0 0 0;
