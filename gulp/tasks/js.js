@@ -12,8 +12,16 @@ export const js = () => {
             mode: app.isBuild ? 'production' : 'development',
             output: {
                 filename: 'scripts.min.js',
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.css$/,
+                        use: ['style-loader', 'css-loader']
+                    }
+                ]
             }
         }))
         .pipe(app.gulp.dest(app.path.build.js))
-        // .pipe(app.plugins.browsersync.stream());
+    // .pipe(app.plugins.browsersync.stream());
 }

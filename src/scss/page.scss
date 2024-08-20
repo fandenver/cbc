@@ -1,4 +1,5 @@
 @import "var";
+@import "fonts";
 @import "header";
 @import "footer";
 @import "catalog";
@@ -1026,7 +1027,7 @@ html, body {
     }
 
     &._active {
-      background-color: #1F347B;
+      background-color: #1F347B !important;
     }
   }
 }
